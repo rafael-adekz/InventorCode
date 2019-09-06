@@ -10,7 +10,7 @@ function About(props) {
   return (
     <div className="about__content">
       <Helmet>
-        <title>p5.js Web Editor | About</title>
+        <title>Editor da Escola de Inventor About</title>
       </Helmet>
       <div className="about__content-column">
         <InlineSVG className="about__logo" src={squareLogoUrl} alt="p5js Square Logo" />
@@ -26,7 +26,7 @@ function About(props) {
         </p>  */}
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">New to p5.js?</h3>
+        <h3 className="about__content-column-title">Saiba Mais</h3>
         <p className="about__content-column-list">
           <a
             href="https://p5js.org/examples/"
@@ -34,7 +34,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Examples
+          Exemplos
           </a>
         </p>
         <p className="about__content-column-list">
@@ -44,7 +44,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Learn
+          Aprenda
           </a>
         </p>
       </div>
@@ -57,7 +57,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Libraries
+          Bibliotecas
           </a>
         </p>
         <p className="about__content-column-list">
@@ -67,7 +67,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Reference
+          Referencia
           </a>
         </p>
         <p className="about__content-column-list">
@@ -77,7 +77,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Forum
+          Fórum
           </a>
         </p>
       </div>
@@ -87,7 +87,7 @@ function About(props) {
             href="https://github.com/processing/p5.js-web-editor"
             target="_blank"
             rel="noopener noreferrer"
-          >Contribute
+          >Contribua
           </a>
         </p>
         <p className="about__footer-list">
@@ -95,7 +95,7 @@ function About(props) {
             href="https://github.com/processing/p5.js-web-editor/issues/new"
             target="_blank"
             rel="noopener noreferrer"
-          >Report a bug
+          >Reportar um bug
           </a>
         </p>
         <p className="about__footer-list">

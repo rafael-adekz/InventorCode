@@ -187,7 +187,7 @@ class IDEView extends React.Component {
     return (
       <div className="ide">
         <Helmet>
-          <title>p5.js Web Editor | {this.props.project.name}</title>
+          <title>Editor da Escola de Inventor</title>
         </Helmet>
         {this.props.toast.isVisible && <Toast />}
         <Nav
@@ -311,7 +311,7 @@ class IDEView extends React.Component {
               </SplitPane>
               <div className="preview-frame-holder">
                 <header className="preview-frame__header">
-                  <h2 className="preview-frame__title">Preview</h2>
+                  <h2 className="preview-frame__title">Visualizar</h2>
                 </header>
                 <div className="preview-frame__content">
                   <div className="preview-frame-overlay" ref={(element) => { this.overlay = element; }}>
@@ -397,7 +397,7 @@ class IDEView extends React.Component {
         { this.props.location.pathname === '/about' &&
           <Overlay
             previousPath={this.props.ide.previousPath}
-            title="Welcome"
+            title="Bem Vindo"
             ariaLabel="about"
           >
             <About previousPath={this.props.ide.previousPath} />

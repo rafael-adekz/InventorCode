@@ -35,11 +35,19 @@ canvas {
   display: block;
 }
 `;
+const defaultPlay = `function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}`;
 
 const initialState = () => {
   const a = objectID().toHexString();
   const b = objectID().toHexString();
   const c = objectID().toHexString();
+  const d = objectID().toHexString();
   const r = objectID().toHexString();
   return [
     {
@@ -59,6 +67,15 @@ const initialState = () => {
       fileType: 'file',
       children: []
     },
+    {
+      name: 'play.js',
+      content: defaultPlay,
+      id: d,
+      _id: d,
+      fileType: 'file',
+      children: []
+    },
+
     {
       name: 'index.html',
       content: defaultHTML,

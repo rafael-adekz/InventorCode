@@ -8,11 +8,11 @@ export function renderIndex() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords" content="p5.js, p5.js web editor, web editor, processing, code editor" />
       <meta name="description" content="A web editor for p5.js, a JavaScript library with the goal of making coding accessible to artists, designers, educators, and beginners." />
-      <title>p5.js Web Editor</title>
+      <title>Editor Escola de Inventor</title>
       ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
       <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-      <link rel='shortcut icon' href='https://raw.githubusercontent.com/processing/p5.js-website-OLD/master/favicon.ico' type='image/x-icon'/ >
+      <link rel='shortcut icon' href='http://www.iconj.com/ico/r/t/rttbfzgxdr.ico' type='image/x-icon'/ >
       <script>
         if (!window.process) {
           window.process = {};

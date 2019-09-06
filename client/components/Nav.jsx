@@ -257,7 +257,7 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">File</span>
+              <span className="nav__item-header">Arquivo</span>
               <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
             </button>
             <ul className="nav__dropdown">
@@ -267,7 +267,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForFile}
                   onBlur={this.handleBlur}
                 >
-                  New
+                  Novo
                 </button>
               </li>
               { __process.env.LOGIN_ENABLED && (!this.props.project.owner || this.isUserOwner()) &&
@@ -277,7 +277,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForFile}
                   onBlur={this.handleBlur}
                 >
-                  Save
+                  Salvar
                   <span className="nav__keyboard-shortcut">{metaKeyName}+s</span>
                 </button>
               </li> }
@@ -288,7 +288,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForFile}
                   onBlur={this.handleBlur}
                 >
-                  Duplicate
+                  Duplicar
                 </button>
               </li> }
               { this.props.project.id &&
@@ -298,7 +298,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForFile}
                   onBlur={this.handleBlur}
                 >
-                  Share
+                  Compartilhar
                 </button>
               </li> }
               { this.props.project.id &&
@@ -319,7 +319,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  Open
+                  Abrir
                 </Link>
               </li> }
               { __process.env.EXAMPLES_ENABLED &&
@@ -330,7 +330,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  Examples
+                  Exemplos
                 </Link>
               </li> }
             </ul>
@@ -346,7 +346,7 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">Edit</span>
+              <span className="nav__item-header">Editar</span>
               <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
             </button>
             <ul className="nav__dropdown" >
@@ -359,7 +359,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForEdit}
                   onBlur={this.handleBlur}
                 >
-                  Tidy Code
+                  Ajeitar codigo
                   <span className="nav__keyboard-shortcut">{'\u21E7'}+Tab</span>
                 </button>
               </li>
@@ -369,7 +369,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForEdit}
                   onBlur={this.handleBlur}
                 >
-                  Find
+                  Procurar
                   <span className="nav__keyboard-shortcut">{metaKeyName}+F</span>
                 </button>
               </li>
@@ -379,7 +379,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForEdit}
                   onBlur={this.handleBlur}
                 >
-                  Find Next
+                  Encontrar Proximo
                   <span className="nav__keyboard-shortcut">{metaKeyName}+G</span>
                 </button>
               </li>
@@ -389,7 +389,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForEdit}
                   onBlur={this.handleBlur}
                 >
-                  Find Previous
+                  Encontrar Anterior
                   <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+G</span>
                 </button>
               </li>
@@ -406,7 +406,7 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">Sketch</span>
+              <span className="nav__item-header">Ferramentas</span>
               <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
             </button>
             <ul className="nav__dropdown">
@@ -416,7 +416,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForSketch}
                   onBlur={this.handleBlur}
                 >
-                  Add File
+                  Adicionar Arquivo
                 </button>
               </li>
               <li className="nav__dropdown-item">
@@ -425,7 +425,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForSketch}
                   onBlur={this.handleBlur}
                 >
-                  Add Folder
+                  Adicionar Pasta
                 </button>
               </li>
               <li className="nav__dropdown-item">
@@ -434,7 +434,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForSketch}
                   onBlur={this.handleBlur}
                 >
-                  Run
+                  Executar Código
                   <span className="nav__keyboard-shortcut">{metaKeyName}+Enter</span>
                 </button>
               </li>
@@ -444,7 +444,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForSketch}
                   onBlur={this.handleBlur}
                 >
-                  Stop
+                  Parar
                   <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+Enter</span>
                 </button>
               </li>
@@ -481,7 +481,7 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">Help & Feedback</span>
+              <span className="nav__item-header">Ajuda</span>
               <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
             </button>
             <ul className="nav__dropdown">
@@ -491,7 +491,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.handleKeyboardShortcuts}
                 >
-                  Keyboard Shortcuts
+                  Atalhos de Teclado
                 </button>
               </li>
               <li className="nav__dropdown-item">
@@ -502,7 +502,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForHelp}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
-                >Reference
+                >Referência
                 </a>
               </li>
               <li className="nav__dropdown-item">
@@ -512,7 +512,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  About
+                  Sobre nós
                 </Link>
               </li>
               <li className="nav__dropdown-item">
@@ -535,17 +535,17 @@ class Nav extends React.PureComponent {
                 <span className="nav__item-header">Log in</span>
               </Link>
             </li>
-            <span className="nav__item-spacer">or</span>
+            <span className="nav__item-spacer">Ou</span>
             <li>
               <Link to="/signup">
-                <span className="nav__item-header">Sign up</span>
+                <span className="nav__item-header">Registrar</span>
               </Link>
             </li>
           </ul>}
         { __process.env.LOGIN_ENABLED && this.props.user.authenticated &&
           <ul className="nav__items-right" title="user-menu">
             <li className="nav__item">
-              <span>Hello, {this.props.user.username}!</span>
+              <span>Ola, {this.props.user.username}!</span>
             </li>
             <span className="nav__item-spacer">|</span>
             <li className={navDropdownState.account}>
@@ -560,7 +560,7 @@ class Nav extends React.PureComponent {
                   }
                 }}
               >
-                My Account
+                Minha Conta
                 <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
               </button>
               <ul className="nav__dropdown">
@@ -571,7 +571,7 @@ class Nav extends React.PureComponent {
                     onBlur={this.handleBlur}
                     onClick={this.setDropdownForNone}
                   >
-                    My sketches
+                    Meus Sketches
                   </Link>
                 </li>
                 <li className="nav__dropdown-item">
@@ -581,7 +581,7 @@ class Nav extends React.PureComponent {
                     onBlur={this.handleBlur}
                     onClick={this.setDropdownForNone}
                   >
-                    My assets
+                    Meus Assets
                   </Link>
                 </li>
                 <li className="nav__dropdown-item">
@@ -591,7 +591,7 @@ class Nav extends React.PureComponent {
                     onBlur={this.handleBlur}
                     onClick={this.setDropdownForNone}
                   >
-                    Settings
+                    Configuracoes
                   </Link>
                 </li>
                 <li className="nav__dropdown-item">

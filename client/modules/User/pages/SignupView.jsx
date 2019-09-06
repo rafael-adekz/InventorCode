@@ -36,7 +36,7 @@ class SignupView extends React.Component {
     return (
       <div className="form-container">
         <Helmet>
-          <title>p5.js Web Editor | Signup</title>
+          <title>Editor da Escola de Inventor Signup</title>
         </Helmet>
         <div className="form-container__header">
           <button className="form-container__logo-button" onClick={this.gotoHomePage}>

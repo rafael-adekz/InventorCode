@@ -1,9 +1,5 @@
 .about__logo {
-  @include themify() {
-    & path {
-      fill: getThemifyVariable('logo-color');
-    }
-  }
+
 }
 
 // hello p5 video link button css
@@ -62,12 +58,7 @@
 
 .about__content-column-asterisk {
   padding-right: #{5 / $base-font-size}rem;
-  @include themify() {
-    & path {
-      fill: getThemifyVariable('logo-color');
-      stroke: getThemifyVariable('logo-color');
-    }
-  }
+
 }
 
 .about__content-column-list {

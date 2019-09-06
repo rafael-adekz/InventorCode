@@ -34,7 +34,7 @@ class AccountView extends React.Component {
     return (
       <div className="form-container">
         <Helmet>
-          <title>p5.js Web Editor | Account</title>
+          <title>Editor da Escola de Inventor Account</title>
         </Helmet>
         <div className="form-container__header">
           <button className="form-container__logo-button" onClick={this.gotoHomePage}>
@@ -45,7 +45,7 @@ class AccountView extends React.Component {
           </button>
         </div>
         <div className="form-container__content">
-          <h2 className="form-container__title">My Account</h2>
+          <h2 className="form-container__title">Minha Conta</h2>
           <AccountForm {...this.props} />
           <h2 className="form-container__divider">Or</h2>
           <GithubButton buttonText="Login with Github" />

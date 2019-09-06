@@ -94,18 +94,18 @@ class Preferences extends React.Component {
     return (
       <section className="preferences" title="preference-menu">
         <Helmet>
-          <title>p5.js Web Editor | Preferences</title>
+          <title>Editor da Escola de Inventor Preferences</title>
         </Helmet>
         <Tabs>
           <TabList>
             <div className="preference__subheadings">
-              <Tab><h4 className="preference__subheading">General Settings</h4></Tab>
-              <Tab><h4 className="preference__subheading">Accessibility</h4></Tab>
+              <Tab><h4 className="preference__subheading">Configuração Geral</h4></Tab>
+              <Tab><h4 className="preference__subheading">Acessibilidade</h4></Tab>
             </div>
           </TabList>
           <TabPanel>
             <div className="preference">
-              <h4 className="preference__title">Theme</h4>
+              <h4 className="preference__title">Tema</h4>
               <div className="preference__options">
                 <input
                   type="radio"
@@ -117,7 +117,7 @@ class Preferences extends React.Component {
                   value="light"
                   checked={this.props.theme === 'light'}
                 />
-                <label htmlFor="light-theme-on" className="preference__option">Light</label>
+                <label htmlFor="light-theme-on" className="preference__option">Claro</label>
                 <input
                   type="radio"
                   onChange={() => this.props.setTheme('dark')}
@@ -128,7 +128,7 @@ class Preferences extends React.Component {
                   value="dark"
                   checked={this.props.theme === 'dark'}
                 />
-                <label htmlFor="dark-theme-on" className="preference__option">Dark</label>
+                <label htmlFor="dark-theme-on" className="preference__option">Escuro</label>
                 <input
                   type="radio"
                   onChange={() => this.props.setTheme('contrast')}
@@ -139,11 +139,11 @@ class Preferences extends React.Component {
                   value="contrast"
                   checked={this.props.theme === 'contrast'}
                 />
-                <label htmlFor="high-contrast-theme-on" className="preference__option">High Contrast</label>
+                <label htmlFor="high-contrast-theme-on" className="preference__option">Alto Contraste</label>
               </div>
             </div>
             <div className="preference">
-              <h4 className="preference__title">Text size</h4>
+              <h4 className="preference__title">Tamanho do Texto</h4>
               <button
                 className="preference__minus-button"
                 onClick={this.decreaseFontSize}
@@ -151,7 +151,7 @@ class Preferences extends React.Component {
                 disabled={this.state.fontSize <= 8}
               >
                 <InlineSVG src={minusUrl} alt="Decrease Font Size" />
-                <h6 className="preference__label">Decrease</h6>
+                <h6 className="preference__label">Diminuir</h6>
               </button>
               <form onSubmit={this.onFontInputSubmit}>
                 <input
@@ -172,11 +172,11 @@ class Preferences extends React.Component {
                 disabled={this.state.fontSize >= 36}
               >
                 <InlineSVG src={plusUrl} alt="Increase Font Size" />
-                <h6 className="preference__label">Increase</h6>
+                <h6 className="preference__label">Aumentar</h6>
               </button>
             </div>
             <div className="preference">
-              <h4 className="preference__title">Autosave</h4>
+              <h4 className="preference__title">Salvar automaticamente</h4>
               <div className="preference__options">
                 <input
                   type="radio"
@@ -188,7 +188,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={this.props.autosave}
                 />
-                <label htmlFor="autosave-on" className="preference__option">On</label>
+                <label htmlFor="autosave-on" className="preference__option">Sim</label>
                 <input
                   type="radio"
                   onChange={() => this.props.setAutosave(false)}
@@ -199,11 +199,11 @@ class Preferences extends React.Component {
                   value="Off"
                   checked={!this.props.autosave}
                 />
-                <label htmlFor="autosave-off" className="preference__option">Off</label>
+                <label htmlFor="autosave-off" className="preference__option">Não</label>
               </div>
             </div>
             <div className="preference">
-              <h4 className="preference__title">Word Wrap</h4>
+              <h4 className="preference__title">Quebra de Texto</h4>
               <div className="preference__options">
                 <input
                   type="radio"
@@ -215,7 +215,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={this.props.linewrap}
                 />
-                <label htmlFor="linewrap-on" className="preference__option">On</label>
+                <label htmlFor="linewrap-on" className="preference__option">Sim</label>
                 <input
                   type="radio"
                   onChange={() => this.props.setLinewrap(false)}
@@ -226,13 +226,13 @@ class Preferences extends React.Component {
                   value="Off"
                   checked={!this.props.linewrap}
                 />
-                <label htmlFor="linewrap-off" className="preference__option">Off</label>
+                <label htmlFor="linewrap-off" className="preference__option">Não</label>
               </div>
             </div>
           </TabPanel>
           <TabPanel>
             <div className="preference">
-              <h4 className="preference__title">Line numbers</h4>
+              <h4 className="preference__title">Linhas Numeradas</h4>
               <div className="preference__options">
                 <input
                   type="radio"
@@ -244,7 +244,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={this.props.lineNumbers}
                 />
-                <label htmlFor="line-numbers-on" className="preference__option">On</label>
+                <label htmlFor="line-numbers-on" className="preference__option">Sim</label>
                 <input
                   type="radio"
                   onChange={() => this.props.setLineNumbers(false)}
@@ -255,11 +255,11 @@ class Preferences extends React.Component {
                   value="Off"
                   checked={!this.props.lineNumbers}
                 />
-                <label htmlFor="line-numbers-off" className="preference__option">Off</label>
+                <label htmlFor="line-numbers-off" className="preference__option">Não</label>
               </div>
             </div>
             <div className="preference">
-              <h4 className="preference__title">Lint warning sound</h4>
+              <h4 className="preference__title">Som de ERRO no codigo</h4>
               <div className="preference__options">
                 <input
                   type="radio"
@@ -271,7 +271,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={this.props.lintWarning}
                 />
-                <label htmlFor="lint-warning-on" className="preference__option">On</label>
+                <label htmlFor="lint-warning-on" className="preference__option">Sim</label>
                 <input
                   type="radio"
                   onChange={() => this.props.setLintWarning(false)}
@@ -282,19 +282,19 @@ class Preferences extends React.Component {
                   value="Off"
                   checked={!this.props.lintWarning}
                 />
-                <label htmlFor="lint-warning-off" className="preference__option">Off</label>
+                <label htmlFor="lint-warning-off" className="preference__option">Não</label>
                 <button
                   className="preference__preview-button"
                   onClick={() => beep.play()}
                   aria-label="preview sound"
                 >
-                  Preview sound
+                  Ouvir Som
                 </button>
               </div>
             </div>
             <div className="preference">
-              <h4 className="preference__title">Accessible text-based canvas</h4>
-              <h6 className="preference__subtitle">Used with screen reader</h6>
+              <h4 className="preference__title">Canvas de Texto Acessivel</h4>
+              <h6 className="preference__subtitle">Para ser usado com leitores de tela</h6>
 
               <div className="preference__options">
                 <input
@@ -308,7 +308,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={(this.props.textOutput)}
                 />
-                <label htmlFor="text-output-on" className="preference__option preference__canvas">Plain-text</label>
+                <label htmlFor="text-output-on" className="preference__option preference__canvas">Texto Puro</label>
                 <input
                   type="checkbox"
                   onChange={(event) => {
@@ -320,7 +320,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={(this.props.gridOutput)}
                 />
-                <label htmlFor="table-output-on" className="preference__option preference__canvas">Table-text</label>
+                <label htmlFor="table-output-on" className="preference__option preference__canvas">Texto em Tabela</label>
                 <input
                   type="checkbox"
                   onChange={(event) => {
@@ -332,7 +332,7 @@ class Preferences extends React.Component {
                   value="On"
                   checked={(this.props.soundOutput)}
                 />
-                <label htmlFor="sound-output-on" className="preference__option preference__canvas">Sound</label>
+                <label htmlFor="sound-output-on" className="preference__option preference__canvas">Som</label>
               </div>
             </div>
           </TabPanel>

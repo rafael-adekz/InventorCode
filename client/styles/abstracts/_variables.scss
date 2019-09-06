@@ -1,7 +1,7 @@
 $base-font-size: 12;
 
 //colors
-$p5js-pink: #ed225d;
+$p5js-pink: #ffffff;
 $white: #fff;
 $black: #000;
 $yellow: #F5DC23;
@@ -16,7 +16,8 @@ $p5-contrast-pink: #FFA9D9;
 
 $themes: (
   light: (
-    logo-color: $p5js-pink,
+    logo-color: black,
+    asterisk-color:orange,
     primary-text-color: #333,
     dropzone-text-color: #333,
     modal-button-color: #333,
@@ -30,11 +31,11 @@ $themes: (
     button-border-color: #979797,
     toolbar-button-color: $p5js-pink,
     toolbar-button-background-color: #f4f4f4,
-    button-background-hover-color: $p5js-pink,
+    button-background-hover-color: rgb(248, 170, 0),
     button-background-active-color: #f10046,
     button-nav-inactive-color: #a0a0a0,
     button-hover-color: $white,
-    button-active-color: $white,
+    button-active-color: orange,
     modal-background-color: #f4f4f4,
     modal-button-background-color: #e6e6e6,
     modal-border-color: rgba(17, 17, 17, 0.3),
@@ -63,7 +64,7 @@ $themes: (
     search-hover-background-color: #4d4d4d,
     dropdown-color: #414141,
     keyboard-shortcut-color: #757575,
-    nav-hover-color: $p5js-pink,
+    nav-hover-color: orange,
     error-color: $p5js-pink,
     codefold-icon-open: url(../images/triangle-arrow-down.svg),
     codefold-icon-closed: url(../images/triangle-arrow-right.svg)

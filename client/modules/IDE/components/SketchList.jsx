@@ -268,9 +268,9 @@ class SketchList extends React.Component {
 
   getSketchesTitle() {
     if (this.props.username === this.props.user.username) {
-      return 'p5.js Web Editor | My sketches';
+      return 'Editor da Escola de Inventor My sketches';
     }
-    return `p5.js Web Editor | ${this.props.username}'s sketches`;
+    return `Editor da Escola de Inventor ${this.props.username}'s sketches`;
   }
 
   hasSketches() {

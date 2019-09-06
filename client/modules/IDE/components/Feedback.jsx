@@ -7,7 +7,7 @@ function Feedback(props) {
   return (
     <div className="feedback__content">
       <Helmet>
-        <title>p5.js Web Editor | Feedback</title>
+        <title>Editor da Escola de Inventor Feedback</title>
       </Helmet>
       <div className="feedback__content-pane">
         <h2 className="feedback__content-pane-header">

@@ -17,9 +17,9 @@ class AssetList extends React.Component {
 
   getAssetsTitle() {
     if (!this.props.username || this.props.username === this.props.user.username) {
-      return 'p5.js Web Editor | My assets';
+      return 'Editor da Escola de Inventor My assets';
     }
-    return `p5.js Web Editor | ${this.props.username}'s assets`;
+    return `Editor da Escola de Inventor ${this.props.username}'s assets`;
   }
 
   hasAssets() {

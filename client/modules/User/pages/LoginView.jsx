@@ -36,7 +36,7 @@ class LoginView extends React.Component {
     return (
       <div className="form-container">
         <Helmet>
-          <title>p5.js Web Editor | Login</title>
+          <title>Editor da Escola de Inventor Login</title>
         </Helmet>
         <div className="form-container__header">
           <button className="form-container__logo-button" onClick={this.gotoHomePage}>
@@ -49,12 +49,12 @@ class LoginView extends React.Component {
         <div className="form-container__content">
           <h2 className="form-container__title">Log In</h2>
           <LoginForm {...this.props} />
-          <h2 className="form-container__divider">Or</h2>
+          <h2 className="form-container__divider">Ou</h2>
           <GithubButton buttonText="Login with Github" />
           <GoogleButton buttonText="Login with Google" />
           <p className="form__navigation-options">
             Don&apos;t have an account?&nbsp;
-            <Link className="form__signup-button" to="/signup">Sign Up</Link>
+            <Link className="form__signup-button" to="/signup">Registrar</Link>
           </p>
           <p className="form__navigation-options">
             Forgot your password?&nbsp;

@@ -100,7 +100,7 @@ class Toolbar extends React.Component {
             }}
           />
           <label htmlFor="autorefresh" className="toolbar__autorefresh-label">
-            Auto-refresh
+            Atualizar Automaticamente
           </label>
         </div>
         <div className={nameContainerClass}>
