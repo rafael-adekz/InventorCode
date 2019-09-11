@@ -195,7 +195,7 @@ export class FileNode extends React.Component {
                               onFocus={this.onFocusComponent}
                               className="sidebar__file-item-option"
                             >
-                              Add File
+                              Adicionar Arquivo
                             </button>
                           </li>
                         );

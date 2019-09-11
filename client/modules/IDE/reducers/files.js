@@ -8,7 +8,6 @@ const defaultSketch = `function setup() {
 function draw() {
   background(220);
 }`;
-
 const defaultHTML =
 `<!DOCTYPE html>
 <html>
@@ -16,6 +15,8 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/molleindustria/p5.play@master/lib/p5.play.js"></script>
+    <script src="https://rawcdn.githack.com/leonardof131/easyEditor/2cc021929d789d921079be0363dc5d91022b8339/easyEditor.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
@@ -25,7 +26,6 @@ const defaultHTML =
   </body>
 </html>
 `;
-
 const defaultCSS =
 `html, body {
   margin: 0;
@@ -35,14 +35,6 @@ canvas {
   display: block;
 }
 `;
-const defaultPlay = `function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}`;
-
 const initialState = () => {
   const a = objectID().toHexString();
   const b = objectID().toHexString();
@@ -54,7 +46,7 @@ const initialState = () => {
       name: 'root',
       id: r,
       _id: r,
-      children: [a, b, c],
+      children: [a, b, c, d],
       fileType: 'folder',
       content: ''
     },
@@ -68,21 +60,20 @@ const initialState = () => {
       children: []
     },
     {
-      name: 'play.js',
-      content: defaultPlay,
-      id: d,
-      _id: d,
-      fileType: 'file',
-      children: []
-    },
-
-    {
       name: 'index.html',
       content: defaultHTML,
       id: b,
       _id: b,
       fileType: 'file',
       children: []
+    },
+    {
+      name: 'teste',
+      id: d,
+      _id: d,
+      children: [],
+      fileType: 'folder',
+      content: 'moon.jpg'
     },
     {
       name: 'style.css',
@@ -137,7 +128,7 @@ const files = (state, action) => {
       return state.map((file) => {
         if (file.id !== action.id) {
           return file;
-        }
+ simplicity       }
 
         return Object.assign({}, file, { content: action.content });
       });

@@ -197,7 +197,7 @@ class IDEView extends React.Component {
         <Toolbar />
         {this.props.ide.preferencesIsVisible &&
           <Overlay
-            title="Settings"
+            title="Configurações"
             ariaLabel="settings"
             closeOverlay={this.props.closePreferences}
           >
