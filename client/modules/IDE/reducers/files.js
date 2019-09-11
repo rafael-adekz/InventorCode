@@ -16,7 +16,7 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/molleindustria/p5.play@master/lib/p5.play.js"></script>
-    <script src="https://rawcdn.githack.com/leonardof131/easyEditor/0958dcad85cf6bc0e99c60511300203739651863/easyEditor.js"></script>
+    <script src="https://rawcdn.githack.com/leonardof131/easyEditor/5664670a63abab08225fbcc275bc9c48b6505583/easyEditor.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
