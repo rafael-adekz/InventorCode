@@ -535,10 +535,10 @@ class Nav extends React.PureComponent {
                 <span className="nav__item-header">Log in</span>
               </Link>
             </li>
-            <span className="nav__item-spacer">Ou</span>
+            <span className="nav__item-spacer"></span>
             <li>
               <Link to="/signup">
-                <span className="nav__item-header">Registrar</span>
+                <span className="nav__item-header"></span>
               </Link>
             </li>
           </ul>}

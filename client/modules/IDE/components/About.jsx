@@ -26,10 +26,43 @@ function About(props) {
         </p>  */}
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">Saiba Mais</h3>
+        <h3 className="about__content-column-title">Inventor Box</h3>
         <p className="about__content-column-list">
           <a
-            href="https://p5js.org/examples/"
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Inventor Box?
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Inventor Box?
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Maker?
+          </a>
+        </p>
+      </div>
+      <div className="about__content-column">
+        <h3 className="about__content-column-title">Recursos</h3>
+        <p className="about__content-column-list">
+          <a
+            href="https://tableless.github.io/iniciantes/manual/js/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -39,35 +72,12 @@ function About(props) {
         </p>
         <p className="about__content-column-list">
           <a
-            href="https://p5js.org/learn/"
+            href="https://escoladeinventor.com.br/blog/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
           Aprenda
-          </a>
-        </p>
-      </div>
-      <div className="about__content-column">
-        <h3 className="about__content-column-title">Resources</h3>
-        <p className="about__content-column-list">
-          <a
-            href="https://p5js.org/libraries/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Bibliotecas
-          </a>
-        </p>
-        <p className="about__content-column-list">
-          <a
-            href="https://p5js.org/reference/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Referencia
           </a>
         </p>
         <p className="about__content-column-list">
@@ -77,33 +87,33 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Fórum
+          Comandos
           </a>
         </p>
       </div>
       <div className="about__footer">
         <p className="about__footer-list">
           <a
-            href="https://github.com/processing/p5.js-web-editor"
+            href="https://escoladeinventor.com.br/"
             target="_blank"
             rel="noopener noreferrer"
-          >Contribua
+          >Escola de Inventor
           </a>
         </p>
         <p className="about__footer-list">
           <a
-            href="https://github.com/processing/p5.js-web-editor/issues/new"
+            href="https://www.facebook.com/escoladeinventor/"
             target="_blank"
             rel="noopener noreferrer"
-          >Reportar um bug
+          >Facebook
           </a>
         </p>
         <p className="about__footer-list">
           <a
-            href="https://twitter.com/p5xjs?lang=en"
+            href="https://www.instagram.com/escoladeinventor/"
             target="_blank"
             rel="noopener noreferrer"
-          >Twitter
+          >Instagram
           </a>
         </p>
       </div>
