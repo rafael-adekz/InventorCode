@@ -330,14 +330,7 @@ exports[`Nav renders correctly 1`] = `
         <li
           className="nav__dropdown-item"
         >
-          <a
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            style={Object {}}
-          >
-            Feedback
-          </a>
+       
         </li>
       </ul>
     </li>

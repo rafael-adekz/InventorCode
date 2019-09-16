@@ -1,13 +1,16 @@
 import objectID from 'bson-objectid';
 import * as ActionTypes from '../../../constants';
 
-const defaultSketch = `function setup() {
-  createCanvas(400, 400);
+const defaultSketch = `//coloque suas variaveis abaixo
+
+  function setup() {
+  
 }
 
 function draw() {
-  background(220);
+  
 }`;
+
 const defaultHTML =
 `<!DOCTYPE html>
 <html>
@@ -15,8 +18,14 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/molleindustria/p5.play@master/lib/p5.play.js"></script>
-    <script src="https://rawcdn.githack.com/leonardof131/easyEditor/5bba5233a7a27cfeefbc8e141426f0c881a983f5/easyEditor.js"></script>
+    <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/69411f088d315fa34c063d3357c870d6fdbb8b38/easyEditor.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/f078505d10f1436665141ed959f1efdddcd0713d/fundo_VS_3_Com Sprites.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/97cf238832bbaaddb360e4be31f802e5a32dbd1e/Sprites_VS_3.js"></script>
+    <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
+    <script src="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.js"></script>
+    <script>$(function() {$('body').ruler({vRuleSize: 0,hRuleSize: 0,showCrosshair : false,showMousePos: true});});</script>
+    <link href="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
@@ -26,6 +35,7 @@ const defaultHTML =
   </body>
 </html>
 `;
+
 const defaultCSS =
 `html, body {
   margin: 0;
@@ -35,18 +45,18 @@ canvas {
   display: block;
 }
 `;
+
 const initialState = () => {
   const a = objectID().toHexString();
   const b = objectID().toHexString();
   const c = objectID().toHexString();
-  const d = objectID().toHexString();
   const r = objectID().toHexString();
   return [
     {
       name: 'root',
       id: r,
       _id: r,
-      children: [a, b, c, d],
+      children: [a, b, c],
       fileType: 'folder',
       content: ''
     },
@@ -66,14 +76,6 @@ const initialState = () => {
       _id: b,
       fileType: 'file',
       children: []
-    },
-    {
-      name: 'teste',
-      id: d,
-      _id: d,
-      children: [],
-      fileType: 'folder',
-      content: 'moon.jpg'
     },
     {
       name: 'style.css',
@@ -128,7 +130,7 @@ const files = (state, action) => {
       return state.map((file) => {
         if (file.id !== action.id) {
           return file;
- simplicity       }
+        }
 
         return Object.assign({}, file, { content: action.content });
       });

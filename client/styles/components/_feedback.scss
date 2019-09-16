@@ -23,7 +23,7 @@
 }
 
 .feedback__github-logo svg {
-  width: #{12 / $base-font-size}rem;
+  width: #{12 / $base-font-size}rezm;
   height: #{12 / $base-font-size}rem;
   @include themify() {
     fill: getThemifyVariable('inactive-text-color');

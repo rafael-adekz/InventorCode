@@ -91,10 +91,6 @@ router.get('/about', (req, res) => {
   res.send(renderIndex());
 });
 
-router.get('/feedback', (req, res) => {
-  res.send(renderIndex());
-});
-
 router.get('/:username/sketches', (req, res) => {
   userExists(req.params.username, exists => (
     exists ? res.send(renderIndex()) : get404Sketch(html => res.send(html))
