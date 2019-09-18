@@ -49,17 +49,6 @@ class LoginView extends React.Component {
         <div className="form-container__content">
           <h2 className="form-container__title">Log In</h2>
           <LoginForm {...this.props} />
-          <h2 className="form-container__divider">Ou</h2>
-          <GithubButton buttonText="Login with Github" />
-          <GoogleButton buttonText="Login with Google" />
-          <p className="form__navigation-options">
-            Don&apos;t have an account?&nbsp;
-            <Link className="form__signup-button" to="/signup">Registrar</Link>
-          </p>
-          <p className="form__navigation-options">
-            Forgot your password?&nbsp;
-            <Link className="form__reset-password-button" to="/reset-password">Reset your password</Link>
-          </p>
         </div>
       </div>
     );

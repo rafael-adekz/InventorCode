@@ -372,7 +372,7 @@ class IDEView extends React.Component {
         { this.props.location.pathname.match(/sketches$/) &&
           <Overlay
             ariaLabel="project list"
-            title="Open a Sketch"
+            title="Exemplos"
             previousPath={this.props.ide.previousPath}
           >
             <Searchbar />
@@ -427,7 +427,7 @@ class IDEView extends React.Component {
         }
         { this.props.ide.keyboardShortcutVisible &&
           <Overlay
-            title="Keyboard Shortcuts"
+            title="Atalhos do teclado"
             ariaLabel="keyboard shortcuts"
             closeOverlay={this.props.closeKeyboardShortcutModal}
           >
