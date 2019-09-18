@@ -3,76 +3,76 @@ import { metaKeyName, } from '../../../utils/metaKey';
 
 function KeyboardShortcutModal() {
   return (
-    <ul className="keyboard-shortcuts" title="keyboard shortcuts">
+    <ul className="keyboard-shortcuts" title="Atalhos do teclado">
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">{'\u21E7'} + Tab</span>
-        <span>Tidy</span>
+        <span>Arrumado</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + S
         </span>
-        <span>Save</span>
+        <span>Salvar</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + F
         </span>
-        <span>Find Text</span>
+        <span>Localizar Texto</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + G
         </span>
-        <span>Find Next Text Match</span>
+        <span>Localizar a próxima correspôndencia de texto</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + {'\u21E7'} + G
         </span>
-        <span>Find Previous Text Match</span>
+        <span>Localizar correspôndencia de texto anterior</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + [
         </span>
-        <span>Indent Code Left</span>
+        <span>Avançar código a esquerda</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + ]
         </span>
-        <span>Indent Code Right</span>
+        <span>Avançar código a direita</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + /
         </span>
-        <span>Comment Line</span>
+        <span>Linha de comentário</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + Enter
         </span>
-        <span>Start Sketch</span>
+        <span>Iniciar esboço</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + {'\u21E7'} + Enter
         </span>
-        <span>Stop Sketch</span>
+        <span>Parar esboço</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + {'\u21E7'} + 1
         </span>
-        <span>Turn on Accessible Output</span>
+        <span>Ativar saída acessível</span>
       </li>
       <li className="keyboard-shortcut-item">
         <span className="keyboard-shortcut__command">
           {metaKeyName} + {'\u21E7'} + 2
         </span>
-        <span>Turn off Accessible Output</span>
+        <span>Desativar saída acessivel</span>
       </li>
     </ul>
   );

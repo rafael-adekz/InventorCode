@@ -517,12 +517,13 @@ class Nav extends React.PureComponent {
               </li>
               <li className="nav__dropdown-item">
                 <Link
-                  to="/feedback"
+                  to="https://www.hostinger.com.br/tutoriais/o-que-e-javascript/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onFocus={this.handleFocusForHelp}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
-                >
-                  Feedback
+                >O que é JavaScript?
                 </Link>
               </li>
             </ul>
