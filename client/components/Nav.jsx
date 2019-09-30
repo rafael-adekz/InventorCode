@@ -496,7 +496,7 @@ class Nav extends React.PureComponent {
               </li>
               <li className="nav__dropdown-item">
                 <a
-                  href="https://p5js.org/reference/"
+                  href="http://referencia.escoladeinventor.com.br/index.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   onFocus={this.handleFocusForHelp}
