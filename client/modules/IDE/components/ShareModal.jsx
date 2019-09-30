@@ -1,3 +1,4 @@
+import QRCode from 'qrcode.react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import CopyableInput from './CopyableInput';
@@ -10,30 +11,22 @@ class ShareModal extends React.PureComponent {
       projectName
     } = this.props;
     const hostname = window.location.origin;
+    const downloadQR = () => {};
     return (
-      <div className="share-modal">
+      <div className="share-modal" align="center">
         <h3 className="share-modal__project-name">
           {projectName}
         </h3>
-        <CopyableInput
-          label="Embed"
-          value={`<iframe src="${hostname}/${ownerUsername}/embed/${projectId}"></iframe>`}
-        />
-        <CopyableInput
-          label="Present"
-          hasPreviewLink
-          value={`${hostname}/${ownerUsername}/present/${projectId}`}
-        />
-        <CopyableInput
-          label="Fullscreen"
-          hasPreviewLink
-          value={`${hostname}/${ownerUsername}/full/${projectId}`}
-        />
-        <CopyableInput
-          label="Edit"
-          hasPreviewLink
-          value={`${hostname}/${ownerUsername}/sketches/${projectId}`}
-        />
+        <div>
+          <QRCode
+            id={`${projectId}`}
+            value={`${hostname}/${ownerUsername}/full/${projectId}`}
+            size={290}
+            level="H"
+            includeMargin
+          />
+
+        </div>
       </div>
     );
   }
