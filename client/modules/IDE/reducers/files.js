@@ -16,7 +16,7 @@ const defaultHTML =
 `<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://rawcdn.githack.com/leonardof131/p5js-translate/078bc08883d2aadbe0dbe399ec1ae2c0284234ab/p5 traduzido.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
