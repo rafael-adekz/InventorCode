@@ -147,6 +147,8 @@
     "primer-tooltips": "^1.5.11",
     "prop-types": "^15.6.2",
     "q": "^1.4.1",
+    "qrcode": "^1.4.2",
+    "qrcode.react": "^0.9.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.1.3",
