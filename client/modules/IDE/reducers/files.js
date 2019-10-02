@@ -22,7 +22,7 @@ const defaultHTML =
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/0a5e9621e9782dad4c03e692fa09ce96a3a4ffe7/easyEditor.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/f32c59512213041de941bbaaf45c721dda98bccd/fundo_VS_3_Com Sprites.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/f32c59512213041de941bbaaf45c721dda98bccd/Sprites_VS_3.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/b6853653304aa50fc9e16d245baa10224766c9c8/Sprites_VS_3.js"></script>
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
     <script src="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.js"></script>
     <script>$(function() {$('body').ruler({vRuleSize: 0,hRuleSize: 0,showCrosshair : false,showMousePos: true});});</script>
