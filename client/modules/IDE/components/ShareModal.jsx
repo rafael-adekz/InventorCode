@@ -25,7 +25,11 @@ class ShareModal extends React.PureComponent {
             level="H"
             includeMargin
           />
-
+          <CopyableInput
+            label="Link para copiar!"
+            hasPreviewLink
+            value={`${hostname}/${ownerUsername}/full/${projectId}`}
+          />
         </div>
       </div>
     );
