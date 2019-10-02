@@ -189,6 +189,7 @@ const files = (state, action) => {
       //   return file;
       // });
       // return newState.filter(file => file.id !== action.id);
+      //teste
     }
     case ActionTypes.SET_SELECTED_FILE:
       return state.map((file) => {
