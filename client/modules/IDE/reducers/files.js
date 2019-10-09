@@ -20,7 +20,7 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/fcb19db95d786e8096d4011bf32800ee868201ba/easyEditor.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/56f48f8dfcca596dfec9e50a266fbabc568cc4cf/easyEditor.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/b9ca127a957ad27129071a8ee5373bbc8171b28b/fundo_VS_3_Com Sprites.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/b9ca127a957ad27129071a8ee5373bbc8171b28b/Sprites_VS_3.js"></script>
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
