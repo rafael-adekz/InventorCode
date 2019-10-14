@@ -19,6 +19,7 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/fabbe712f5eab584006b79e76b50f8679b77e494/Preload.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/14cff2d9d2689fed29abdee7d6f79d05040e0bef/easyEditor.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/af869f278bf62eed7627b5f1acc68a2df9988e2b/fundo_VS_3_Com Sprites.js"></script>
