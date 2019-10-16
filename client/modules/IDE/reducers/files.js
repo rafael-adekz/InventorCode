@@ -21,9 +21,9 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/fabbe712f5eab584006b79e76b50f8679b77e494/Preload.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/14cff2d9d2689fed29abdee7d6f79d05040e0bef/easyEditor.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/af869f278bf62eed7627b5f1acc68a2df9988e2b/fundo_VS_3_Com Sprites.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/c101f44a7297a7870c811b12d3faebfba1ab71af/Sprites_VS_3.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/70c615e68c36dcfb660fc997e0f0340f84f19f86/easyEditor.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/70c615e68c36dcfb660fc997e0f0340f84f19f86/fundo_VS_3_Com Sprites.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/70c615e68c36dcfb660fc997e0f0340f84f19f86/Sprites_VS_3.js"></script>
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
     <script src="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.js"></script>
     <script>$(function() {$('body').ruler({vRuleSize: 0,hRuleSize: 0,showCrosshair : false,showMousePos: true});});</script>
