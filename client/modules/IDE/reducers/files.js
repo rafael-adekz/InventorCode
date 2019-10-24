@@ -16,7 +16,7 @@ const defaultHTML =
 `<!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/07ed56394382fb3edd991e2381c38c38017646a5/p5_pt.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/fabbe712f5eab584006b79e76b50f8679b77e494/Preload.js"></script>
