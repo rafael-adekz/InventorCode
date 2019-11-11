@@ -21,8 +21,8 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/fabbe712f5eab584006b79e76b50f8679b77e494/Preload.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/edb86a41686b498fdf871861033cf8dcbc31042d/easyEditor.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/e4d430af566bd9f113cb435653eb5560abff848e/fundo_VS_3_Com Sprites.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/d27eca597c01f8209e208fe63cc72fc0bb85d6ac/easyEditor.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/d27eca597c01f8209e208fe63cc72fc0bb85d6ac/fundo_VS_3_Com Sprites.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/da352eeec4a5d61b63f19691896262d862c2ef4c/Sprites_VS_3.js"></script>
     <script src="https://rawcdn.githack.com/IDMNYU/p5.js-speech/e7ae007d61f048fc2379971b0de7d5db8abb7eee/lib/p5.speech.js"></script>
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
