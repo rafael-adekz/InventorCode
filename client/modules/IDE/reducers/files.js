@@ -22,7 +22,7 @@ const defaultHTML =
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/fabbe712f5eab584006b79e76b50f8679b77e494/Preload.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/017ca6fb30a2faba5fec20778518b9d6c5e6da3d/easyEditor.js"></script>
-    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/d27eca597c01f8209e208fe63cc72fc0bb85d6ac/fundo_VS_3_Com Sprites.js"></script>
+    <script src="https://rawcdn.githack.com/fabiojavaroni/lib/e85f6ca492bccac6e5771d02db1b095228ff95d8/fundo_VS_3_Com Sprites.js"></script>
     <script src="https://rawcdn.githack.com/fabiojavaroni/lib/8d271b3e1ea17b56388acbcb45513822f032bd4e/Sprites_VS_3.js"></script>
     <script src="https://rawcdn.githack.com/IDMNYU/p5.js-speech/e7ae007d61f048fc2379971b0de7d5db8abb7eee/lib/p5.speech.js"></script>
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
