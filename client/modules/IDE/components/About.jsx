@@ -26,7 +26,7 @@ function About(props) {
         </p>  */}
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">Inventor Box</h3>
+        <h3 className="about__content-column-title">Este Site</h3>
         <p className="about__content-column-list">
           <a
             href="https://escoladeinventor.com.br/blog/"
@@ -34,7 +34,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          O que é Inventor Box?
+          O que é Este Site?
           </a>
         </p>
         <p className="about__content-column-list">
@@ -44,7 +44,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          O que é Inventor Box?
+          O que é Este Site?
           </a>
         </p>
         <p className="about__content-column-list">
