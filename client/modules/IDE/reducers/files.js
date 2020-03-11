@@ -19,7 +19,6 @@ const defaultHTML =
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/p5_pt.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-    <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/Preload.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/easyEditor.js"></script>
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/fundo_VS_3_Com+Sprites.js"></script>
