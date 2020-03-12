@@ -549,7 +549,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.handleKeyboardShortcuts}
                 >
-                  Atalhos de Teclado
+                  Personagens
                 </button>
               </li>
               <li className="nav__dropdown-item">
@@ -560,7 +560,7 @@ class Nav extends React.PureComponent {
                   onFocus={this.handleFocusForHelp}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
-                >Referência
+                >Sons
                 </a>
               </li>
               <li className="nav__dropdown-item">
@@ -570,18 +570,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  Sobre nós
-                </Link>
-              </li>
-              <li className="nav__dropdown-item">
-                <Link
-                  to="https://www.hostinger.com.br/tutoriais/o-que-e-javascript/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onFocus={this.handleFocusForHelp}
-                  onBlur={this.handleBlur}
-                  onClick={this.setDropdownForNone}
-                >O que é JavaScript?
+                  Fundos de Tela
                 </Link>
               </li>
             </ul>
