@@ -528,6 +528,64 @@ class Nav extends React.PureComponent {
               </li>
             </ul>
           </li>
+          <li className={navDropdownState.biblioteca}>
+            <button
+              onClick={this.toggleDropdownForHelp}
+              onBlur={this.handleBlur}
+              onFocus={this.clearHideTimeout}
+              onMouseOver={() => {
+                if (this.state.dropdownOpen !== 'none') {
+                  this.setDropdown('help');
+                }
+              }}
+            >
+              <span className="nav__item-header">Ajuda</span>
+              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+            </button>
+            <ul className="nav__dropdown">
+              <li className="nav__dropdown-item">
+                <button
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.handleKeyboardShortcuts}
+                >
+                  Atalhos de Teclado
+                </button>
+              </li>
+              <li className="nav__dropdown-item">
+                <a
+                  href="https://p5js.org/reference/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >Referência
+                </a>
+              </li>
+              <li className="nav__dropdown-item">
+                <Link
+                  to="/about"
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >
+                  Sobre nós
+                </Link>
+              </li>
+              <li className="nav__dropdown-item">
+                <Link
+                  to="https://www.hostinger.com.br/tutoriais/o-que-e-javascript/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >O que é JavaScript?
+                </Link>
+              </li>
+            </ul>
+          </li>
         </ul>
         { __process.env.LOGIN_ENABLED && !this.props.user.authenticated &&
           <ul className="nav__items-right" title="user-menu">
