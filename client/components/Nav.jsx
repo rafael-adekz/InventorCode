@@ -570,7 +570,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  Fundos de Tela
+                  Fundos de Tela!
                 </Link>
               </li>
             </ul>
