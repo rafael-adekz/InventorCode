@@ -238,6 +238,10 @@ class Nav extends React.PureComponent {
       account: classNames({
         'nav__item': true,
         'nav__item--open': this.state.dropdownOpen === 'account'
+      }),
+      biblioteca: classNames({
+        'nav__item': true,
+        'nav__item--open': this.state.dropdownOpen === 'biblioteca'
       })
     };
     return (
