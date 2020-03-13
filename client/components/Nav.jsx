@@ -53,6 +53,8 @@ class Nav extends React.PureComponent {
     this.handleFocusForSketch = this.handleFocus.bind(this, 'sketch');
     this.toggleDropdownForHelp = this.toggleDropdown.bind(this, 'help');
     this.handleFocusForHelp = this.handleFocus.bind(this, 'help');
+    this.toggleDropdownForBiblioteca = this.toggleDropdown.bind(this, 'biblioteca');
+    this.handleFocusForBiblioteca = this.handleFocus.bind(this, 'biblioteca');
     this.toggleDropdownForAccount = this.toggleDropdown.bind(this, 'account');
     this.handleFocusForAccount = this.handleFocus.bind(this, 'account');
     this.closeDropDown = this.closeDropDown.bind(this);
@@ -534,7 +536,7 @@ class Nav extends React.PureComponent {
           </li>
           <li className={navDropdownState.biblioteca}>
             <button
-              onClick={this.toggleDropdownForHelp}
+              onClick={this.toggleDropdownForBiblioteca}
               onBlur={this.handleBlur}
               onFocus={this.clearHideTimeout}
               onMouseOver={() => {
