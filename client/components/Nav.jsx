@@ -513,7 +513,7 @@ class Nav extends React.PureComponent {
               </li>
               <li className="nav__dropdown-item">
                 <Link
-                  to="/about"
+                  to="/personagens"
                   onFocus={this.handleFocusForHelp}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
