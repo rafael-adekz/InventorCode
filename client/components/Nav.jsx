@@ -574,7 +574,7 @@ class Nav extends React.PureComponent {
                   to="/about"
                   onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
-                  onClick={this.listAlbums()}
+                  onClick={this.setDropdownForNone}
                 >
                   Fundos de Tela!
                 </Link>
