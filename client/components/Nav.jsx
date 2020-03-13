@@ -551,7 +551,7 @@ class Nav extends React.PureComponent {
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
                 <button
-                  onFocus={this.handleFocusForHelp}
+                  onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                  /* onClick={this.handleKeyboardShortcuts} */
                 >
@@ -563,7 +563,7 @@ class Nav extends React.PureComponent {
                   href="https://p5js.org/reference/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onFocus={this.handleFocusForHelp}
+                  onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >Sons
@@ -572,7 +572,7 @@ class Nav extends React.PureComponent {
               <li className="nav__dropdown-item">
                 <Link
                   to="/about"
-                  onFocus={this.handleFocusForHelp}
+                  onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
