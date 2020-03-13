@@ -42,4 +42,4 @@ function listAlbums() {
   });
 }
 
-export default About;
+export default listAlbums;
