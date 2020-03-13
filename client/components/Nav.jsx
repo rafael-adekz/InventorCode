@@ -541,7 +541,7 @@ class Nav extends React.PureComponent {
               onFocus={this.clearHideTimeout}
               onMouseOver={() => {
                 if (this.state.dropdownOpen !== 'none') {
-                  this.setDropdown('help');
+                  this.setDropdown('biblioteca');
                 }
               }}
             >
