@@ -547,7 +547,7 @@ class Nav extends React.PureComponent {
                 <button
                   onFocus={this.handleFocusForHelp}
                   onBlur={this.handleBlur}
-                  onClick={this.handleKeyboardShortcuts}
+                 /* onClick={this.handleKeyboardShortcuts} */
                 >
                   Personagens
                 </button>
