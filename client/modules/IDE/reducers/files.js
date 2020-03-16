@@ -33,7 +33,7 @@ const defaultHTML =
   </head>
   <body>
     <div id="conteiner">
-    <img src="t4.png" class="img"> 
+    <img src="https://codigosinventor.s3-sa-east-1.amazonaws.com/t4.png" class="img"> 
     <script src="sketch.js"></script>
     </div>
   </body>
