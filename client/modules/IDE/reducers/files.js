@@ -32,18 +32,30 @@ const defaultHTML =
 
   </head>
   <body>
+    <div id="conteiner">
+    <img src="t4.png" class="img"> 
     <script src="sketch.js"></script>
+    </div>
   </body>
 </html>
 `;
 
 const defaultCSS =
-`html, body {
+`.img{position:absolute;z-index:1;}
+  html, body {
   margin: 0;
   padding: 0;
 }
 canvas {
-  display: block;
+  position:relative;
+  z-index:-1;
+  display: block;  
+  left: 15px;
+  top: 22px;
+}
+regua{
+  position:relative;
+  z-index:14;
 }
 `;
 
