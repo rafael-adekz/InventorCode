@@ -8,6 +8,10 @@ export function renderIndex() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords" content="p5.js, p5.js web editor, web editor, processing, code editor" />
       <meta name="description" content="A web editor for p5.js, a JavaScript library with the goal of making coding accessible to artists, designers, educators, and beginners." />
+      <meta name="AmazonID" content="EnCt2acccf1c747505e9bd79842d620a8e0f1f8da9963acccf1c747505e9bd79842d6vU1lzV=5qwJ
+      ynDzenV2x/ccaBe0VuDR/WTa/MKnKDvu+v8I189wAiKPesAxIl1ZWGm2qOFj4u2BpmCNz3g4qiTUJbp3
+      hILlVx0PwpBhRVY5aBbs8JLelkaZwrNLJMSslxNSOnBFCLXk16c0NNuqp0crJA0f4FI2tfKQV+WTy2dT
+      XfWwUGXAZKD/vM2k73hA=IwEmS" />
       <title>Editor Escola de Inventor</title>
       ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
       <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>

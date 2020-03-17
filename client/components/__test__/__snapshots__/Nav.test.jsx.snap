@@ -324,7 +324,7 @@ exports[`Nav renders correctly 1`] = `
             onFocus={[Function]}
             style={Object {}}
           >
-            Sobre nos
+            
           </a>
         </li>
         <li
