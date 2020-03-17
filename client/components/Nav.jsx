@@ -13,7 +13,7 @@ import { logoutUser } from '../modules/User/actions';
 import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
-const shareURL = requiere('../images/shareicon.svg');
+const shareURL = require('../images/shareicon.svg');
 const logoUrl = require('../images/p5js-logo-small.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
