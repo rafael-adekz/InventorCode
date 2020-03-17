@@ -90,6 +90,7 @@ class Toolbar extends React.Component {
         >
           <InlineSVG src={stopUrl} alt="Stop Sketch" />
         </button>
+        {/**
         <div className="toolbar__autorefresh">
           <input
             id="autorefresh"
@@ -103,6 +104,7 @@ class Toolbar extends React.Component {
             Atualizar Automaticamente
           </label>
         </div>
+         */}
         <div className={nameContainerClass}>
           <a
             className="toolbar__project-name"
