@@ -265,7 +265,7 @@ class Nav extends React.PureComponent {
               }}
             >
               <span className="nav__item-header">Arquivo</span>
-              <InlineSVG className="nav__item-header-triangle" src={shareUrl} />
+              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
@@ -547,7 +547,7 @@ class Nav extends React.PureComponent {
               }}
             >
               <span className="nav__item-header">Biblioteca</span>
-              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+              <InlineSVG className="nav__item-header-triangle" src={shareURL} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
