@@ -21,9 +21,14 @@ const defaultHTML =
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="https://rawcdn.githack.com/molleindustria/p5.play/42cd19c39f6f508e4a73c20eaaeb490b97022840/lib/p5.play.js"></script>
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/easyEditor.js"></script>
+<<<<<<< HEAD
+    <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/fundogti_VS_3_Com+Sprites.js"></script>
+    <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/sprites_vs.5.js"></script>
+=======
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/fundo_VS_3_Com+Sprites.js"></script>
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/Sprites_VS_3.js"></script>
     <script src="https://rawcdn.githack.com/IDMNYU/p5.js-speech/e7ae007d61f048fc2379971b0de7d5db8abb7eee/lib/p5.speech.js"></script>
+>>>>>>> origin/master
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
     <script src="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.js"></script>
     <script>$(function() {$('body').ruler({vRuleSize: 0,hRuleSize: 0,showCrosshair : false,showMousePos: true});});</script>

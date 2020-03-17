@@ -6,6 +6,7 @@ const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
+
 function About(props) {
   return (
     <div className="about__content">

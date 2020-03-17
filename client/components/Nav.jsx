@@ -53,6 +53,8 @@ class Nav extends React.PureComponent {
     this.handleFocusForSketch = this.handleFocus.bind(this, 'sketch');
     this.toggleDropdownForHelp = this.toggleDropdown.bind(this, 'help');
     this.handleFocusForHelp = this.handleFocus.bind(this, 'help');
+    this.toggleDropdownForBiblioteca = this.toggleDropdown.bind(this, 'biblioteca');
+    this.handleFocusForBiblioteca = this.handleFocus.bind(this, 'biblioteca');
     this.toggleDropdownForAccount = this.toggleDropdown.bind(this, 'account');
     this.handleFocusForAccount = this.handleFocus.bind(this, 'account');
     this.closeDropDown = this.closeDropDown.bind(this);
@@ -238,6 +240,10 @@ class Nav extends React.PureComponent {
       account: classNames({
         'nav__item': true,
         'nav__item--open': this.state.dropdownOpen === 'account'
+      }),
+      biblioteca: classNames({
+        'nav__item': true,
+        'nav__item--open': this.state.dropdownOpen === 'biblioteca'
       })
     };
     return (
@@ -527,6 +533,53 @@ class Nav extends React.PureComponent {
                 </Link>
               </li>
               
+            </ul>
+          </li>
+          <li className={navDropdownState.biblioteca}>
+            <button
+              onClick={this.toggleDropdownForBiblioteca}
+              onBlur={this.handleBlur}
+              onFocus={this.clearHideTimeout}
+              onMouseOver={() => {
+                if (this.state.dropdownOpen !== 'none') {
+                  this.setDropdown('biblioteca');
+                }
+              }}
+            >
+              <span className="nav__item-header">Biblioteca</span>
+              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+            </button>
+            <ul className="nav__dropdown">
+              <li className="nav__dropdown-item">
+                <button
+                  onFocus={this.handleFocusForBiblioteca}
+                  onBlur={this.handleBlur}
+                 /* onClick={this.handleKeyboardShortcuts} */
+                >
+                  Personagens
+                </button>
+              </li>
+              <li className="nav__dropdown-item">
+                <a
+                  href="https://p5js.org/reference/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onFocus={this.handleFocusForBiblioteca}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >Sons
+                </a>
+              </li>
+              <li className="nav__dropdown-item">
+                <Link
+                  to="/personagens"
+                  onFocus={this.handleFocusForBiblioteca}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >
+                  Fundos de Tela!
+                </Link>
+              </li>
             </ul>
           </li>
         </ul>
