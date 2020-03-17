@@ -324,19 +324,17 @@ class Editor extends React.Component {
           >
             <InlineSVG src={rightArrowUrl} />
           </button>
-          */}
-          {/* 
           <div className="editor__file-name">
             <span>
               {this.props.file.name}
               {this.props.unsavedChanges ? <InlineSVG src={unsavedChangesDotUrl} /> : null}
             </span>
-          */}
+          
             <Timer
               projectSavedTime={this.props.projectSavedTime}
               isUserOwner={this.props.isUserOwner}
             />
-          </div>
+          </div> */}
         </header>
         <div ref={(element) => { this.codemirrorContainer = element; }} className={editorHolderClass} >
         </div>
