@@ -316,6 +316,7 @@ class Editor extends React.Component {
           >
             <InlineSVG src={leftArrowUrl} />
           </button>
+          {/* 
           <button
             aria-label="expand file navigation"
             className="sidebar__expand"
@@ -323,6 +324,7 @@ class Editor extends React.Component {
           >
             <InlineSVG src={rightArrowUrl} />
           </button>
+          */}
           <div className="editor__file-name">
             <span>
               {this.props.file.name}
