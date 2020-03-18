@@ -410,7 +410,7 @@ class IDEView extends React.Component {
             title="Está é a lista de personagens!"
             ariaLabel="personagens"
           >
-            <Personagens previousPath={this.props.ide.previousPath} />
+            <About previousPath={this.props.ide.previousPath} />
           </Overlay>
         }
         { this.props.location.pathname === '/feedback' &&
