@@ -3,7 +3,6 @@ import InlineSVG from 'react-inlinesvg';
 import { Helmet } from 'react-helmet';
 
 const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
-const testeUrl = require('../../../images/shareicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
@@ -15,9 +14,9 @@ function About(props) {
         <title>Editor da Escola de Inventor About</title>
       </Helmet>
       <div className="about__content-column">
-        <InlineSVG className="about__logo" src={testeUrl} alt="p5js Square Logo" />
+        <InlineSVG className="about__logo" src={squareLogoUrl} alt="p5js Square Logo" />
         {/* Video button to hello p5 video page */}
-        {/*  <p className="about__play-video">
+        {/* <p className="about__play-video">
           <a
             href="http://hello.p5js.org/"
             target="_blank"
@@ -28,7 +27,7 @@ function About(props) {
         </p>  */}
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">Lista de Personagens</h3>
+        <h3 className="about__content-column-title">Inventor Box</h3>
         <p className="about__content-column-list">
           <a
             href="https://escoladeinventor.com.br/blog/"
@@ -36,7 +35,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Esse é um teste para ver se funcionou
+          O que é Inventor Box?
           </a>
         </p>
         <p className="about__content-column-list">
@@ -61,7 +60,7 @@ function About(props) {
         </p>
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">Recursosss</h3>
+        <h3 className="about__content-column-title">Recursos</h3>
         <p className="about__content-column-list">
           <a
             href="https://tableless.github.io/iniciantes/manual/js/"
@@ -69,7 +68,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          ExemplUSSSs
+          Exemplos
           </a>
         </p>
         <p className="about__content-column-list">
@@ -89,7 +88,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Comandos
+          Teste de tag
           </a>
         </p>
       </div>
