@@ -36,7 +36,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          O que é Inventor Box?
+          Esse é um teste para ver se funcionou
           </a>
         </p>
         <p className="about__content-column-list">
