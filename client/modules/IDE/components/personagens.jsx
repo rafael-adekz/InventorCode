@@ -1,61 +1,126 @@
-// **DO THIS**:
-//   Replace BUCKET_NAME with the bucket name.
-//
-var albumBucketName = 'codigosinventor';
+import React from 'react';
+import InlineSVG from 'react-inlinesvg';
+import { Helmet } from 'react-helmet';
 
-// **DO THIS**:
-//   Replace this block of code with the sample code located at:
-//   Cognito -- Manage Identity Pools -- [identity_pool_name] -- Sample Code -- JavaScript
-//
-// Initialize the Amazon Cognito credentials provider
-AWS.config.region = 'sa-east-1'; // Region
-//AWS.config.credentials = new AWS.CognitoIdentityCredentials({
- //   IdentityPoolId: 'IDENTITY_POOL_ID',
-//});
+const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
+const testeUrl = require('../../../images/shareicon.svg');
+// const playUrl = require('../../../images/play.svg');
+const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
-// Create a new service object
-var s3 = new AWS.S3({
-  apiVersion: '2006-03-01',
-  params: {Bucket: albumBucketName}
-});
 
-// A utility function to create HTML.
-function getHtml(template) {
-  return template.join('\n');
+function About(props) {
+  return (
+    <div className="about__content">
+      <Helmet>
+        <title>Editor da Escola de Inventor About</title>
+      </Helmet>
+      <div className="about__content-column">
+        <InlineSVG className="about__logo" src={testeUrl} alt="p5js Square Logo" />
+        {/* Video button to hello p5 video page */}
+        {/* <p className="about__play-video">
+          <a
+            href="http://hello.p5js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__play-video-button" src={playUrl} alt="Play Hello Video" />
+          Play hello! video</a>
+        </p>  */}
+      </div>
+      <div className="about__content-column">
+        <h3 className="about__content-column-title">Inventor Box</h3>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Inventor Box?
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Inventor Box?
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Maker?
+          </a>
+        </p>
+      </div>
+      <div className="about__content-column">
+        <h3 className="about__content-column-title">Recursos</h3>
+        <p className="about__content-column-list">
+          <a
+            href="https://tableless.github.io/iniciantes/manual/js/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          Exemplos
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          Aprenda
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://discourse.processing.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          Comandos
+          </a>
+        </p>
+      </div>
+      <div className="about__footer">
+        <p className="about__footer-list">
+          <a
+            href="https://escoladeinventor.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Escola de Inventor
+          </a>
+        </p>
+        <p className="about__footer-list">
+          <a
+            href="https://www.facebook.com/escoladeinventor/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Facebook
+          </a>
+        </p>
+        <p className="about__footer-list">
+          <a
+            href="https://www.instagram.com/escoladeinventor/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Instagram
+          </a>
+        </p>
+      </div>
+    </div>
+  );
 }
 
-// List the photo albums that exist in the bucket.
-function listAlbums() {
-  s3.listObjects({Delimiter: '/'}, function(err, data) {
-    if (err) {
-      return alert('There was an error listing your albums: ' + err.message);
-    } else {
-      var albums = data.CommonPrefixes.map(function(commonPrefix) {
-        var prefix = commonPrefix.Prefix;
-        var albumName = decodeURIComponent(prefix.replace('/', ''));
-        return getHtml([
-          '<li>',
-            '<button style="margin:5px;" onclick="viewAlbum(\'' + albumName + '\')">',
-              albumName,
-            '</button>',
-          '</li>'
-        ]);
-      });
-      var message = albums.length ?
-        getHtml([
-          '<p>Click on an album name to view it.</p>',
-        ]) :
-        '<p>You do not have any albums. Please Create album.';
-      var htmlTemplate = [
-        '<h2>Albums</h2>',
-        message,
-        '<ul>',
-          getHtml(albums),
-        '</ul>',
-      ]
-      document.getElementById('viewer').innerHTML = getHtml(htmlTemplate);
-    }
-  });
-}
-
-export default listAlbums;
+export default About;
