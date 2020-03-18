@@ -343,6 +343,7 @@ class Nav extends React.PureComponent {
               </li> }
             </ul>
           </li>
+          {/*
           <li className={navDropdownState.edit}>
             <button
               onClick={this.toggleDropdownForEdit}
@@ -402,7 +403,7 @@ class Nav extends React.PureComponent {
                 </button>
               </li>
             </ul>
-          </li>
+          </li> * *
           <li className={navDropdownState.sketch}>
             <button
               onClick={this.toggleDropdownForSketch}
@@ -475,9 +476,9 @@ class Nav extends React.PureComponent {
                   Stop Accessible
                   <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+2</span>
                 </button>
-              </li> */}
+              </li> 
             </ul>
-          </li>
+            </li>  */}
           <li className={navDropdownState.help}>
             <button
               onClick={this.toggleDropdownForHelp}
