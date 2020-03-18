@@ -34,6 +34,7 @@ import Searchbar from '../components/Searchbar';
 import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
+import personagens from '../components/Personagens';
 
 class IDEView extends React.Component {
   constructor(props) {
