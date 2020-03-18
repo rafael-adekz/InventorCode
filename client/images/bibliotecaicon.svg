@@ -3,8 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="19.998px" height="18.209px" viewBox="0 0 19.998 18.209" enable-background="new 0 0 19.998 18.209" xml:space="preserve">
-<path fill="#FFFFFF" stroke="#74B6D2" stroke-width="5" stroke-miterlimit="10" d="M12.499,10.036c0,0.488-0.396,0.884-0.884,0.884
+<path fill="#FFFFFF" stroke="#74B6D2" stroke-width="2" stroke-miterlimit="10" d="M12.499,10.036c0,0.488-0.396,0.884-0.884,0.884
 	h-8.23c-0.488,0-0.885-0.396-0.885-0.884V3.384C2.5,2.896,2.896,2.5,3.385,2.5h8.23c0.488,0,0.884,0.396,0.884,0.884V10.036z"/>
-<path fill="#FFFFFF" stroke="#74B6D2" stroke-width="5" stroke-miterlimit="10" d="M17.498,14.824c0,0.488-0.396,0.885-0.884,0.885
+<path fill="#FFFFFF" stroke="#74B6D2" stroke-width="2" stroke-miterlimit="10" d="M17.498,14.824c0,0.488-0.396,0.885-0.884,0.885
 	h-8.23c-0.488,0-0.884-0.396-0.884-0.885V8.173c0-0.488,0.396-0.884,0.884-0.884h8.23c0.488,0,0.884,0.396,0.884,0.884V14.824z"/>
 </svg>
