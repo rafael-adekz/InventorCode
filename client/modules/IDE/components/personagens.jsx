@@ -1,26 +1,126 @@
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-var listOfImages =[];
+import InlineSVG from 'react-inlinesvg';
+import { Helmet } from 'react-helmet';
 
-class Personagens extends React.Component{
-    importAll(r) {
-        return r.keys().map(r);
-    }
-    componentWillMount() {
-        listOfImages = this.importAll(require.context('./images/', false, /\.(png|jpe?g|svg)$/));
-    }
-    render(){
-        return(
-          <div>
-              {
-                    listOfImages.map(
-                      (image, index) =>    <img key={index} src={image} alt="info"></img>
-                    )
-              }
-          </div>
-        )
-    }
+const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
+const testeUrl = require('../../../images/shareicon.svg');
+// const playUrl = require('../../../images/play.svg');
+const asteriskUrl = require('../../../images/p5-asterisk.svg');
+
+
+function About(props) {
+  return (
+    <div className="about__content">
+      <Helmet>
+        <title>Editor da Escola de Inventor About</title>
+      </Helmet>
+      <div className="about__content-column">
+        <InlineSVG className="about__logo" src={testeUrl} alt="p5js Square Logo" />
+        {/* Video button to hello p5 video page */}
+        {/*  <p className="about__play-video">
+          <a
+            href="http://hello.p5js.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__play-video-button" src={playUrl} alt="Play Hello Video" />
+          Play hello! video</a>
+        </p>  */}
+      </div>
+      <div className="about__content-column">
+        <h3 className="about__content-column-title">Lista de Personagens</h3>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          Esse é um teste para ver se funcionou
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Inventor Box?
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          O que é Maker?
+          </a>
+        </p>
+      </div>
+      <div className="about__content-column">
+        <h3 className="about__content-column-title">Recursosss</h3>
+        <p className="about__content-column-list">
+          <a
+            href="https://tableless.github.io/iniciantes/manual/js/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          ExemplUSSSs
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://escoladeinventor.com.br/blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          Aprenda
+          </a>
+        </p>
+        <p className="about__content-column-list">
+          <a
+            href="https://discourse.processing.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
+          Comandos
+          </a>
+        </p>
+      </div>
+      <div className="about__footer">
+        <p className="about__footer-list">
+          <a
+            href="https://escoladeinventor.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Escola de Inventor
+          </a>
+        </p>
+        <p className="about__footer-list">
+          <a
+            href="https://www.facebook.com/escoladeinventor/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Facebook
+          </a>
+        </p>
+        <p className="about__footer-list">
+          <a
+            href="https://www.instagram.com/escoladeinventor/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Instagram
+          </a>
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default Personagens;
