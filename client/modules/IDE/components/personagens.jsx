@@ -61,7 +61,7 @@ function About(props) {
         </p>
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">Recursos</h3>
+        <h3 className="about__content-column-title">Recursosss</h3>
         <p className="about__content-column-list">
           <a
             href="https://tableless.github.io/iniciantes/manual/js/"

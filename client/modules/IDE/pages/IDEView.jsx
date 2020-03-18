@@ -407,7 +407,7 @@ class IDEView extends React.Component {
           <Overlay
             previousPath={this.props.ide.previousPath}
             title="Bem Vindo"
-            ariaLabel="about"
+            ariaLabel="personagens"
           >
             <About previousPath={this.props.ide.previousPath} />
           </Overlay>
