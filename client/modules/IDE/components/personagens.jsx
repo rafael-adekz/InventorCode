@@ -69,7 +69,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Exemplos
+          ExemplUSSSs
           </a>
         </p>
         <p className="about__content-column-list">
