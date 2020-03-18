@@ -17,7 +17,7 @@ function About(props) {
       <div className="about__content-column">
         <InlineSVG className="about__logo" src={testeUrl} alt="p5js Square Logo" />
         {/* Video button to hello p5 video page */}
-        {/* <p className="about__play-video">
+        {/*  <p className="about__play-video">
           <a
             href="http://hello.p5js.org/"
             target="_blank"
