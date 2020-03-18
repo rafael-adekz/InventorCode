@@ -123,4 +123,4 @@ function About(props) {
   );
 }
 
-export default About;
+export default Personagens;
