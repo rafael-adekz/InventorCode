@@ -28,7 +28,7 @@ function About(props) {
         </p>  */}
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">Inventor Box</h3>
+        <h3 className="about__content-column-title">Lista de Personagens</h3>
         <p className="about__content-column-list">
           <a
             href="https://escoladeinventor.com.br/blog/"
