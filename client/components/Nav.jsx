@@ -16,7 +16,7 @@ const triangleUrl = require('../images/down-filled-triangle.svg');
 const shareURL = require('../images/shareicon.svg');
 const bibliotecaURL = require('../images/bibliotecaicon.svg');
 const arquivoURL = require('../images/opcoesicon.svg');
-//const ajudaURL = require('../images/bibliotecaicon.svg');
+const ajudaURL = require('../images/ajudaicon.svg');
 const logoUrl = require('../images/p5js-logo-small.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
@@ -493,7 +493,7 @@ class Nav extends React.PureComponent {
               }}
             >
               <span className="nav__item-header">Ajuda</span>
-              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+              <InlineSVG className="nav__item-header-triangle" src={ajudaUrl} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
