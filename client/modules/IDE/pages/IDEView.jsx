@@ -33,6 +33,7 @@ import SketchList from '../components/SketchList';
 import Searchbar from '../components/Searchbar';
 import AssetList from '../components/AssetList';
 import About from '../components/About';
+import Personagens from '../components/Personagens';
 import Feedback from '../components/Feedback';
 
 class IDEView extends React.Component {
