@@ -14,6 +14,7 @@ import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
 const shareURL = require('../images/shareicon.svg');
+const bibliotecaURL = require('../images/bibliotecaicon.svg');
 const logoUrl = require('../images/p5js-logo-small.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
@@ -547,7 +548,7 @@ class Nav extends React.PureComponent {
               }}
             >
               <span className="nav__item-header">Biblioteca</span>
-              <InlineSVG className="nav__item-header-share" src={shareURL} />
+              <InlineSVG className="nav__item-header-share" src={bibliotecaURL} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
