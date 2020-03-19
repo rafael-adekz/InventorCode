@@ -35,7 +35,7 @@ import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
 //import Personagens from '../components/Personagens';
-//import Personagens from '../components/Personagens';
+import Personagens from '../components/Personagens';
 
 class IDEView extends React.Component {
   constructor(props) {
