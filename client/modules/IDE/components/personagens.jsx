@@ -7,7 +7,7 @@ const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
 
-function About(props) {
+function Personagens(props) {
   return (
     <div className="about__content">
       <Helmet>
@@ -35,7 +35,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          O que é Inventor Box?
+          O que é TESTEEE
           </a>
         </p>
         <p className="about__content-column-list">
@@ -88,7 +88,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Teste de tag
+          Comandos
           </a>
         </p>
       </div>
