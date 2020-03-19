@@ -313,7 +313,7 @@ class Editor extends React.Component {
             aria-label="collapse file navigation"
             className="sidebar__contract"
             onClick={this.props.collapseSidebar}
-          >
+          > 
             <InlineSVG src={leftArrowUrl} />
           </button>
            
