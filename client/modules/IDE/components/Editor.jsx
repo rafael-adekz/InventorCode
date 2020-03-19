@@ -316,7 +316,7 @@ class Editor extends React.Component {
           >
             <InlineSVG src={leftArrowUrl} />
           </button>
-          {/* 
+           
           <button
             aria-label="expand file navigation"
             className="sidebar__expand"
@@ -334,7 +334,7 @@ class Editor extends React.Component {
               projectSavedTime={this.props.projectSavedTime}
               isUserOwner={this.props.isUserOwner}
             />
-          </div> */}
+          </div> 
         </header>
         <div ref={(element) => { this.codemirrorContainer = element; }} className={editorHolderClass} >
         </div>
