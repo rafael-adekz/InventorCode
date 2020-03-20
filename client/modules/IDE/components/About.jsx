@@ -35,7 +35,7 @@ function About(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          O que é Este Site?
+          Subindo um teste de modificação
           </a>
         </p>
         <p className="about__content-column-list">

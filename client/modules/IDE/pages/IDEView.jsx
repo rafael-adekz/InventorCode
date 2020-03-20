@@ -35,7 +35,7 @@ import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
 //import Personagens from '../components/Personagens';
-//import Personagens from '../components/Personagens';
+import About2 from '../components/About2';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -411,7 +411,7 @@ class IDEView extends React.Component {
             title="Está é a lista de personagens!"
             ariaLabel="personagens"
           >
-            <About previousPath={this.props.ide.previousPath} />
+            <About2 previousPath={this.props.ide.previousPath} />
           </Overlay>
         }
         { this.props.location.pathname === '/feedback' &&
