@@ -35,7 +35,7 @@ function About2(props) {
             rel="noopener noreferrer"
           >
             <InlineSVG className="about__content-column-asterisk" src={asteriskUrl} alt="p5 asterisk" />
-          Subindo um teste de modificação
+          Subindo um teste de modificação ABOUT 2 IRMÃO
           </a>
         </p>
         <p className="about__content-column-list">
