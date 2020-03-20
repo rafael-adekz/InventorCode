@@ -313,9 +313,10 @@ class Editor extends React.Component {
             aria-label="collapse file navigation"
             className="sidebar__contract"
             onClick={this.props.collapseSidebar}
-          >
+          > 
             <InlineSVG src={leftArrowUrl} />
           </button>
+           
           <button
             aria-label="expand file navigation"
             className="sidebar__expand"
@@ -328,11 +329,12 @@ class Editor extends React.Component {
               {this.props.file.name}
               {this.props.unsavedChanges ? <InlineSVG src={unsavedChangesDotUrl} /> : null}
             </span>
+          
             <Timer
               projectSavedTime={this.props.projectSavedTime}
               isUserOwner={this.props.isUserOwner}
             />
-          </div>
+          </div> 
         </header>
         <div ref={(element) => { this.codemirrorContainer = element; }} className={editorHolderClass} >
         </div>

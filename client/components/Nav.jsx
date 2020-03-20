@@ -13,6 +13,10 @@ import { logoutUser } from '../modules/User/actions';
 import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
+const shareURL = require('../images/shareicon.svg');
+const bibliotecaURL = require('../images/bibliotecaicon.svg');
+const arquivoURL = require('../images/opcoesicon.svg');
+const ajudaURL = require('../images/ajudaicon.svg');
 const logoUrl = require('../images/p5js-logo-small.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
@@ -263,8 +267,8 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">Arquivo</span>
-              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+              <span className="nav__item-header"></span>
+              <InlineSVG className="nav__item-header-triangle" src={arquivoURL} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
@@ -341,6 +345,7 @@ class Nav extends React.PureComponent {
               </li> }
             </ul>
           </li>
+          {/*
           <li className={navDropdownState.edit}>
             <button
               onClick={this.toggleDropdownForEdit}
@@ -400,7 +405,7 @@ class Nav extends React.PureComponent {
                 </button>
               </li>
             </ul>
-          </li>
+          </li> * *
           <li className={navDropdownState.sketch}>
             <button
               onClick={this.toggleDropdownForSketch}
@@ -473,9 +478,9 @@ class Nav extends React.PureComponent {
                   Stop Accessible
                   <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+2</span>
                 </button>
-              </li> */}
+              </li> 
             </ul>
-          </li>
+            </li>  */}
           <li className={navDropdownState.help}>
             <button
               onClick={this.toggleDropdownForHelp}
@@ -487,8 +492,8 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">Ajuda</span>
-              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+              <span className="nav__item-header"></span>
+              <InlineSVG className="nav__item-header-triangle" src={ajudaURL} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
@@ -546,8 +551,8 @@ class Nav extends React.PureComponent {
                 }
               }}
             >
-              <span className="nav__item-header">Biblioteca</span>
-              <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+              <span className="nav__item-header"></span>
+              <InlineSVG className="nav__item-header-share" src={bibliotecaURL} />
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">

@@ -34,6 +34,8 @@ import Searchbar from '../components/Searchbar';
 import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
+//import Personagens from '../components/Personagens';
+//import Personagens from '../components/Personagens';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -311,7 +313,7 @@ class IDEView extends React.Component {
               </SplitPane>
               <div className="preview-frame-holder">
                 <header className="preview-frame__header">
-                  <h2 className="preview-frame__title">Visualizar</h2>
+                  {/*<h2 className="preview-frame__title">Visualizar</h2>*/}
                 </header>
                 <div className="preview-frame__content">
                   <div className="preview-frame-overlay" ref={(element) => { this.overlay = element; }}>
@@ -399,6 +401,15 @@ class IDEView extends React.Component {
             previousPath={this.props.ide.previousPath}
             title="Bem Vindo"
             ariaLabel="about"
+          >
+            <About previousPath={this.props.ide.previousPath} />
+          </Overlay>
+        }
+        { this.props.location.pathname === '/personagens' &&
+          <Overlay
+            previousPath={this.props.ide.previousPath}
+            title="Está é a lista de personagens!"
+            ariaLabel="personagens"
           >
             <About previousPath={this.props.ide.previousPath} />
           </Overlay>
