@@ -29,7 +29,6 @@ const defaultHTML =
     <link href="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
-
   </head>
   <body>
     <div id="conteiner">
@@ -201,6 +200,7 @@ const files = (state, action) => {
       //   return file;
       // });
       // return newState.filter(file => file.id !== action.id);
+      //teste
     }
     case ActionTypes.SET_SELECTED_FILE:
       return state.map((file) => {
@@ -234,3 +234,4 @@ export const getCSSFiles = state => state.filter(file => file.name.match(/.*\.cs
 export const getLinkedFiles = state => state.filter(file => file.url);
 
 export default files;
+//teste

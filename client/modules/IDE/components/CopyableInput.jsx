@@ -46,7 +46,7 @@ class CopyableInput extends React.Component {
       <div className={copyableInputClass}>
         <div
           className="copyable-input__value-container tooltipped-no-delay"
-          aria-label="Copied to Clipboard!"
+          aria-label="Link Copiado!"
           ref={(element) => { this.tooltip = element; }}
           onMouseLeave={this.onMouseLeaveHandler}
         >
