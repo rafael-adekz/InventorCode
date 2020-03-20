@@ -6,13 +6,6 @@ const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
-importAll(r) {
-  return r.keys().map(r);
-}
-componentWillMount() {
-  listOfImages = this.importAll(require.context('./images/', false, /\.(png|jpe?g|svg)$/));
-}
-
 function About2(props) {
   return (
     <div className="about__content">
