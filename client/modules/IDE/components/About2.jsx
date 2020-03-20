@@ -6,6 +6,12 @@ const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
+importAll(r) {
+  return r.keys().map(r);
+}
+componentWillMount() {
+  listOfImages = this.importAll(require.context('./images/', false, /\.(png|jpe?g|svg)$/));
+}
 
 function About2(props) {
   return (
@@ -13,19 +19,13 @@ function About2(props) {
       <Helmet>
         <title>Editor da Escola de Inventor About</title>
       </Helmet>
-      <div className="about__teste">
-        <InlineSVG className="about__teste" src={elementosUrl} alt="p5js Square Logo" />
-        {/* Video button to hello p5 video page */}
-        {/* <p className="about__play-video">
-          <a
-            href="http://hello.p5js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InlineSVG className="about__play-video-button" src={playUrl} alt="Play Hello Video" />
-          Play hello! video</a>
-        </p>  */}
-      </div>
+          <div>
+              {
+                    listOfImages.map(
+                      (image, index) =>    <img key={index} src={image} alt="info"></img>
+                    )
+              }
+          </div>
     </div>
   );
 }
