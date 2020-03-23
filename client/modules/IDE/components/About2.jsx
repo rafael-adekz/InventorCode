@@ -8,7 +8,7 @@ const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
 function About2(props) {
   return (
-    <div className="about__content">
+    <div className="about__teste">
       <Helmet>
         <title>Editor da Escola de Inventor About</title>
       </Helmet>
