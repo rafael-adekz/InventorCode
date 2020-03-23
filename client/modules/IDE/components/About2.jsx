@@ -6,6 +6,8 @@ const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
+
+
 function About2(props) {
   return (
     <div className="about2__teste">
