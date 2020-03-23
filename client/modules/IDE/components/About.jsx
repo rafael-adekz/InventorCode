@@ -26,7 +26,7 @@ function About(props) {
           Play hello! video</a>
         </p>  */}
       </div>
-      <div className="about__content-column">
+      <div className="about__teste">
         <h3 className="about__content-column-title">Este Site</h3>
         <p className="about__content-column-list">
           <a
