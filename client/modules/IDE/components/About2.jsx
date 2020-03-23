@@ -13,7 +13,7 @@ function About2(props) {
         <title>Editor da Escola de Inventor About</title>
       </Helmet>
       <div className="about__teste">
-        <InlineSVG className="about__teste" src={elementosUrl} alt="p5js Square Logo" />
+        <InlineSVG className="about__teste" src={elementosUrl} />
         {/* Video button to hello p5 video page */}
         {/* <p className="about__play-video">
           <a
