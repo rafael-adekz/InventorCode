@@ -93,9 +93,14 @@
     border: #{0.5 / $base-font-size}rem solid $toast-background-color;
   }
   .about__teste {
+    position: absolute;
     overflow-y: scroll;
     overflow-x: scroll;
     overflow: scroll;
     
     }
+    svg:not(:root) {
+      width:auto;
+      height: auto;
+  }
 }
