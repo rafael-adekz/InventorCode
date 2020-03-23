@@ -8,12 +8,12 @@ const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
 function About2(props) {
   return (
-    <div className="about__teste">
+    <div className="about2__teste">
       <Helmet>
         <title>Editor da Escola de Inventor About</title>
       </Helmet>
-      <div className="about__teste">
-        <InlineSVG className="about__teste" src={elementosUrl} />
+      <div className="about2__teste">
+        <InlineSVG className="about2__teste" src={elementosUrl} />
         {/* Video button to hello p5 video page */}
         {/* <p className="about__play-video">
           <a
