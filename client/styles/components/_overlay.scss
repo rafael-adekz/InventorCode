@@ -6,7 +6,7 @@
   bottom: 0;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 .overlay__content {
@@ -15,6 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .overlay__body {
@@ -25,6 +26,7 @@
   max-height: 80%;
   max-width: 65%;
   position: relative;
+  overflow-y: scroll;
 }
 
 .overlay__header {
