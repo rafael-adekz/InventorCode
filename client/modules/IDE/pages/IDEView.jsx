@@ -36,6 +36,8 @@ import About from '../components/About';
 import Feedback from '../components/Feedback';
 //import Personagens from '../components/Personagens';
 import Fundos from '../components/Fundos';
+import Sons from '../components/Sons';
+import Personagens from '../components/Personagens';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -413,6 +415,26 @@ class IDEView extends React.Component {
             className="Fundos__teste"
           >
             <Fundos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
+          </Overlay>
+        }
+                { this.props.location.pathname === '/personagens' &&
+          <Overlay
+            previousPath={this.props.ide.previousPath}
+            title="Está é a lista de fundos de tela"
+            ariaLabel="fundos"
+            className="Fundos__teste"
+          >
+            <Personagens previousPath={this.props.ide.previousPath} className="Fundos__teste" />
+          </Overlay>
+        }
+                { this.props.location.pathname === '/sons' &&
+          <Overlay
+            previousPath={this.props.ide.previousPath}
+            title="Está é a lista de fundos de tela"
+            ariaLabel="fundos"
+            className="Fundos__teste"
+          >
+            <Sons previousPath={this.props.ide.previousPath} className="Fundos__teste" />
           </Overlay>
         }
         { this.props.location.pathname === '/feedback' &&
