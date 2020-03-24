@@ -6,7 +6,7 @@ const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
-const images = [('http://placehold.it/100x100/76BD22'), ('http://placehold.it/200x200/76BD23'),('http://placehold.it/150x150/76BD24'),('http://placehold.it/300x300/76BD25'),('http://placehold.it/100x100/76BD22'), ('http://placehold.it/200x200/76BD23'),('http://placehold.it/150x150/76BD24'),('http://placehold.it/300x300/76BD25'),];
+const images = [('http://placehold.it/100x100/92DG15'), ('http://placehold.it/200x200/92DG15'),('http://placehold.it/150x150/92DG15'),('http://placehold.it/300x300/92DG15')('http://placehold.it/100x100/92DG15'), ('http://placehold.it/200x200/92DG15'),('http://placehold.it/150x150/92DG15'),('http://placehold.it/300x300/92DG15')];
 
 
 function Personagens(props) {
