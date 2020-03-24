@@ -18,7 +18,7 @@ function Personagens(props) {
       <div className="about2__teste">
         {/*<InlineSVG className="about2__teste" src={elementosUrl} />*/}
         {images.map(function(image, imageIndex){
-      return <img key={ imageIndex } src={ image } />
+      return <InlineSVG src={image} alt="p5 asterisk" />
      })}
         {/* Video button to hello p5 video page */}
         {/* <p className="about__play-video">
