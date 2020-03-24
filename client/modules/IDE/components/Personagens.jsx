@@ -6,7 +6,7 @@ const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
-const images = [(asteriskUrl), (asteriskUrl),];
+const images = [(asteriskUrl), (elementosUrl),];
 
 
 function Personagens(props) {
