@@ -6,6 +6,7 @@ const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
+const images = [('http://placehold.it/100x100/76BD22'), ('http://placehold.it/100x100/76BD23')];
 
 
 function About2(props) {
@@ -15,7 +16,10 @@ function About2(props) {
         <title>Editor da Escola de Inventor About</title>
       </Helmet>
       <div className="about2__teste">
-        <InlineSVG className="about2__teste" src={elementosUrl} />
+        {/*<InlineSVG className="about2__teste" src={elementosUrl} />*/}
+        {images.map(function(image, imageIndex){
+      return <img key={ imageIndex } src={ image } />
+     })}
         {/* Video button to hello p5 video page */}
         {/* <p className="about__play-video">
           <a
