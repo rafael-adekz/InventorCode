@@ -405,11 +405,11 @@ class IDEView extends React.Component {
             <About previousPath={this.props.ide.previousPath} />
           </Overlay>
         }
-        { this.props.location.pathname === '/personagens' &&
+        { this.props.location.pathname === '/fundos' &&
           <Overlay
             previousPath={this.props.ide.previousPath}
             title="Está é a lista de fundos de tela"
-            ariaLabel="personagens"
+            ariaLabel="fundos"
             className="Fundos__teste"
           >
             <Fundos previousPath={this.props.ide.previousPath} className="Fundos__teste" />

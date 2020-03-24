@@ -91,7 +91,7 @@ router.get('/about', (req, res) => {
   res.send(renderIndex());
 });
 
-router.get('/personagens', (req, res) => {
+router.get('/fundos', (req, res) => {
   res.send(renderIndex());
 });
 
