@@ -35,7 +35,7 @@ import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
 //import Personagens from '../components/Personagens';
-import About2 from '../components/About2';
+import Fundos from '../components/Fundos';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -410,9 +410,9 @@ class IDEView extends React.Component {
             previousPath={this.props.ide.previousPath}
             title="Está é a lista de fundos de tela"
             ariaLabel="personagens"
-            className="about2__teste"
+            className="Fundos__teste"
           >
-            <About2 previousPath={this.props.ide.previousPath} className="about2__teste" />
+            <Fundos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
           </Overlay>
         }
         { this.props.location.pathname === '/feedback' &&
