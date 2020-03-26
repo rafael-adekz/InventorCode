@@ -556,28 +556,28 @@ class Nav extends React.PureComponent {
             </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
-                <button
-                  onFocus={this.handleFocusForBiblioteca}
-                  onBlur={this.handleBlur}
-                 /* onClick={this.handleKeyboardShortcuts} */
-                >
-                  Personagens
-                </button>
-              </li>
-              <li className="nav__dropdown-item">
-                <a
-                  href="https://p5js.org/reference/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <Link
+                  to="/personagens"
                   onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
-                >Sons
-                </a>
+                >
+                  Personagens!
+                </Link>
+              </li>
+              <li className="nav__dropdown-item">
+              <Link
+                  to="/sons"
+                  onFocus={this.handleFocusForBiblioteca}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >
+                  Sons!
+                </Link>
               </li>
               <li className="nav__dropdown-item">
                 <Link
-                  to="/personagens"
+                  to="/fundos"
                   onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}

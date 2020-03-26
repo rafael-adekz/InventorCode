@@ -35,7 +35,9 @@ import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
 //import Personagens from '../components/Personagens';
-import About2 from '../components/About2';
+import Fundos from '../components/Fundos';
+import Sons from '../components/Sons';
+import Personagens from '../components/Personagens';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -405,14 +407,34 @@ class IDEView extends React.Component {
             <About previousPath={this.props.ide.previousPath} />
           </Overlay>
         }
-        { this.props.location.pathname === '/personagens' &&
+        { this.props.location.pathname === '/fundos' &&
           <Overlay
             previousPath={this.props.ide.previousPath}
             title="Está é a lista de fundos de tela"
-            ariaLabel="personagens"
-            className="about2__teste"
+            ariaLabel="fundos"
+            className="Fundos__teste"
           >
-            <About2 previousPath={this.props.ide.previousPath} className="about2__teste" />
+            <Fundos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
+          </Overlay>
+        }
+                { this.props.location.pathname === '/personagens' &&
+          <Overlay
+            previousPath={this.props.ide.previousPath}
+            title="Está é a lista de fundos de tela"
+            ariaLabel="fundos"
+            className="Fundos__teste"
+          >
+            <Personagens previousPath={this.props.ide.previousPath} className="Fundos__teste" />
+          </Overlay>
+        }
+                { this.props.location.pathname === '/sons' &&
+          <Overlay
+            previousPath={this.props.ide.previousPath}
+            title="Está é a lista de fundos de tela"
+            ariaLabel="fundos"
+            className="Fundos__teste"
+          >
+            <Sons previousPath={this.props.ide.previousPath} className="Fundos__teste" />
           </Overlay>
         }
         { this.props.location.pathname === '/feedback' &&
