@@ -1,16 +1,7 @@
 import objectID from 'bson-objectid';
 import * as ActionTypes from '../../../constants';
 
-const defaultSketch = `//coloque suas variaveis abaixo
-
-
-function setup() {
-  
-}
-
-function draw() {
-  
-}`;
+const defaultSketch = ``;
 
 const defaultHTML =
 `<!DOCTYPE html>
@@ -31,6 +22,7 @@ const defaultHTML =
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
   </head>
+  
   <body>
     <div id="conteiner">
     <img src="https://codigosinventor.s3-sa-east-1.amazonaws.com/t7.png" class="img"> 
