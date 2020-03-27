@@ -1,16 +1,7 @@
 import objectID from 'bson-objectid';
 import * as ActionTypes from '../../../constants';
 
-const defaultSketch = `//coloque suas variaveis abaixo
-
-
-function setup() {
-  
-}
-
-function draw() {
-  
-}`;
+const defaultSketch = ``;
 
 const defaultHTML =
 `<!DOCTYPE html>
