@@ -12,6 +12,7 @@ import AccountView from './modules/User/pages/AccountView';
 // import SketchListView from './modules/Sketch/pages/SketchListView';
 import { getUser } from './modules/User/actions';
 import { stopSketch } from './modules/IDE/actions/ide';
+import Passos from './modules/IDE/actions/ide';
 
 const checkAuth = (store) => {
   store.dispatch(getUser());
@@ -45,6 +46,8 @@ const routes = store => (
     <Route path="/personagens" component={IDEView} />
     <Route path="/sons" component={IDEView} />
     <Route path="/feedback" component={IDEView} />
+    <Route path="/passos" componente={IDEView} />
+
   </Route>
 );
 
