@@ -598,7 +598,7 @@ class Nav extends React.PureComponent {
             <span className="nav__item-spacer"></span>
             <li>
               <Link to="/signup">
-                <span className="nav__item-header"></span>
+                <span className="nav__item-header">Teste</span>
               </Link>
             </li>
           </ul>}

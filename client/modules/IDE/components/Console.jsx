@@ -19,6 +19,8 @@ import infoDarkUrl from '../../../images/console-info-dark.svg';
 const upArrowUrl = require('../../../images/up-arrow.svg');
 const downArrowUrl = require('../../../images/down-arrow.svg');
 
+
+
 class Console extends React.Component {
   componentDidUpdate(prevProps) {
     this.consoleMessages.scrollTop = this.consoleMessages.scrollHeight;
@@ -69,10 +71,43 @@ class Console extends React.Component {
         return '';
     }
   }
-
+  Teste(parametro){
+    var resposta = "";
+    var fraseArray = parametro;    //passo o valor do parâmetro para a variavel (em array)
+    var fraseString = fraseArray.toString(); //passando o parâmetro para string (redutivel porem mantido para clareza)
+    if(fraseString.includes('SyntaxError: expected expression, got')){
+      //fraseString = fraseString.substring(fraseString.indexOf("line")+4)
+      if(fraseString.includes('end of script')){
+         fraseString = fraseString.substring(fraseString.indexOf("line")+4)
+         resposta = "Encontrei um caractere que eu não esperava! Veja se você não esqueceu de fechar a chave de nenhum componente (Dê uma olhada na linha "+fraseString
+        //console.log("passei end of script")
+       }else{
+        //console.log("passei expected expression")
+        fraseString = fraseString.substring(fraseString.indexOf("line")+4)
+        resposta = "Parece que o programa parou de rodar inesperadamente! Veja se tudo foi escrito corretamente. (Dê uma olhada na linha "+fraseString
+       }
+    }
+    if(fraseString.includes('ReferenceError')){
+      fraseString = fraseString.substring(fraseString.indexOf("line")+4);
+       resposta = "Parece que você escreveu algo que não existe na nossa lista de comandos! (Dê uma olhada na linha "+fraseString;
+    //  console.log("passei referenceerror");
+    }
+    if(fraseString.includes('missing } in compound statement')){
+      fraseString = fraseString.substring(fraseString.indexOf("line")+4);
+       resposta = "Parece que você esqueceu de fechar uma chave! (Dê uma olhada na linha "+fraseString;
+      //console.log("passei referenceerror");
+    }
+   // fraseString = fraseString.substring(fraseString.indexOf("line")+4) 
+   // teste = teste.substring(teste.indexOf("(")+1);
+  //  var teste = "a b c d e f g h i j k l m nU o p q";
+    //str = str.substring(str.indexOf("e")+1);
+    //console.log("a linha em baixo dessa é a mensagem de erro com apenas a linha do erro");
+    console.log(fraseString);
+    return resposta;
+  }
   render() {
     const consoleClass = classNames({
-      'preview-console': true,
+      'ole': true,
       'preview-console--collapsed': !this.props.isExpanded
     });
 
@@ -109,10 +144,18 @@ class Console extends React.Component {
                   >
                     {times}
                   </div>
+                  
                 }
+                <p>Opa! Parece que temos um bug aqui! </p>
+                
+                {//console.log(consoleEvent)
+                }
+                {//this.Teste(consoleEvent.data)
+                }
+              <p>{this.Teste(consoleEvent.data)}</p>
                 <ConsoleFeed
                   styles={this.getConsoleFeedStyle(theme, times)}
-                  logs={[consoleEvent]}
+                  //logs={[consoleEvent]}
                 />
               </div>
             );
