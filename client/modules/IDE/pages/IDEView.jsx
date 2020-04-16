@@ -38,7 +38,10 @@ import Feedback from '../components/Feedback';
 import Fundos from '../components/Fundos';
 import Sons from '../components/Sons';
 import Personagens from '../components/Personagens';
-import Passos from '../components/Passos';
+import InlineSVG from 'react-inlinesvg';
+
+const giftUrl = require('../../../images/new/gift.svg');
+const playUrl = require('../../../images/new/play-button.svg');
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -229,6 +232,9 @@ class IDEView extends React.Component {
           </Overlay>
         }
         <div className="editor-preview-container">
+        <button className="gift-button"> 
+            <InlineSVG src={giftUrl} alt="Preferences" />
+          </button>
           <SplitPane
             split="vertical"
             size={this.state.sidebarSize}
@@ -315,10 +321,14 @@ class IDEView extends React.Component {
                 />
               </SplitPane>
               <div className="preview-frame-holder">
-                <header className="preview-frame__header">
-                  {/*<h2 className="preview-frame__title">Visualizar</h2>*/}
-                </header>
-                <div className="preview-frame__content">
+                {/*<header className="preview-frame__header">
+                  <h2 className="preview-frame__title">Visualizar</h2>
+                </header>*/}
+                <div>
+                  <button className="play-button"> 
+                    <InlineSVG src={playUrl} alt="Preferences" />
+                  </button>
+                </div>                <div className="preview-frame__content">
                   <div className="preview-frame-overlay" ref={(element) => { this.overlay = element; }}>
                   </div>
                   <div>

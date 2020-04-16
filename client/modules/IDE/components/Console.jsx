@@ -15,6 +15,7 @@ import debugLightUrl from '../../../images/console-debug-light.svg';
 import debugDarkUrl from '../../../images/console-debug-dark.svg';
 import infoLightUrl from '../../../images/console-info-light.svg';
 import infoDarkUrl from '../../../images/console-info-dark.svg';
+import consoleUrl from '../../../images/new/console.svg';
 
 const upArrowUrl = require('../../../images/up-arrow.svg');
 const downArrowUrl = require('../../../images/down-arrow.svg');
@@ -114,21 +115,31 @@ class Console extends React.Component {
     return (
       <div className={consoleClass} role="main" title="console">
         <div className="preview-console__header">
-          <h2 className="preview-console__header-title">Console</h2>
-          <div className="preview-console__header-buttons">
-            <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="clear console">
-              Clear
-            </button>
-            <button
-              className="preview-console__collapse"
-              onClick={this.props.collapseConsole}
-              aria-label="collapse console"
-            >
-              <InlineSVG src={downArrowUrl} />
-            </button>
-            <button className="preview-console__expand" onClick={this.props.expandConsole} aria-label="expand console">
-              <InlineSVG src={upArrowUrl} />
-            </button>
+        <h2 className="preview-console__header-title">
+            Console
+            <InlineSVG src={consoleUrl} />
+          </h2>
+          <div className="dflex">
+            <div className="error_inf">
+              <span>(1) Bug Encontrado</span>
+              <span>(2) Chamados</span>
+              <span>(1) Bug Encontrado</span>
+            </div>
+            <div className="preview-console__header-buttons">
+              <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="clear console">
+                Clear
+              </button>
+              <button
+                className="preview-console__collapse"
+                onClick={this.props.collapseConsole}
+                aria-label="collapse console"
+              >
+                <InlineSVG src={downArrowUrl} />
+              </button>
+              <button className="preview-console__expand" onClick={this.props.expandConsole} aria-label="expand console">
+                <InlineSVG src={upArrowUrl} />
+              </button>
+            </div>
           </div>
         </div>
         <div ref={(element) => { this.consoleMessages = element; }} className="preview-console__messages">

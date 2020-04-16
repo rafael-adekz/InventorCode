@@ -33,6 +33,9 @@ import '../../../utils/webGL-clike';
 import Timer from '../components/Timer';
 import EditorAccessibility from '../components/EditorAccessibility';
 import { metaKey, } from '../../../utils/metaKey';
+const preferencesUrl = require('../../../images/new/settings.svg');
+const pencilUrl = require('../../../images/new/pencil.svg');
+const playUrl = require('../../../images/new/play-button.svg');
 
 import search from '../../../utils/codemirror-search';
 
@@ -335,6 +338,21 @@ class Editor extends React.Component {
               isUserOwner={this.props.isUserOwner}
             />
           </div> 
+          <div className="edit-name">
+            Defesa Terrestre Final copy
+            <button
+              aria-label="preferences"
+              className="icon_settings"
+            >
+              <InlineSVG src={pencilUrl} alt="Editar" />
+            </button>
+          </div>
+          <button
+            aria-label="preferences"
+            className="icon_settings"
+          >
+            <InlineSVG src={preferencesUrl} alt="Preferences" />
+          </button>
         </header>
         <div ref={(element) => { this.codemirrorContainer = element; }} className={editorHolderClass} >
         </div>

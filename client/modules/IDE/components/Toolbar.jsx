@@ -150,13 +150,13 @@ class Toolbar extends React.Component {
             }
           })()}
         </div>
-        <button
+       {/*  <button
           className={preferencesButtonClass}
           onClick={this.props.openPreferences}
           aria-label="preferences"
         >
           <InlineSVG src={preferencesUrl} alt="Preferences" />
-        </button>
+        </button>*/}
       </div>
     );
   }
