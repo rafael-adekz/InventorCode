@@ -237,6 +237,14 @@ $color-white    : #FFFFFF;
     }
   }
 }
+.error_mensagem{
+  p{
+    display: block;
+    color: $color-secundary;
+    font-weight: 700;
+    margin-right: 15px;
+  }
+}
 
 // .ipad{
 //   width: 656px;
