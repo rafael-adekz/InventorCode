@@ -75,14 +75,14 @@ class Toolbar extends React.Component {
         >
           <InlineSVG src={playUrl} alt="Play Sketch" />
         </button>
-        <button
+        {/*<button
           className={playButtonClass}
           onClick={this.props.startSketch}
           aria-label="play only visual sketch"
           disabled={this.props.infiniteLoop}
         >
           <InlineSVG src={playUrl} alt="Play only visual Sketch" />
-        </button>
+        </button>*/}
         <button
           className={stopButtonClass}
           onClick={this.props.stopSketch}

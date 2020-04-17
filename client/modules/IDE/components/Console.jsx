@@ -121,9 +121,9 @@ class Console extends React.Component {
           </h2>
           <div className="dflex">
             <div className="error_inf">
-              <span>(1) Bug Encontrado</span>
+            {/*  <span>(1) Bug Encontrado</span>
               <span>(2) Chamados</span>
-              <span>(1) Bug Encontrado</span>
+              <span>(1) Bug Encontrado</span>* */}
             </div>
             <div className="preview-console__header-buttons">
               <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="clear console">
