@@ -325,7 +325,8 @@ class IDEView extends React.Component {
                   <h2 className="preview-frame__title">Visualizar</h2>
                 </header>*/}
                 <div>
-                  <button className="play-button"> 
+                  <button className="play-button"
+                  onClick={this.props.startSketch}> 
                     <InlineSVG src={playUrl} alt="Preferences" />
                   </button>
                 </div>                <div className="preview-frame__content">
