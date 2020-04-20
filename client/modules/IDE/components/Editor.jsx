@@ -36,6 +36,9 @@ import { metaKey, } from '../../../utils/metaKey';
 const preferencesUrl = require('../../../images/new/settings.svg');
 const pencilUrl = require('../../../images/new/pencil.svg');
 const playUrl = require('../../../images/new/play-button.svg');
+import * as preferenceActions from '../actions/preferences';
+import * as IDEActions from '../actions/ide';
+import * as projectActions from '../actions/project';
 
 import search from '../../../utils/codemirror-search';
 
@@ -304,6 +307,10 @@ class Editor extends React.Component {
       'editor-holder': true,
       'editor-holder--hidden': this.props.file.fileType === 'folder' || this.props.file.url
     });
+        const preferencesButtonClass = classNames({
+      'toolbar__preferences-button': true,
+      'toolbar__preferences-button--selected': this.props.preferencesIsVisible
+    });
 
     return (
       <section
@@ -339,7 +346,7 @@ class Editor extends React.Component {
             />
           </div> 
           <div className="edit-name">
-            Defesa Terrestre Final copy
+
             <button
               aria-label="preferences"
               className="icon_settings"
@@ -350,6 +357,7 @@ class Editor extends React.Component {
           <button
             aria-label="preferences"
             className="icon_settings"
+            onClick={this.props.openPreferences}
           >
             <InlineSVG src={preferencesUrl} alt="Preferences" />
           </button>

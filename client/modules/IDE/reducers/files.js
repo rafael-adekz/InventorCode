@@ -25,7 +25,7 @@ const defaultHTML =
   
   <body>
     <div id="conteiner">
-    <img src="https://codigosinventor.s3-sa-east-1.amazonaws.com/t7.png" class="img" width="600"> 
+    <img src="https://codigosinventor.s3-sa-east-1.amazonaws.com/t7.png" class="img"> 
     <script src="sketch.js"></script>
     </div>
   </body>

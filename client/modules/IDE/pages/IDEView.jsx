@@ -39,6 +39,7 @@ import Fundos from '../components/Fundos';
 import Sons from '../components/Sons';
 import Personagens from '../components/Personagens';
 import InlineSVG from 'react-inlinesvg';
+import Passos from '../components/Passos';
 
 const giftUrl = require('../../../images/new/gift.svg');
 const playUrl = require('../../../images/new/play-button.svg');
@@ -259,7 +260,7 @@ class IDEView extends React.Component {
             />
             <SplitPane
               split="vertical"
-              defaultSize="50%"
+              defaultSize="45%"
               onChange={() => { this.overlay.style.display = 'block'; }}
               onDragFinished={() => { this.overlay.style.display = 'none'; }}
               resizerStyle={{
@@ -448,6 +449,10 @@ class IDEView extends React.Component {
           >
             <Passos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
           </Overlay>
+        } 
+                { this.props.location.pathname === '/passos' &&
+
+          <Passos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
         }
                 { this.props.location.pathname === '/sons' &&
           <Overlay

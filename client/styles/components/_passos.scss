@@ -1,0 +1,243 @@
+//Variaveis
+$color-primary   : #EF7D00; //Laranja
+$color-secundary : #42BCD6; //Azul
+$color-white     : #FFFFFF; //Branco
+
+
+//Estilo
+.d-flex{
+	display: flex;
+
+	&.colunm{
+		flex-direction: column;
+	}
+
+	&.jc-bet{
+		justify-content: space-between;
+	}
+
+	&.jc-center{
+		justify-content: center;
+	}
+
+	&.jc-end{
+		justify-content: flex-end;
+	}
+
+	&.a-center{
+		align-items: center;
+	}
+}
+
+.passos{
+	padding: 50px;
+	min-height: 980px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&.bg{
+		background: url(../images/new/bg-pixel.svg) center center no-repeat;
+		// background-size: 100%;
+	}
+
+	.tablet{
+		margin: 0 auto;
+		position: relative;
+		padding: 50px 30px 50px;
+		width: 550px;
+		height: 700px;
+		background-image: url(../images/new/tablet-blue.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100%;
+
+		&.white{
+			background-image: url(../images/new/tablet-white.svg);
+		}
+
+		&-stripe{
+			position: absolute;
+			top: 30%;
+			left: 30px;
+			right: 30px;
+			background-color: rgba(#E9FBFF, .9);
+			box-shadow: 0 5px 5px rgba(#000, .4);
+
+			.flex{
+				display: flex;
+			}
+
+			.stripe-rocket{
+				position: relative;
+				background-color: $color-secundary;
+				width: 50px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				z-index: 1;
+
+				&:after{
+					content: "";
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: -65%;
+					width: 60px;
+					height: 75px;
+					background: url(../images/new/rocket.svg) center center no-repeat;
+					background-size: 100%;
+				}
+
+				&:first-child{
+					border-radius: 10px 0 0 10px;
+					margin-left: -50px;
+				}
+
+				&:last-child{
+					border-radius: 0 10px 10px 0;
+					margin-right: -50px;
+				}
+
+				span{
+					display: flex;
+					justify-content: space-between;
+					padding: 7px;
+
+					&:before,
+					&:after{
+						content: "";
+						display: block;
+						width: 12px;
+						height: 12px;
+						background: url(../images/new/screw.svg) center center no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+
+			.stripe-text{
+				padding: 20px 10px;
+				font-size: 16px;
+				font-weight: 700;
+				text-align: center;
+				flex: 1;
+			}
+
+			.stripe-close{
+				position: absolute;
+				right: -105px;
+				top: 0;
+				padding: 0 0 10px 10px;
+				height: 100%;
+				width: 65px;
+				background: url(../images/new/close.svg) 27px 9px no-repeat #C40000;
+				background-size: 20px;
+				color: $color-white;
+				border-radius: 0 10px 10px 0;
+				font-weight: 700;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+
+		.btn{
+			display: table;
+			background-color: $color-primary;
+			margin: 0;
+			padding: 10px 30px;
+			border: 0;
+			border-radius: 30px;
+			color: $color-white;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 16px;
+			transition: 300ms ease-in-out;
+			border: solid 2px $color-primary;
+
+			&.center{
+				margin: 0 auto;
+			}
+
+			&.mt20{
+				margin-top: 20px;
+			}
+
+			&.white{
+				background-color: $color-white;
+				border: solid 2px $color-primary;
+				color: $color-primary;
+
+				&:hover{
+					background-color: $color-primary;
+					border-color: $color-primary;
+					color: $color-white;
+				}
+			}
+
+			&:hover{
+				background-color: $color-secundary;
+				border-color: $color-secundary;
+				box-shadow: 0 0 10px rgba(#000, .5);
+			}
+		}
+
+		.text{
+			p{
+				text-align: center;
+				font-weight: 700;
+				font-size: 18px;
+			}
+
+			&.primary{
+				p{
+					color: $color-primary;
+				}
+			}
+		}
+
+		.form{
+			min-width: 300px;
+
+			form{
+				ul{
+					li{
+						margin-bottom: 15px;
+
+						legend{
+							display: block;
+							font-weight: 700;
+							font-size: 20px;
+							text-align: center;
+						}
+
+						input{
+							width: 100%;
+							outline: none;
+							font-weight: 700;
+							color: #000;
+							background-color: transparent;
+							border: solid 1px transparent;
+							padding: 0;
+							height: 35px;
+
+							&::placeholder{
+								color: #A1A1A1;
+							}
+						}
+
+						.forget{
+							color: $color-primary;
+							font-weight: 700;
+							border-bottom: solid 1px $color-primary;
+							margin-right: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -127,7 +127,7 @@ class Console extends React.Component {
             </div>
             <div className="preview-console__header-buttons">
               <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="clear console">
-                Clear
+                Apagar
               </button>
               <button
                 className="preview-console__collapse"
