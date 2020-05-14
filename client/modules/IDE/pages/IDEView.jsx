@@ -49,6 +49,8 @@ class IDEView extends React.Component {
     super(props);
     this.handleGlobalKeydown = this.handleGlobalKeydown.bind(this);
     this.warnIfUnsavedChanges = this.warnIfUnsavedChanges.bind(this);
+    
+
 
     this.state = {
       consoleSize: props.ide.consoleIsExpanded ? 150 : 29,
@@ -67,7 +69,7 @@ class IDEView extends React.Component {
       if (id !== this.props.project.id) {
         this.props.getProject(id);
       }
-    }
+    };
 
     this.isMac = navigator.userAgent.toLowerCase().indexOf('mac') !== -1;
     document.addEventListener('keydown', this.handleGlobalKeydown, false);
@@ -79,7 +81,6 @@ class IDEView extends React.Component {
     document.body.className = this.props.preferences.theme;
     this.autosaveInterval = null;
   }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.location !== this.props.location) {
       this.props.setPreviousPath(this.props.location.pathname);

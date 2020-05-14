@@ -32,7 +32,7 @@ import '../../../utils/p5-javascript';
 import '../../../utils/webGL-clike';
 import Timer from '../components/Timer';
 import EditorAccessibility from '../components/EditorAccessibility';
-import { metaKey, } from '../../../utils/metaKey';
+import { metaKey, } from '../../../utils/metaKey';  
 const preferencesUrl = require('../../../images/new/settings.svg');
 const pencilUrl = require('../../../images/new/pencil.svg');
 const playUrl = require('../../../images/new/play-button.svg');
@@ -63,6 +63,7 @@ class Editor extends React.Component {
   constructor(props) {
     super(props);
     this.tidyCode = this.tidyCode.bind(this);
+    this.handleProjectNameChange = this.handleProjectNameChange.bind(this);
 
     this.updateLintingMessageAccessibility = debounce((annotations) => {
       this.props.clearLintMessage();
@@ -156,6 +157,25 @@ class Editor extends React.Component {
       getContent: this.getContent
     });
   }
+  canEditProjectName() {
+    return (this.props.owner && this.props.owner.username
+      && this.props.owner.username === this.props.currentUser)
+      || !this.props.owner || !this.props.owner.username;
+  };
+  handleProjectNameChange(event) {
+    this.props.setProjectName(event.target.value);
+  }
+  validateProjectName() {
+    if (this.props.project.name === '') {
+      this.props.setProjectName(this.originalProjectName);
+    }
+  }
+  handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      this.props.hideEditProjectName();
+    }
+  }
+
 
   componentWillUpdate(nextProps) {
     // check if files have changed
@@ -297,6 +317,7 @@ class Editor extends React.Component {
   }
 
   render() {
+
     const editorSectionClass = classNames({
       'editor': true,
       'sidebar--contracted': !this.props.isExpanded,
@@ -346,7 +367,7 @@ class Editor extends React.Component {
             />
           </div> 
           <div className="edit-name">
-
+          Placeholder
             <button
               aria-label="preferences"
               className="icon_settings"
@@ -355,8 +376,8 @@ class Editor extends React.Component {
             </button>
           </div>
           <button
+            className={preferencesButtonClass}
             aria-label="preferences"
-            className="icon_settings"
             onClick={this.props.openPreferences}
           >
             <InlineSVG src={preferencesUrl} alt="Preferences" />
@@ -373,6 +394,8 @@ class Editor extends React.Component {
 }
 
 Editor.propTypes = {
+  preferencesIsVisible: PropTypes.bool.isRequired,
+  openPreferences: PropTypes.func.isRequired,
   lineNumbers: PropTypes.bool.isRequired,
   lintWarning: PropTypes.bool.isRequired,
   linewrap: PropTypes.bool.isRequired,
@@ -426,6 +449,12 @@ Editor.propTypes = {
 Editor.defaultProps = {
   isUserOwner: false,
   consoleEvents: [],
+};
+
+const mapDispatchToProps = {
+  ...IDEActions,
+  ...preferenceActions,
+  ...projectActions,
 };
 
 export default Editor;

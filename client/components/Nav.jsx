@@ -13,7 +13,7 @@ import { logoutUser } from '../modules/User/actions';
 import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
-const shareURL = require('../images/shareicon.svg');
+const shareURL = require('../images/new/share.svg');
 const bibliotecaURL = require('../images/new/book.svg');
 const arquivoURL = require('../images/new/burger.svg');
 const ajudaURL = require('../images/new/help.svg');
@@ -586,6 +586,9 @@ class Nav extends React.PureComponent {
               </li>
               
             </ul>
+          </li>
+          <li className="nav__item">
+            <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
           </li>
         </ul>
         { __process.env.LOGIN_ENABLED && !this.props.user.authenticated &&

@@ -47,6 +47,7 @@
   height: 100%;
 }
 
+
 //############# NEW STYLE #############
 $color-primary  : #EF7D00;
 $color-secundary: #42BCD6;
@@ -70,7 +71,14 @@ $color-white    : #FFFFFF;
       margin-right: 20px;
     }
 
+    .svg__share svg{
+      height: 45px;
+    }
+
     .nav__items-right{
+      flex-direction: column;
+      justify-content: center;
+
       li{
         a{
           color: $color-white;
@@ -78,6 +86,45 @@ $color-white    : #FFFFFF;
           font-size: 15px;
         }
       }
+
+      .nav__item{
+        display: block;
+        height: auto;
+
+        &-header{
+          display: flex;
+          color: $color-white;
+          font-weight: 700;
+          padding: 5px;
+          font-size: 17px;
+
+          &-triangle{
+            display: block;
+
+            svg{
+              height: auto;
+
+              polygon{
+                fill: $color-white;
+              }
+            }
+          }
+        }
+      }
+
+      .nav__dropdown{
+        top: 41px !important;
+
+        li{
+          a{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .nav__item-spacer{
+      display: none;
     }
 
     .nav__item{
@@ -90,10 +137,18 @@ $color-white    : #FFFFFF;
         }
       }
 
+      span{
+        color: $color-white;
+        font-weight: 700;
+        font-size: 17px;
+      }
+
       .nav__dropdown{
         top: 67px;
         background-color: $color-white;
         border-color: $color-white;
+        width: auto;
+        min-width: 170px;
 
         li{
           button,
@@ -205,12 +260,12 @@ $color-white    : #FFFFFF;
         h2{
           display: flex;
           align-items: center;
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 700;
 
           svg{
             margin-left: 10px;
-            width: 30px;
+            width: 25px;
           }
         }
 
@@ -237,17 +292,9 @@ $color-white    : #FFFFFF;
     }
   }
 }
-.error_mensagem{
-  p{
-    display: block;
-    color: $color-secundary;
-    font-weight: 700;
-    margin-right: 15px;
-  }
-}
 
 // .ipad{
 //   width: 656px;
 //   height: 826px;
 //   background: url("../images/ipad.png") center center no-repeat;
-// } 
+// }
