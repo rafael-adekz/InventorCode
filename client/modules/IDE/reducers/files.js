@@ -1,6 +1,10 @@
 import objectID from 'bson-objectid';
 import * as ActionTypes from '../../../constants';
 
+
+import tablet from '../../../images/new/tablet.svg';   //aparentemente isso só finciona com SVG [???]; Mudar tablet.svg para o arquivo que vocês usam
+//no defaultHTML chamamos esse arquivo usando {tablet}. Isso é possivel apenas usando ` ao invés do uso de aspas convencional
+
 const defaultSketch = ``;
 
 const defaultHTML =
@@ -25,7 +29,7 @@ const defaultHTML =
   
   <body>
     <div id="conteiner">
-    <img src="https://codigosinventor.s3-sa-east-1.amazonaws.com/t7.png" class="img"> 
+    <img src="${tablet}" class="img" width="600">  
     <script src="sketch.js"></script>
     </div>
   </body>
