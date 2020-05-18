@@ -46,7 +46,7 @@ canvas {
   position:relative;
   z-index:-1;
   display: block;  
-  left: 25px;
+  left: 40px;
   top: 26.7px;
 }
 regua{
