@@ -29,7 +29,7 @@ const defaultHTML =
   
   <body>
     <div id="conteiner">
-    <img src="${tablet}" class="img" width="600">  
+    <img src="https://codigosinventor.s3.sa-east-1.amazonaws.com/tabletleo3.png" class="img">  
     <script src="sketch.js"></script>
     </div>
   </body>
@@ -46,8 +46,8 @@ canvas {
   position:relative;
   z-index:-1;
   display: block;  
-  left: 40px;
-  top: 26.7px;
+  left: 20px;
+  top: 20px;
 }
 regua{
   position:relative;
