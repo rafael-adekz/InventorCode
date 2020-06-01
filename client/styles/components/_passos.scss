@@ -40,203 +40,550 @@ $color-white     : #FFFFFF; //Branco
 		background: url(../images/new/bg-pixel.svg) center center no-repeat;
 		// background-size: 100%;
 	}
+}
 
-	.tablet{
-		margin: 0 auto;
-		position: relative;
-		padding: 50px 30px 50px;
-		width: 550px;
-		height: 700px;
-		background-image: url(../images/new/tablet-blue.svg);
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: 100%;
+.bg-black{
+	background-color: #ddd;
+	padding: 40px;
+}
 
-		&.white{
-			background-image: url(../images/new/tablet-white.svg);
+.tablet{
+	margin: 0 auto;
+	position: relative;
+	padding: 50px 30px 50px;
+	width: 550px;
+	height: 700px;
+	background-image: url(../images/new/tablet-blue.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+
+	&.white{
+		background-image: url(../images/new/tablet-white.svg);
+	}
+
+	&-stripe{
+		position: absolute;
+		top: 30%;
+		left: 30px;
+		right: 30px;
+		background-color: rgba(#E9FBFF, .9);
+		box-shadow: 0 5px 5px rgba(#000, .4);
+
+		.flex{
+			display: flex;
 		}
 
-		&-stripe{
-			position: absolute;
-			top: 30%;
-			left: 30px;
-			right: 30px;
-			background-color: rgba(#E9FBFF, .9);
-			box-shadow: 0 5px 5px rgba(#000, .4);
+		.stripe-rocket{
+			position: relative;
+			background-color: $color-secundary;
+			width: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			z-index: 1;
 
-			.flex{
-				display: flex;
+			&:after{
+				content: "";
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -65%;
+				width: 60px;
+				height: 75px;
+				background: url(../images/new/rocket.svg) center center no-repeat;
+				background-size: 100%;
 			}
 
-			.stripe-rocket{
-				position: relative;
-				background-color: $color-secundary;
-				width: 50px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				z-index: 1;
+			&:first-child{
+				border-radius: 10px 0 0 10px;
+				margin-left: -50px;
+			}
 
+			&:last-child{
+				border-radius: 0 10px 10px 0;
+				margin-right: -50px;
+			}
+
+			span{
+				display: flex;
+				justify-content: space-between;
+				padding: 7px;
+
+				&:before,
 				&:after{
 					content: "";
-					position: absolute;
-					left: 50%;
-					transform: translateX(-50%);
-					bottom: -65%;
-					width: 60px;
-					height: 75px;
-					background: url(../images/new/rocket.svg) center center no-repeat;
+					display: block;
+					width: 12px;
+					height: 12px;
+					background: url(../images/new/screw.svg) center center no-repeat;
 					background-size: 100%;
 				}
+			}
+		}
 
-				&:first-child{
-					border-radius: 10px 0 0 10px;
-					margin-left: -50px;
+		.stripe-text{
+			padding: 20px 10px;
+			font-size: 16px;
+			font-weight: 700;
+			text-align: center;
+			flex: 1;
+		}
+
+		.stripe-close{
+			position: absolute;
+			right: -105px;
+			top: 0;
+			padding: 0 0 10px 10px;
+			height: 100%;
+			width: 65px;
+			background: url(../images/new/close.svg) 27px 9px no-repeat #C40000;
+			background-size: 20px;
+			color: $color-white;
+			border-radius: 0 10px 10px 0;
+			font-weight: 700;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+
+	.btn{
+		display: table;
+		background-color: $color-primary;
+		margin: 0;
+		padding: 10px 30px;
+		border: 0;
+		border-radius: 30px;
+		color: $color-white;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 16px;
+		transition: 300ms ease-in-out;
+		border: solid 2px $color-primary;
+		outline: none;
+
+		&.center{
+			margin: 0 auto;
+		}
+
+		&.mt20{
+			margin-top: 20px;
+		}
+
+		&.white{
+			background-color: $color-white;
+			border: solid 2px $color-primary;
+			color: $color-primary;
+
+			&:hover{
+				background-color: $color-primary;
+				border-color: $color-primary;
+				color: $color-white;
+			}
+		}
+
+		&:hover{
+			background-color: $color-secundary;
+			border-color: $color-secundary;
+			box-shadow: 0 0 10px rgba(#000, .5);
+		}
+	}
+
+	.text{
+		p{
+			text-align: center;
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		&.primary{
+			p{
+				color: $color-primary;
+			}
+		}
+	}
+
+	.form{
+		min-width: 300px;
+
+		form{
+			ul{
+				li{
+					margin-bottom: 15px;
+
+					legend{
+						display: block;
+						font-weight: 700;
+						font-size: 20px;
+						text-align: center;
+					}
+
+					input{
+						width: 100%;
+						outline: none;
+						font-weight: 700;
+						color: #000;
+						background-color: transparent;
+						border: solid 1px transparent;
+						padding: 0;
+						height: 35px;
+
+						&::placeholder{
+							color: #A1A1A1;
+						}
+					}
+
+					.forget{
+						color: $color-primary;
+						font-weight: 700;
+						border-bottom: solid 1px $color-primary;
+						margin-right: 20px;
+					}
 				}
+			}
+		}
+	}
+}
 
-				&:last-child{
-					border-radius: 0 10px 10px 0;
-					margin-right: -50px;
+.book{
+	max-width: 1200px;
+	margin: 0 auto;
+
+	&-tabs{
+		display: flex;
+		max-width: 1160px;
+		margin: 0 auto;
+
+		.tab{
+			padding: 10px 15px;
+			background-color: $color-white;
+			border-radius: 10px 10px 0 0;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			position: relative;
+
+			&.active,
+			&:hover{
+				background-color: $color-secundary;
+
+				&:after{
+					background-color: $color-secundary;
+				}
+				
+				span:first-child{
+					display: block;
+					color: $color-white;
 				}
 
 				span{
-					display: flex;
-					justify-content: space-between;
-					padding: 7px;
+					svg{
+						margin-left: 10px;
 
-					&:before,
-					&:after{
-						content: "";
-						display: block;
-						width: 12px;
-						height: 12px;
-						background: url(../images/new/screw.svg) center center no-repeat;
-						background-size: 100%;
+						path{
+							fill: $color-white
+						}
 					}
 				}
 			}
 
-			.stripe-text{
-				padding: 20px 10px;
-				font-size: 16px;
-				font-weight: 700;
-				text-align: center;
-				flex: 1;
+			&:after{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 100%;
+				height: 100px;
+				width: 100%;
+				background-color: $color-white;
 			}
 
-			.stripe-close{
-				position: absolute;
-				right: -105px;
-				top: 0;
-				padding: 0 0 10px 10px;
-				height: 100%;
-				width: 65px;
-				background: url(../images/new/close.svg) 27px 9px no-repeat #C40000;
-				background-size: 20px;
-				color: $color-white;
-				border-radius: 0 10px 10px 0;
+			span:first-child{
+				display: none;
+				font-size: 16px;	
 				font-weight: 700;
-				display: flex;
-				align-items: flex-end;
-				justify-content: center;
-				text-align: center;
-				cursor: pointer;
+				color: $color-secundary;
+			}
+
+		}
+	}
+
+	&-content{
+		background: url(../images/new/book2.svg) center center no-repeat;
+		background-size: 100%;
+		height: 780px;
+		position: relative;
+		z-index: 10;
+
+		.w50{
+			float: left;
+			width: 50%;
+			padding: 40px 70px 40px 40px;
+
+			&.right{
+				float: right;
+				padding: 40px 40px 40px 70px;
 			}
 		}
 
-		.btn{
-			display: table;
-			background-color: $color-primary;
-			margin: 0;
-			padding: 10px 30px;
-			border: 0;
-			border-radius: 30px;
-			color: $color-white;
-			font-weight: 700;
-			text-transform: uppercase;
-			font-size: 16px;
-			transition: 300ms ease-in-out;
-			border: solid 2px $color-primary;
+		.search{
+			display: flex;
+			margin-bottom: 20px;
 
-			&.center{
-				margin: 0 auto;
-			}
+			input{
+				outline: none;
+				font-weight: 700;
+				color: #000;
+				background-color: transparent;
+				border: solid 1px transparent;
+				padding: 0 15px;
+				height: 35px;
+				font-size: 15px;
+				flex: 1;
 
-			&.mt20{
-				margin-top: 20px;
-			}
-
-			&.white{
-				background-color: $color-white;
-				border: solid 2px $color-primary;
-				color: $color-primary;
-
-				&:hover{
-					background-color: $color-primary;
-					border-color: $color-primary;
-					color: $color-white;
+				&::placeholder{
+					color: #A1A1A1;
 				}
 			}
 
-			&:hover{
-				background-color: $color-secundary;
-				border-color: $color-secundary;
-				box-shadow: 0 0 10px rgba(#000, .5);
+			.btn-search{
+				display: table;
+				background-color: $color-primary;
+				margin: 0;
+				border: 0;
+				width: 45px;
+				height: 45px;
+				border-radius: 8px;
+				outline: none;
+				transition: 300ms ease-in-out;
+
+				&:hover{
+					background-color: $color-secundary;
+				}
+
+				svg{
+					width: 80%;
+				}
 			}
 		}
 
-		.text{
-			p{
-				text-align: center;
-				font-weight: 700;
-				font-size: 18px;
-			}
+		.buttons{
+			margin-bottom: 20px;
 
-			&.primary{
+			.btn{
+				height: 45px;
+				background-color: $color-primary;
+				color: $color-white;
+				font-weight: 700;
+				font-size: 15px;
+				padding: 0 20px;
+				transition: 300ms ease-in-out;
+
+				&:first-child{
+					border-radius: 30px 8px 8px 30px;
+				}
+
+				&:last-child{
+					border-radius: 8px 30px 30px 8px;
+					margin-left: 20px;
+				}
+
+				&:hover{
+					background-color: $color-secundary;
+				}
+			}
+		}
+
+		.list{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.box{
+				margin-bottom: 20px;
+
+				img{
+					border-radius: 8px;
+					max-width: 100px;
+				}
+
 				p{
+					margin-top: 3px;
+					color: $color-secundary;
+					font-weight: 700;
+					text-align: center;
+					font-size: 15px;
+				}
+			}
+		}
+
+		.txt{
+			color: #A1A1A1;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 18px;
+		}
+
+		.book-scroll{
+			margin-top: 20px;
+			max-height: 550px;
+			overflow-y: auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			// &::-webkit-scrollbar {
+			//   width: 8px;
+			// }
+
+			// &::-webkit-scrollbar-track {
+			//   background: #191919;
+			// }
+
+			// &::-webkit-scrollbar-thumb {
+			//   background: #6C6C6C;
+			// }
+
+			ul{
+				width: 150px;
+				margin-bottom: 20px;
+
+				li{
+					padding: 3px 0;
+					font-size: 15px;
+					color: $color-secundary;
+					font-weight: 700;
+					cursor: pointer;
+
+					span{
+						color: $color-primary;
+						font-size: 18px;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+
+		.selected{
+			.h1{
+				font-size: 30px;
+				font-weight: 700;
+				color: $color-secundary;
+
+				&.primary{
 					color: $color-primary;
 				}
 			}
-		}
 
-		.form{
-			min-width: 300px;
+			p{
+				margin: 30px 0;
+				color: #000;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 18px;
+			}
 
-			form{
-				ul{
-					li{
-						margin-bottom: 15px;
+			.copy{
+				margin-top: 10px;
 
-						legend{
-							display: block;
-							font-weight: 700;
-							font-size: 20px;
-							text-align: center;
-						}
+				.label{
+					font-size: 12px;
+					color: #000;
+					font-weight: 700;
+				}
 
-						input{
-							width: 100%;
-							outline: none;
-							font-weight: 700;
-							color: #000;
-							background-color: transparent;
-							border: solid 1px transparent;
-							padding: 0;
-							height: 35px;
+				.field{
+					margin-top: 5px;
+					padding: 8px 15px;
+					border: solid 3px $color-secundary;
+					border-radius: 5px;
+					font-weight: 700;
+					font-size: 18px;
+					color: #707070;
 
-							&::placeholder{
-								color: #A1A1A1;
-							}
-						}
+					.secundary{
+						color: $color-secundary;
+					}
 
-						.forget{
-							color: $color-primary;
-							font-weight: 700;
-							border-bottom: solid 1px $color-primary;
-							margin-right: 20px;
-						}
+					.primary{
+						color: $color-primary;
+					}
+
+					svg{
+						max-width: 25px;
+						cursor: pointer;
 					}
 				}
+			}
+		}
+	}
+}
+
+.bug{
+	p{
+		margin-top: 20px;
+		color: $color-secundary;
+		font-weight: 700;
+		text-align: center;
+		padding: 0 30px;
+
+		&.big{
+			margin-top: 0;
+			font-size: 60px;
+		}
+
+		&.text{
+			margin-top: 5px;
+			font-size: 17px;
+			font-weight: 700;
+		}
+
+		.primary{
+			color: $color-primary;
+		}
+	}
+}
+
+.qrcode{
+	background-color: $color-white;
+	max-width: 700px;
+	border-radius: 20px;
+	margin: 0 auto;
+	padding: 30px;
+
+	.h1{
+		color: $color-primary;
+		font-weight: 700;
+		font-size: 30px;
+	}
+
+	img{
+			display: block;
+			margin: 40px 0;
+		}
+
+	.link{
+		width: 100%;
+
+		p{
+			font-size: 14px;
+			font-weight: 700;
+			color: $color-primary;
+		}
+
+		a{
+			margin-top: 10px;
+			font-size: 12px;
+			font-weight: 700;
+			color: $color-secundary;
+			display: flex;
+			align-items: center;
+
+			svg{
+				margin-right: 10px;
+				max-width: 20px;
 			}
 		}
 	}

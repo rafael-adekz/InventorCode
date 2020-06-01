@@ -15,16 +15,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
+ // overflow-y: scroll;
 }
 
 .overlay__body {
   @extend %modal;
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
+  //display: flex;
+  //flex-wrap: wrap;
+  //flex-flow: column;
   max-height: 80%;
-  max-width: 65%;
+  max-width: 95%;
   position: relative;
   overflow-y: scroll;
 }
