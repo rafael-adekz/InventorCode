@@ -76,7 +76,7 @@ class Overlay extends React.Component {
             className="overlay__body"
           >
             <header className="overlay__header">
-              <h2 className="overlay__title">{title}</h2>
+            
               <button className="overlay__close-button" onClick={this.close} >
                 <InlineSVG src={exitUrl} alt="close overlay" />
               </button>

@@ -13,11 +13,11 @@ import { logoutUser } from '../modules/User/actions';
 import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
-const shareURL = require('../images/new/share.svg');
-const bibliotecaURL = require('../images/new/book.svg');
-const arquivoURL = require('../images/new/burger.svg');
-const ajudaURL = require('../images/new/help.svg');
-const logoUrl = require('../images/new/logo.svg');
+const shareURL = require('../images/new2/Icone_compartilhar.svg');
+const bibliotecaURL = require('../images/new2/Icone_livro.svg');
+const arquivoURL = require('../images/new2/Icone_menu.svg');
+const ajudaURL = require('../images/new2/Icone_duvida.svg');
+const logoUrl = require('../images/new2/logo.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
 

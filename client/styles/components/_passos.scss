@@ -44,7 +44,7 @@ $color-white     : #FFFFFF; //Branco
 
 .bg-black{
 	background-color: #ddd;
-	padding: 40px;
+	padding: 0px;  //40px antes
 }
 
 .tablet{
@@ -311,9 +311,9 @@ $color-white     : #FFFFFF; //Branco
 	}
 
 	&-content{
-		background: url(../images/new/book2.svg) center center no-repeat;
+		background: url(../images/new/book3.svg) center center no-repeat;
 		background-size: 100%;
-		height: 780px;
+		height: 750px;
 		position: relative;
 		z-index: 10;
 
@@ -429,7 +429,7 @@ $color-white     : #FFFFFF; //Branco
 		.book-scroll{
 			margin-top: 20px;
 			max-height: 550px;
-			overflow-y: auto;
+			overflow-y: hidden;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;

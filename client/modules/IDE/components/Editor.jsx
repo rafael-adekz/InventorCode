@@ -33,7 +33,7 @@ import '../../../utils/webGL-clike';
 import Timer from '../components/Timer';
 import EditorAccessibility from '../components/EditorAccessibility';
 import { metaKey, } from '../../../utils/metaKey';  
-const preferencesUrl = require('../../../images/new/settings.svg');
+const preferencesUrl = require('../../../images/new2/Icone_configuração.svg');
 const pencilUrl = require('../../../images/new/pencil.svg');
 const playUrl = require('../../../images/new/play-button.svg');
 import * as preferenceActions from '../actions/preferences';

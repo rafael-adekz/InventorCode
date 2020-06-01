@@ -53,6 +53,8 @@ $color-primary  : #EF7D00;
 $color-secundary: #42BCD6;
 $color-white    : #FFFFFF;
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
+
 .app{
   > [style]{
     display: none;
@@ -67,13 +69,65 @@ $color-white    : #FFFFFF;
     border-bottom: none;
 
     .nav__item-logo{
-      height: 50px;
-      margin-right: 20px;
+      // height: 50px;
+      // margin-right: 20px;
+      width: 200px;
+
+      svg{
+        width: 100%;
+        height: 39px;
+
+        .cls-2{
+          fill: #4d4b4d;
+        }
+
+        path.cls-1{
+          fill: #fff;
+        }
+      }
     }
+
+    [data-name="Group 69"]{
+      path{
+        fill: #42bcd6;
+      }
+        }
 
     .svg__share svg{
       height: 45px;
     }
+    .svg__share svg{
+      height: 45px;
+    }
+
+    .nav__items-left{
+      > li{
+        margin-right: 20px;
+
+        button{
+          padding: 0;
+        }
+
+        &:nth-child(2){
+          svg{
+            width: 40px;
+          }
+        }
+
+        &:nth-child(3){
+          [data-name="Path 36"]{
+            fill: #42bcd6;
+          }
+        }
+
+        &:nth-child(5){
+          svg{
+            width: 30px;
+          }
+        }
+      }
+    }
+
 
     .nav__items-right{
       flex-direction: column;
@@ -84,6 +138,7 @@ $color-white    : #FFFFFF;
           color: $color-white;
           font-weight: 700;
           font-size: 15px;
+          font-family: 'Source Code Pro';
         }
       }
 
@@ -144,7 +199,7 @@ $color-white    : #FFFFFF;
       }
 
       .nav__dropdown{
-        top: 67px;
+        top: 55px;
         background-color: $color-white;
         border-color: $color-white;
         width: auto;
@@ -222,12 +277,12 @@ $color-white    : #FFFFFF;
       }
 
       .icon_settings{
-        margin-right: 30px;
-        height: 32px;
+        margin-right: 10px;
+        //height: 32px;
         outline: none;
 
         svg{
-          width: 25px;
+          width: 35px;
         }
       }
 
@@ -237,11 +292,15 @@ $color-white    : #FFFFFF;
         color: $color-white;
         font-weight: 500;
         font-size: 15px;
+        padding-left: 30px;
+        font-family: 'Source Code Pro';
+        font-weight: 700;
+
 
         button{
           margin-left: 5px;
         }
-      }
+      } 
 
     }
 
@@ -291,6 +350,14 @@ $color-white    : #FFFFFF;
       padding-left: 200px;
     }
   }
+}
+
+.saved{
+  display: flex;
+  justify-content: flex-end;
+  color: #42BCD6;
+  padding: 0 30px 5px 0;
+  font-family: 'Source Code Pro';
 }
 
 // .ipad{
