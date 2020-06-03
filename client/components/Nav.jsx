@@ -254,7 +254,7 @@ class Nav extends React.PureComponent {
       <nav className="nav" title="main-navigation" ref={(node) => { this.node = node; }}>
         <ul className="nav__items-left" title="project-menu">
           <li className="nav__item-logo">
-            <InlineSVG src={logoUrl} alt="p5.js logo" className="svg__logo" />
+            <InlineSVG src={logoUrl}/>
           </li>
           <li className={navDropdownState.file}>
             <button
@@ -529,7 +529,7 @@ class Nav extends React.PureComponent {
             </ul>
           </li>
           <li className={navDropdownState.help}>
-            <button
+            {/**<button
               onClick={this.toggleDropdownForHelp}
               onBlur={this.handleBlur}
               onFocus={this.clearHideTimeout}
@@ -541,7 +541,7 @@ class Nav extends React.PureComponent {
             >
               <span className="nav__item-header"></span>
               <InlineSVG className="nav__item-header-triangle" src={ajudaURL} />
-            </button>
+            </button>*/}
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
                 <button
@@ -587,7 +587,7 @@ class Nav extends React.PureComponent {
               
             </ul>
           </li>
-          <li className="nav__item">
+          <li className="nav__itemdn">
             <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
           </li>
         </ul>

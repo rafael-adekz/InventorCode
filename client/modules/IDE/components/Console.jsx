@@ -157,9 +157,9 @@ class Console extends React.Component {
                   </div>
                 }
                 <div className="error_mensagem">
-                <p>Parece que temos um bug aqui!</p>
+                <p className="preview-console__mensagemtitulo">Parece que temos um bug aqui!</p>
                 
-                <p>{this.MensagemErro(consoleEvent.data)}</p>
+                <p className="preview-console__mensagemtraduzida">{this.MensagemErro(consoleEvent.data)}</p>
                 </div>
                 <ConsoleFeed
                   styles={this.getConsoleFeedStyle(theme, times)}

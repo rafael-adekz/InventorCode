@@ -27,7 +27,15 @@ function Sons(props) {
     <div className="book">
       <div className="book-tabs">
         <div className="tab">
-          <span>Sprite</span>
+        <Link
+                  to="/personagens"
+                  onFocus={this.handleFocusForBiblioteca}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >
+                  <span>Sprite</span>
+              </Link>
+          
           <InlineSVG src={tlogoUrl} alt="" />
         </div>
         <div className="tab">

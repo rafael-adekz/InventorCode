@@ -328,10 +328,10 @@ class Editor extends React.Component {
       'editor-holder': true,
       'editor-holder--hidden': this.props.file.fileType === 'folder' || this.props.file.url
     });
-        const preferencesButtonClass = classNames({
-      'toolbar__preferences-button': true,
-      'toolbar__preferences-button--selected': this.props.preferencesIsVisible
-    });
+  //      const preferencesButtonClass = classNames({
+   //   'toolbar__preferences-button': true,
+    //  'toolbar__preferences-button--selected': this.props.preferencesIsVisible
+    //});
 
     return (
       <section
@@ -355,7 +355,7 @@ class Editor extends React.Component {
          
             <InlineSVG src={rightArrowUrl} />
           </button> >* */}
-          <div className="editor__file-name">
+          <div className="editor__file-namedn">
             <span>
               {this.props.file.name}
               {this.props.unsavedChanges ? <InlineSVG src={unsavedChangesDotUrl} /> : null}
@@ -367,21 +367,22 @@ class Editor extends React.Component {
             />
           </div> 
           <div className="edit-name">
-          Placeholder
-            <button
+          <p className="edit-name">Area de Programação</p>
+          {/**   <button
               aria-label="preferences"
               className="icon_settings"
             >
               <InlineSVG src={pencilUrl} alt="Editar" />
-            </button>
+            
+          </button>*/}
           </div>
-          <button
+         {/* <button
             className={preferencesButtonClass}
             aria-label="preferences"
             onClick={this.props.openPreferences}
           >
             <InlineSVG src={preferencesUrl} alt="Preferences" />
-          </button>
+          </button>*/}
         </header>
         <div ref={(element) => { this.codemirrorContainer = element; }} className={editorHolderClass} >
         </div>
