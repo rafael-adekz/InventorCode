@@ -31,9 +31,12 @@
 }
 
 .form-container__logo-button {
-  @extend %none-themify-icon;
+      height: 100px;
+      // margin-right: 20px;
+      width: 200px;
 }
 
 .form-container__exit-button {
   @extend %none-themify-icon-with-hover;
 }
+ 

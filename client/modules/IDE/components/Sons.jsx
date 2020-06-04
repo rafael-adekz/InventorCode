@@ -61,12 +61,12 @@ function Sons(props) {
       </div>  
       <div className="book-content">
         <div className="w50">
-          <div className="search d-flex a-center">
+        {/**  <div className="search d-flex a-center">
             <input type="text" placeholder="Buscar" />
             <button className="btn-search">
               <InlineSVG src={searchUrl} alt="" />
             </button>
-          </div>
+          </div> */}
           <div className="list">
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />
@@ -104,10 +104,10 @@ function Sons(props) {
         </div>
 
         <div className="w50 right">
-          <div className="buttons d-flex jc-end">
+        {/**   <div className="buttons d-flex jc-end">
             <button className="btn">Anterior</button>
             <button className="btn">Proximo</button>
-          </div>
+          </div>*/}
           <div className="list">
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />
