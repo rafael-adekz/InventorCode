@@ -15,11 +15,10 @@ import debugLightUrl from '../../../images/console-debug-light.svg';
 import debugDarkUrl from '../../../images/console-debug-dark.svg';
 import infoLightUrl from '../../../images/console-info-light.svg';
 import infoDarkUrl from '../../../images/console-info-dark.svg';
+import consoleUrl from '../../../images/new/console.svg';
 
 const upArrowUrl = require('../../../images/up-arrow.svg');
 const downArrowUrl = require('../../../images/down-arrow.svg');
-
-
 
 class Console extends React.Component {
   componentDidUpdate(prevProps) {
@@ -71,7 +70,8 @@ class Console extends React.Component {
         return '';
     }
   }
-  Teste(parametro){
+
+  MensagemErro(parametro){
     var resposta = "";
     var fraseArray = parametro;    //passo o valor do parâmetro para a variavel (em array)
     var fraseString = fraseArray.toString(); //passando o parâmetro para string (redutivel porem mantido para clareza)
@@ -105,30 +105,41 @@ class Console extends React.Component {
     console.log(fraseString);
     return resposta;
   }
+
   render() {
     const consoleClass = classNames({
-      'ole': true,
+      'preview-console': true,
       'preview-console--collapsed': !this.props.isExpanded
     });
 
     return (
       <div className={consoleClass} role="main" title="console">
         <div className="preview-console__header">
-          <h2 className="preview-console__header-title">Console</h2>
-          <div className="preview-console__header-buttons">
-            <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="clear console">
-              Clear
-            </button>
-            <button
-              className="preview-console__collapse"
-              onClick={this.props.collapseConsole}
-              aria-label="collapse console"
-            >
-              <InlineSVG src={downArrowUrl} />
-            </button>
-            <button className="preview-console__expand" onClick={this.props.expandConsole} aria-label="expand console">
-              <InlineSVG src={upArrowUrl} />
-            </button>
+          <h2 className="preview-console__header-title">
+            Console
+            <InlineSVG src={consoleUrl} />
+          </h2>
+          <div className="dflex">
+            <div className="error_inf">
+            {/*  <span>(1) Bug Encontrado</span>
+              <span>(2) Chamados</span>
+              <span>(1) Bug Encontrado</span>* */}
+            </div>
+            <div className="preview-console__header-buttons">
+              <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="clear console">
+                Apagar
+              </button>
+              <button
+                className="preview-console__collapse"
+                onClick={this.props.collapseConsole}
+                aria-label="collapse console"
+              >
+                <InlineSVG src={downArrowUrl} />
+              </button>
+              <button className="preview-console__expand" onClick={this.props.expandConsole} aria-label="expand console">
+                <InlineSVG src={upArrowUrl} />
+              </button>
+            </div>
           </div>
         </div>
         <div ref={(element) => { this.consoleMessages = element; }} className="preview-console__messages">
@@ -144,18 +155,15 @@ class Console extends React.Component {
                   >
                     {times}
                   </div>
-                  
                 }
-                <p>Opa! Parece que temos um bug aqui! </p>
+                <div className="error_mensagem">
+                <p className="preview-console__mensagemtitulo">Parece que temos um bug aqui!</p>
                 
-                {//console.log(consoleEvent)
-                }
-                {//this.Teste(consoleEvent.data)
-                }
-              <p>{this.Teste(consoleEvent.data)}</p>
+                <p className="preview-console__mensagemtraduzida">{this.MensagemErro(consoleEvent.data)}</p>
+                </div>
                 <ConsoleFeed
                   styles={this.getConsoleFeedStyle(theme, times)}
-                  //logs={[consoleEvent]}
+                 // logs={[consoleEvent]}
                 />
               </div>
             );

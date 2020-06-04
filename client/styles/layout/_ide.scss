@@ -46,3 +46,322 @@
   width: 100%;
   height: 100%;
 }
+
+
+//############# NEW STYLE #############
+$color-primary  : #EF7D00;
+$color-secundary: #42BCD6;
+$color-white    : #FFFFFF;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
+
+.app{
+  > [style]{
+    display: none;
+  }
+}
+
+.ide{
+  .nav{
+    padding: 5px 15px 5px;
+    background-color: $color-primary;
+    height: 15;
+    border-bottom: none;
+
+    .nav__item-logo{
+      // height: 50px;
+      // margin-right: 20px;
+      width: 200px;
+
+      svg{
+        width: 100%;
+        height: 39px;
+
+        .cls-2{
+          fill: #FFFFFF;
+        }
+
+        path.cls-1{
+          fill: #4d4b4d;
+        }
+      }
+    }
+
+    [data-name="Group 69"]{
+      path{
+        fill: #42bcd6;
+      }
+        }
+
+    .svg__share svg{
+      height: 45px;
+    }
+    .svg__share svg{
+      height: 45px;
+    }
+
+    .nav__items-left{
+      > li{
+        margin-right: 20px;
+
+        button{
+          padding: 0;
+        }
+
+        &:nth-child(2){
+          svg{
+            width: 40px;
+          }
+        }
+
+        &:nth-child(3){
+          [data-name="Path 36"]{
+            fill: #42bcd6;
+          }
+        }
+
+        &:nth-child(5){
+          svg{
+            width: 30px;
+          }
+        }
+      }
+    }
+
+
+    .nav__items-right{
+      flex-direction: column;
+      justify-content: center;
+
+      li{
+        a{
+          color: $color-white;
+          font-weight: 700;
+          font-size: 15px;
+          font-family: 'Source Code Pro';
+        }
+      }
+
+      .nav__item{
+        display: block;
+        height: auto;
+
+        &-header{
+          display: flex;
+          color: $color-white;
+          font-weight: 700;
+          padding: 5px;
+          font-size: 17px;
+
+          &-triangle{
+            display: block;
+
+            svg{
+              height: auto;
+
+              polygon{
+                fill: $color-white;
+              }
+            }
+          }
+        }
+      }
+
+      .nav__dropdown{
+        top: 41px !important;
+
+        li{
+          a{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .nav__item-spacer{
+      display: none;
+    }
+
+    .nav__item{
+      button{
+        // padding: 0;
+        outline: none;
+
+        svg{
+          height: 35px;
+        }
+      }
+
+      span{
+        color: $color-white;
+        font-weight: 700;
+        font-size: 17px;
+      }
+
+      .nav__dropdown{
+        top: 55px;
+        background-color: $color-white;
+        border-color: $color-white;
+        width: auto;
+        min-width: 170px;
+
+        li{
+          button,
+          a{
+            color: $color-primary;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .editor-preview-container{
+    // margin-top: 40px;
+
+    .dflex{
+      display: flex;
+      align-items: center;
+    }
+
+    .play-button{
+      position: absolute;
+      left: 40px;
+      top: 30%;
+      z-index: 100;
+      outline: none;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+      border-radius: 30px;
+      padding: 0 20px;
+
+      svg{
+        width: 90px;
+      }
+    }
+
+    .gift-button{
+      position: absolute;
+      right: 30px;
+      bottom: 0;
+      z-index: 100;
+
+      svg{
+        width: 100px;
+      }
+    }
+
+    .editor__header{
+      background-color: $color-secundary;
+      border-radius: 30px 30px 0 0;
+      padding: 5px 0;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .editor__file-name{
+        padding-top: 0;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 17px;
+        height: auto;
+      }
+
+      .sidebar__expand,
+      .sidebar__contract{
+        outline: none;
+        // padding-top: 7px !important;
+        // padding-left: 20px;
+        top: 14px;
+        left: 26px;
+      }
+
+      .icon_settings{
+        margin-right: 10px;
+        //height: 32px;
+        outline: none;
+
+        svg{
+          width: 35px;
+        }
+      }
+
+      .edit-name{
+        display: flex;
+        align-items: center;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 15px;
+        padding-left: 20px;
+        font-family: 'Source Code Pro';
+        font-weight: 700;
+
+
+        button{
+          margin-left: 5px;
+        }
+      } 
+
+    }
+
+    .editor-holder{
+      .CodeMirror-linenumber{
+        color: lighten($color-primary, 20%);
+        font-weight: 500;
+      }
+    }
+
+    .preview-console{
+      .preview-console__header{
+        background-color: $color-white;
+        color: $color-primary;
+
+        h2{
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 700;
+
+          svg{
+            margin-left: 10px;
+            width: 25px;
+          }
+        }
+
+        .error_inf{
+          display: flex;
+
+          span{
+            display: block;
+            color: $color-secundary;
+            font-weight: 700;
+            margin-right: 15px;
+          }
+        }
+
+        .preview-console__clear{
+          color: $color-secundary;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .preview-frame__content{
+      padding-left: 200px;
+    }
+  }
+}
+
+.saved{
+  display: flex;
+  justify-content: flex-end;
+  color: #42BCD6;
+  padding: 0 30px 5px 0;
+  font-family: 'Source Code Pro';
+}
+
+// .ipad{
+//   width: 656px;
+//   height: 826px;
+//   background: url("../images/ipad.png") center center no-repeat;
+// }

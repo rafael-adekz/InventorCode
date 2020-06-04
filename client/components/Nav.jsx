@@ -13,11 +13,11 @@ import { logoutUser } from '../modules/User/actions';
 import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
-const shareURL = require('../images/shareicon.svg');
-const bibliotecaURL = require('../images/bibliotecaicon.svg');
-const arquivoURL = require('../images/opcoesicon.svg');
-const ajudaURL = require('../images/ajudaicon.svg');
-const logoUrl = require('../images/p5js-logo-small.svg');
+const shareURL = require('../images/new2/Icone_compartilhar.svg');
+const bibliotecaURL = require('../images/new2/Icone_livro.svg');
+const arquivoURL = require('../images/new2/Icone_menu.svg');
+const ajudaURL = require('../images/new2/Icone_duvida.svg');
+const logoUrl = require('../images/new2/logo.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
 
@@ -254,7 +254,7 @@ class Nav extends React.PureComponent {
       <nav className="nav" title="main-navigation" ref={(node) => { this.node = node; }}>
         <ul className="nav__items-left" title="project-menu">
           <li className="nav__item-logo">
-            <InlineSVG src={logoUrl} alt="p5.js logo" className="svg__logo" />
+            <InlineSVG src={logoUrl}/>
           </li>
           <li className={navDropdownState.file}>
             <button
@@ -481,65 +481,6 @@ class Nav extends React.PureComponent {
               </li> 
             </ul>
             </li>  */}
-          <li className={navDropdownState.help}>
-            <button
-              onClick={this.toggleDropdownForHelp}
-              onBlur={this.handleBlur}
-              onFocus={this.clearHideTimeout}
-              onMouseOver={() => {
-                if (this.state.dropdownOpen !== 'none') {
-                  this.setDropdown('help');
-                }
-              }}
-            >
-              <span className="nav__item-header"></span>
-              <InlineSVG className="nav__item-header-triangle" src={ajudaURL} />
-            </button>
-            <ul className="nav__dropdown">
-              <li className="nav__dropdown-item">
-                <button
-                  onFocus={this.handleFocusForHelp}
-                  onBlur={this.handleBlur}
-                  onClick={this.handleKeyboardShortcuts}
-                >
-                  Atalhos de Teclado
-                </button>
-              </li>
-              <li className="nav__dropdown-item">
-                <a
-                  href="http://referencia.escoladeinventor.com.br/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onFocus={this.handleFocusForHelp}
-                  onBlur={this.handleBlur}
-                  onClick={this.setDropdownForNone}
-                >Referência
-                </a>
-              </li>
-              <li className="nav__dropdown-item">
-                <Link
-                  to="/about"
-                  onFocus={this.handleFocusForHelp}
-                  onBlur={this.handleBlur}
-                  onClick={this.setDropdownForNone}
-                >
-                  Sobre nós
-                </Link>
-              </li>
-              <li className="nav__dropdown-item">
-                <Link
-                  to="https://www.hostinger.com.br/tutoriais/o-que-e-javascript/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onFocus={this.handleFocusForHelp}
-                  onBlur={this.handleBlur}
-                  onClick={this.setDropdownForNone}
-                >O que é JavaScript?
-                </Link>
-              </li>
-              
-            </ul>
-          </li>
           <li className={navDropdownState.biblioteca}>
             <button
               onClick={this.toggleDropdownForBiblioteca}
@@ -587,6 +528,68 @@ class Nav extends React.PureComponent {
               </li>
             </ul>
           </li>
+          <li className={navDropdownState.help}>
+            {/**<button
+              onClick={this.toggleDropdownForHelp}
+              onBlur={this.handleBlur}
+              onFocus={this.clearHideTimeout}
+              onMouseOver={() => {
+                if (this.state.dropdownOpen !== 'none') {
+                  this.setDropdown('help');
+                }
+              }}
+            >
+              <span className="nav__item-header"></span>
+              <InlineSVG className="nav__item-header-triangle" src={ajudaURL} />
+            </button>*/}
+            <ul className="nav__dropdown">
+              <li className="nav__dropdown-item">
+                <button
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.handleKeyboardShortcuts}
+                >
+                  Atalhos de Teclado
+                </button>
+              </li>
+              <li className="nav__dropdown-item">
+                <a
+                  href="http://referencia.escoladeinventor.com.br/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >Referência
+                </a>
+              </li>
+              <li className="nav__dropdown-item">
+                <Link
+                  to="/about"
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >
+                  Sobre nós
+                </Link>
+              </li>
+              <li className="nav__dropdown-item">
+                <Link
+                  to="https://www.hostinger.com.br/tutoriais/o-que-e-javascript/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onFocus={this.handleFocusForHelp}
+                  onBlur={this.handleBlur}
+                  onClick={this.setDropdownForNone}
+                >O que é JavaScript?
+                </Link>
+              </li>
+              
+            </ul>
+          </li>
+          <li className="nav__itemdn">
+            <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
+          </li>
         </ul>
         { __process.env.LOGIN_ENABLED && !this.props.user.authenticated &&
           <ul className="nav__items-right" title="user-menu">
@@ -598,7 +601,7 @@ class Nav extends React.PureComponent {
             <span className="nav__item-spacer"></span>
             <li>
               <Link to="/signup">
-                <span className="nav__item-header">Teste</span>
+                <span className="nav__item-header"></span>
               </Link>
             </li>
           </ul>}

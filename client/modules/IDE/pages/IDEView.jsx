@@ -38,13 +38,19 @@ import Feedback from '../components/Feedback';
 import Fundos from '../components/Fundos';
 import Sons from '../components/Sons';
 import Personagens from '../components/Personagens';
+import InlineSVG from 'react-inlinesvg';
 import Passos from '../components/Passos';
+
+const giftUrl = require('../../../images/new/gift.svg');
+const playUrl = require('../../../images/new/play-button.svg');
 
 class IDEView extends React.Component {
   constructor(props) {
     super(props);
     this.handleGlobalKeydown = this.handleGlobalKeydown.bind(this);
     this.warnIfUnsavedChanges = this.warnIfUnsavedChanges.bind(this);
+    
+
 
     this.state = {
       consoleSize: props.ide.consoleIsExpanded ? 150 : 29,
@@ -63,7 +69,7 @@ class IDEView extends React.Component {
       if (id !== this.props.project.id) {
         this.props.getProject(id);
       }
-    }
+    };
 
     this.isMac = navigator.userAgent.toLowerCase().indexOf('mac') !== -1;
     document.addEventListener('keydown', this.handleGlobalKeydown, false);
@@ -75,7 +81,6 @@ class IDEView extends React.Component {
     document.body.className = this.props.preferences.theme;
     this.autosaveInterval = null;
   }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.location !== this.props.location) {
       this.props.setPreviousPath(this.props.location.pathname);
@@ -229,6 +234,9 @@ class IDEView extends React.Component {
           </Overlay>
         }
         <div className="editor-preview-container">
+        <button className="gift-button"> 
+            <InlineSVG src={giftUrl} alt="Preferences" />
+          </button>
           <SplitPane
             split="vertical"
             size={this.state.sidebarSize}
@@ -253,7 +261,7 @@ class IDEView extends React.Component {
             />
             <SplitPane
               split="vertical"
-              defaultSize="50%"
+              defaultSize="45%"
               onChange={() => { this.overlay.style.display = 'block'; }}
               onDragFinished={() => { this.overlay.style.display = 'none'; }}
               resizerStyle={{
@@ -315,10 +323,15 @@ class IDEView extends React.Component {
                 />
               </SplitPane>
               <div className="preview-frame-holder">
-                <header className="preview-frame__header">
-                  {/*<h2 className="preview-frame__title">Visualizar</h2>*/}
-                </header>
-                <div className="preview-frame__content">
+                {/*<header className="preview-frame__header">
+                  <h2 className="preview-frame__title">Visualizar</h2>
+                </header>*/}
+                <div>
+                  <button className="play-button"
+                  onClick={this.props.startSketch}> 
+                    <InlineSVG src={playUrl} alt="Preferences" />
+                  </button>
+                </div>                <div className="preview-frame__content">
                   <div className="preview-frame-overlay" ref={(element) => { this.overlay = element; }}>
                   </div>
                   <div>
@@ -437,6 +450,10 @@ class IDEView extends React.Component {
           >
             <Passos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
           </Overlay>
+        } 
+                { this.props.location.pathname === '/passos' &&
+
+          <Passos previousPath={this.props.ide.previousPath} className="Fundos__teste" />
         }
                 { this.props.location.pathname === '/sons' &&
           <Overlay

@@ -15,25 +15,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
+ // overflow-y: scroll;
 }
 
 .overlay__body {
   @extend %modal;
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
-  max-height: 80%;
-  max-width: 65%;
+  //display: flex;
+  //flex-wrap: wrap;
+  //flex-flow: column;
+  max-height: 100%;
+  max-width: 95%;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .overlay__header {
-  display: flex;
-  justify-content: space-between;
-  padding: #{20 / $base-font-size}rem;
-  flex: 1 0 auto;
+//  display: flex;
+//  justify-content: space-between;
+//  padding: #{20 / $base-font-size}rem;
+//  flex: 1 0 auto;
 }
 
 .overlay__title {

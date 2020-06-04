@@ -42,7 +42,7 @@
 		@extend %toolbar-button;
 		line-height: #{52 / $base-font-size}rem;
 		&--selected {
-			@extend %toolbar-button--selected;
+			@extend %toolbar-button--selected;	
 			line-height: #{52 / $base-font-size}rem;
 		}
 	}
@@ -51,6 +51,10 @@
 	& span {
 		padding-left: #{1 / $base-font-size}rem;
 	}
+}
+
+.toolbar__preferences-buttondn{
+	display:none
 }
 
 .toolbar__logo {
@@ -63,7 +67,7 @@
 }
 
 .toolbar {
-	padding: #{20 / $base-font-size}rem #{34 / $base-font-size}rem;
+	padding: 2px;
 	display: flex;
 	align-items: center;
 }

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
+
+
 .preview-console {
 	@include themify() {
 		background: getThemifyVariable('console-background-color');
@@ -23,6 +26,18 @@
 		}
 		flex: 1 0 auto;
 		position: relative;
+	}
+	.preview-console__mensagemtraduzida{
+		color: black;
+	//	font-weight: 700;
+	//	font-size: 15px;
+		font-family: 'Source Code Pro';
+	}
+	.preview-console__mensagemtitulo{
+		color: red;
+		font-weight: 700;
+	//	font-size: 15px;
+		font-family: 'Source Code Pro';
 	}
 }
 
