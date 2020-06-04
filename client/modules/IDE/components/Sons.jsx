@@ -1,6 +1,8 @@
 import React from 'react';
 import InlineSVG from 'react-inlinesvg';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router';
+
 
 const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
@@ -27,15 +29,15 @@ function Sons(props) {
     <div className="book">
       <div className="book-tabs">
         <div className="tab">
-        <Link
+     {/**   <Link
                   to="/personagens"
                   onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
                   <span>Sprite</span>
-              </Link>
-          
+              </Link> */}
+              <span>Sprite</span>
           <InlineSVG src={tlogoUrl} alt="" />
         </div>
         <div className="tab">
