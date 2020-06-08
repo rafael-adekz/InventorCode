@@ -1,6 +1,7 @@
 import React from 'react';
 import InlineSVG from 'react-inlinesvg';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router';
 
 const elementosUrl = require('../../../images/elementosicon.svg');
 // const playUrl = require('../../../images/play.svg');
@@ -27,29 +28,29 @@ function Personagens(props) {
     <div className="book">
       <div className="book-tabs">
         <div className="tab active">
-          <span>Sprite</span>
+        <Link to="/personagens"><span>Sprite</span></Link>
           <InlineSVG src={tlogoUrl} alt="" />
         </div>
         <div className="tab">
-          <span>Imagens</span>
+        <Link to="/fundos"><span>Fundos</span></Link>
           <InlineSVG src={imagesUrl} alt="" />
         </div>
-        <div className="tab">
+        <div className="tabdn">
           <span>Tab 3</span>
           <InlineSVG src={corUrl} alt="" />
         </div>
-        <div className="tab">
-          <span>Músicas</span>
+        <div className="tabdn">
+        <Link to="/sons"><span>Sons</span></Link>
           <InlineSVG src={audioUrl} alt="" />
         </div>
-        <div className="tab">
+        <div className="tabdn">
           <span>Sons</span>
           <InlineSVG src={musicaUrl} alt="" />
         </div>
-        <div className="tab">
+        <div className="tabdn">
           <span>Comandos</span>
           <InlineSVG src={codeUrl} alt="" />
-        </div>
+        </div> 
       </div>  
       <div className="book-content">
         <div className="w50">
@@ -95,10 +96,10 @@ function Personagens(props) {
         </div>
 
         <div className="w50 right">
-          <div className="buttons d-flex jc-end">
+         {/** <div className="buttons d-flex jc-end">
             <button className="btn">Anterior</button>
             <button className="btn">Proximo</button>
-          </div>
+          </div> */}
           <div className="list">
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />

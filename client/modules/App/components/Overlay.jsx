@@ -54,7 +54,7 @@ class Overlay extends React.Component {
     if (this.node.parentElement.parentElement !== overlays[overlays.length - 1]) return;
 
     if (!this.props.closeOverlay) {
-      browserHistory.push(this.props.previousPath);
+      browserHistory.push('/');
     } else {
       this.props.closeOverlay();
     }
