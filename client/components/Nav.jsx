@@ -482,51 +482,17 @@ class Nav extends React.PureComponent {
             </ul>
             </li>  */}
           <li className={navDropdownState.biblioteca}>
-            <button
-              onClick={this.toggleDropdownForBiblioteca}
-              onBlur={this.handleBlur}
-              onFocus={this.clearHideTimeout}
-              onMouseOver={() => {
-                if (this.state.dropdownOpen !== 'none') {
-                  this.setDropdown('biblioteca');
-                }
-              }}
-            >
-              <span className="nav__item-header"></span>
-              <InlineSVG className="nav__item-header-share" src={bibliotecaURL} />
-            </button>
-            <ul className="nav__dropdown">
-              <li className="nav__dropdown-item">
               <Link
                   to="/personagens"
                   onFocus={this.handleFocusForBiblioteca}
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  Personagens!
+                              <button>
+              <span className="nav__item-header"></span>
+              <InlineSVG className="nav__item-header-share" src={bibliotecaURL} />
+            </button>
                 </Link>
-              </li>
-              <li className="nav__dropdown-item">
-              <Link
-                  to="/sons"
-                  onFocus={this.handleFocusForBiblioteca}
-                  onBlur={this.handleBlur}
-                  onClick={this.setDropdownForNone}
-                >
-                  Sons!
-                </Link>
-              </li>
-              <li className="nav__dropdown-item">
-                <Link
-                  to="/fundos"
-                  onFocus={this.handleFocusForBiblioteca}
-                  onBlur={this.handleBlur}
-                  onClick={this.setDropdownForNone}
-                >
-                  Fundos de Tela!
-                </Link>
-              </li>
-            </ul>
           </li>
           <li className={navDropdownState.help}>
             {/**<button
