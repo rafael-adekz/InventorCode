@@ -53,12 +53,11 @@ function Personagens(props) {
       </div>  
       <div className="book-content">
         <div className="w50">
-          <div className="search d-flex a-center">
-            <input type="text" placeholder="Buscar" />
+         {/**  <div className="search d-flex a-center">
             <button className="btn-search">
               <InlineSVG src={searchUrl} alt="" />
             </button>
-          </div>
+          </div>*/}
           <div className="list">
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />
