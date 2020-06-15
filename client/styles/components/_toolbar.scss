@@ -54,7 +54,7 @@
 }
 
 .toolbar__preferences-buttondn{
-	display:none
+//	display:none
 }
 
 .toolbar__logo {
@@ -97,12 +97,12 @@
 	line-height: #{18 / $base-font-size}rem;
 
 	.toolbar__project-name-container--editing & {
-		display: none;
+		//display: none;
 	}
 }
 
 .toolbar__project-name-input {
-	display: none;
+	//display: none;
 	border: 0px;
 	.toolbar__project-name-container--editing & {
 		display: block;

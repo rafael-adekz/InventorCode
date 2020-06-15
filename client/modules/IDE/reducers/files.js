@@ -19,6 +19,7 @@ const defaultHTML =
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/easyEditor.js"></script>
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/fundo_VS_3_Com+Sprites.js"></script>
     <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/sprites_vs.7.js"></script>
+    <script src="https://codigosinventor.s3-sa-east-1.amazonaws.com/som.js></script>
     <script src="https://rawcdn.githack.com/yining1023/p5PlayGround/cad807762776d1f29820bc9f35f36e98cc18d934/js/jquery.js" type="text/javascript"> </script>
     <script src="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.js"></script>
     <script>$(function() {$('body').ruler({vRuleSize: 0,hRuleSize: 0,showCrosshair : false,showMousePos: true});});</script>
@@ -46,8 +47,8 @@ canvas {
   position:relative;
   z-index:-1;
   display: block;  
-  left: 20px;
-  top: 20px;
+  left: 18px;
+  top: 18px;
 }
 regua{
   position:relative;
