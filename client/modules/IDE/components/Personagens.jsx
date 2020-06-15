@@ -18,7 +18,16 @@ const copyUrl = require('../../../images/new/copy.svg');
 const bugUrl = require('../../../images/new/bug.svg');
 
 
-const images = [(asteriskUrl), (elementosUrl),];
+//const images = [(asteriskUrl), (elementosUrl),];
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
+
 
 
 function Personagens(props) {
@@ -65,20 +74,20 @@ function Personagens(props) {
               <p>Sprite n+</p>
             </div>
             <div className="box">
-              <img src={'https://placehold.it/100'} alt="Logo" />
+            <img src={images['cara1.png']} />
+              <p>Sprite aqui</p>
+            </div>
+            <div className="box">
+              <img src={images['cara2.png']} alt="Logo" />
               <p>Sprite n+</p>
             </div>
             <div className="box">
-              <img src={'https://placehold.it/100'} alt="Logo" />
+              <img src={images['cara3.png']} alt="Logo" />
               <p>Sprite n+</p>
             </div>
             <div className="box">
-              <img src={'https://placehold.it/100'} alt="Logo" />
-              <p>Sprite n+</p>
-            </div>
-            <div className="box">
-              <img src={'https://placehold.it/100'} alt="Logo" />
-              <p>Sprite n+</p>
+              <img src={images['cara3.png']} alt="Logo" />
+              <p>nova imagem</p>
             </div>
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />

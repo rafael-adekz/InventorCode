@@ -21,11 +21,9 @@ const bugUrl = require('../../../images/new/bug.svg');
 
 const images = [(asteriskUrl), (elementosUrl),];
 
-
 function Sons(props) {
   return (
     <div className="bg-black">
-        
     <div className="book">
       <div className="book-tabs">
         <div className="tab">

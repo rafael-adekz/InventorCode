@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import CodeMirror from 'codemirror';
 import beautifyJS from 'js-beautify';
+import * as projectActions from '../actions/project';
 import 'codemirror/mode/css/css';
 import 'codemirror/addon/selection/active-line';
 import 'codemirror/addon/lint/lint';
@@ -20,6 +21,7 @@ import 'codemirror/addon/search/matchesonscrollbar';
 import 'codemirror/addon/search/match-highlighter';
 import 'codemirror/addon/search/jump-to-line';
 import 'codemirror/addon/edit/matchbrackets';
+import Toolbar from '../components/Toolbar';
 
 import { JSHINT } from 'jshint';
 import { CSSLint } from 'csslint';
@@ -38,7 +40,7 @@ const pencilUrl = require('../../../images/new/pencil.svg');
 const playUrl = require('../../../images/new/play-button.svg');
 import * as preferenceActions from '../actions/preferences';
 import * as IDEActions from '../actions/ide';
-import * as projectActions from '../actions/project';
+
 
 import search from '../../../utils/codemirror-search';
 
@@ -80,6 +82,12 @@ class Editor extends React.Component {
     this.findNext = this.findNext.bind(this);
     this.findPrev = this.findPrev.bind(this);
     this.getContent = this.getContent.bind(this);
+  }
+
+  validateProjectName() {
+    if (this.props.project.name === '') {
+      this.props.setProjectName(this.originalProjectName);
+    }
   }
 
   componentDidMount() {
@@ -165,11 +173,7 @@ class Editor extends React.Component {
   handleProjectNameChange(event) {
     this.props.setProjectName(event.target.value);
   }
-  validateProjectName() {
-    if (this.props.project.name === '') {
-      this.props.setProjectName(this.originalProjectName);
-    }
-  }
+
   handleKeyPress(event) {
     if (event.key === 'Enter') {
       this.props.hideEditProjectName();
@@ -318,6 +322,7 @@ class Editor extends React.Component {
 
   render() {
 
+
     const editorSectionClass = classNames({
       'editor': true,
       'sidebar--contracted': !this.props.isExpanded,
@@ -332,6 +337,7 @@ class Editor extends React.Component {
    //   'toolbar__preferences-button': true,
     //  'toolbar__preferences-button--selected': this.props.preferencesIsVisible
     //});
+
 
     return (
       <section
@@ -348,13 +354,13 @@ class Editor extends React.Component {
             <InlineSVG src={leftArrowUrl} />
           </button>
            
-         {/* <button
+          <button
             aria-label="expand file navigation"
             className="sidebar__expand"
             onClick={this.props.expandSidebar}
-         
+          >
             <InlineSVG src={rightArrowUrl} />
-          </button> >* */}
+          </button> 
           <div className="editor__file-namedn">
             <span>
               {this.props.file.name}
@@ -368,6 +374,7 @@ class Editor extends React.Component {
           </div> 
           <div className="edit-name">
           <p className="edit-name">Area de Programação</p>
+                   
           {/**   <button
               aria-label="preferences"
               className="icon_settings"
@@ -437,6 +444,11 @@ Editor.propTypes = {
     content: PropTypes.string.isRequired
   })).isRequired,
   isExpanded: PropTypes.bool.isRequired,
+  project: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    isEditingName: PropTypes.bool,
+    id: PropTypes.string,
+  }).isRequired,
   collapseSidebar: PropTypes.func.isRequired,
   expandSidebar: PropTypes.func.isRequired,
   isUserOwner: PropTypes.bool,
@@ -451,11 +463,22 @@ Editor.defaultProps = {
   isUserOwner: false,
   consoleEvents: [],
 };
-
+function mapStateToProps(state) {
+  return {
+    autorefresh: state.preferences.autorefresh,
+    currentUser: state.user.username,
+    infiniteLoop: state.ide.infiniteLoop,
+    isPlaying: state.ide.isPlaying,
+    owner: state.project.owner,
+    preferencesIsVisible: state.ide.preferencesIsVisible,
+    project: state.project,
+  };
+}
 const mapDispatchToProps = {
   ...IDEActions,
   ...preferenceActions,
   ...projectActions,
 };
 
-export default Editor;
+
+export default  Editor;

@@ -66,7 +66,7 @@ function Fundos(props) {
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />
               <p>Sprite n+</p>
-            </div>
+            </div>    
             <div className="box">
               <img src={'https://placehold.it/100'} alt="Logo" />
               <p>Sprite n+</p>
