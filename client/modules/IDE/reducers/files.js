@@ -25,7 +25,7 @@ const defaultHTML =
     <script>$(function() {$('body').ruler({vRuleSize: 0,hRuleSize: 0,showCrosshair : false,showMousePos: true});});</script>
     <link href="https://rawcdn.githack.com/leonardof131/mousePosP5js/280d22c78e510f1677fb246c62bd7ed755bbe0db/jquery.ruler.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
   </head>
   
   <body>
