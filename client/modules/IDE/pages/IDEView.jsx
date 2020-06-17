@@ -204,7 +204,7 @@ class IDEView extends React.Component {
           warnIfUnsavedChanges={this.warnIfUnsavedChanges}
           cmController={this.cmController}
         />
-        <Toolbar />
+     {/*    <Toolbar />*/}
         {this.props.ide.preferencesIsVisible &&
           <Overlay
             title="Configurações"
