@@ -205,6 +205,7 @@ class IDEView extends React.Component {
           cmController={this.cmController}
         />
      {/*    <Toolbar />*/}
+     <div className = "toolbar__espaco"  />
         {this.props.ide.preferencesIsVisible &&
           <Overlay
             title="Configurações"

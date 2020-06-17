@@ -85,7 +85,7 @@
 		&:hover {
 		color: #EF7D00;
 		  & .toolbar__edit-name-button path {
-		  	fill: getThemifyVariable('primary-text-color');
+		  	fill: #EF7D00;
 		  }
 		}
 	}
@@ -108,7 +108,7 @@
 .toolbar__project-owner {
 	margin-left: #{5 / $base-font-size}rem;
 	@include themify() {
-		color: getThemifyVariable('inactive-text-color');
+		color: #fff
 	}
 }
 
@@ -161,4 +161,9 @@
 			fill: getThemifyVariable('inactive-text-color');
 		}
 	}
+}
+
+.toolbar__espaco{
+
+	padding: 3px;
 }

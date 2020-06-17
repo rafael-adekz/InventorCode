@@ -373,7 +373,7 @@ class Editor extends React.Component {
             />
           </div> 
           <div className="edit-name">
-          <p className="edit-name">Area de Programação</p>
+          <p className="edit-name">Nome do projeto: </p>
           <Toolbar/>  
           {/**   <button
               aria-label="preferences"

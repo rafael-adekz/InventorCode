@@ -145,7 +145,7 @@ class Toolbar extends React.Component {
             if (this.props.owner) {
               return (
                 <p className="toolbar__project-owner">
-                  by <Link to={`/${this.props.owner.username}/sketches`}>{this.props.owner.username}</Link>
+                  por <Link to={`/${this.props.owner.username}/sketches`}>{this.props.owner.username}</Link>
                 </p>
               );
             }
