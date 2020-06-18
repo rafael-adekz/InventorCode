@@ -553,7 +553,7 @@ class Nav extends React.PureComponent {
               
             </ul>
           </li>
-          <li className="nav__itemdn">
+          <li className="nav__item">
             <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
           </li>
         </ul>
