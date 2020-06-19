@@ -48,7 +48,7 @@ canvas {
   z-index:-1;
   display: block;  
   left: 19px;
-  top: 20px;
+  top: 19px;
 }
 regua{
   position:relative;
