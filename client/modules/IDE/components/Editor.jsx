@@ -348,7 +348,7 @@ class Editor extends React.Component {
         <header className="editor__header">
           <button
             aria-label="collapse file navigation"
-            className="sidebar__contract"
+            className="sidebar__contractdn"
             onClick={this.props.collapseSidebar}
           > 
             <InlineSVG src={leftArrowUrl} />
@@ -356,7 +356,7 @@ class Editor extends React.Component {
            
           <button
             aria-label="expand file navigation"
-            className="sidebar__expand"
+            className="sidebar__expanddn"
             onClick={this.props.expandSidebar}
           >
             <InlineSVG src={rightArrowUrl} />
