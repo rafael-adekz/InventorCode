@@ -553,8 +553,14 @@ class Nav extends React.PureComponent {
               
             </ul>
           </li>
-          <li className="nav__item">
-            <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
+          <li className="nav__item">                <button
+                  onClick={this.handleShare}
+                  //onFocus={this.handleFocusForFile}
+                  //onBlur={this.handleBlur}
+                >
+                  <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
+                </button>
+            
           </li>
         </ul>
         { __process.env.LOGIN_ENABLED && !this.props.user.authenticated &&
