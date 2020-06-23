@@ -12,7 +12,7 @@ import { validateSettings } from '../../../utils/reduxFormUtils';
 import GithubButton from '../components/GithubButton';
 
 const exitUrl = require('../../../images/exit.svg');
-const logoUrl = require('../../../images/p5js-logo.svg');
+const logoUrl = require('../../../images/new2/logo.svg');
 
 
 class AccountView extends React.Component {
@@ -47,8 +47,8 @@ class AccountView extends React.Component {
         <div className="form-container__content">
           <h2 className="form-container__title">Minha Conta</h2>
           <AccountForm {...this.props} />
-          <h2 className="form-container__divider">Or</h2>
-          <GithubButton buttonText="Login with Github" />
+         {/** <h2 className="form-container__divider">Or</h2>
+          <GithubButton buttonText="Login with Github" /> */}
         </div>
       </div>
     );

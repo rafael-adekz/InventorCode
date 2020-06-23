@@ -55,7 +55,7 @@ function AccountForm(props) {
           )
       }
       <p className="form__field">
-        <label htmlFor="username" className="form__label">User Name</label>
+        <label htmlFor="username" className="form__label">Usuário</label>
         <input
           className="form__input"
           aria-label="username"
@@ -67,7 +67,7 @@ function AccountForm(props) {
         {username.touched && username.error && <span className="form-error">{username.error}</span>}
       </p>
       <p className="form__field">
-        <label htmlFor="current password" className="form__label">Current Password</label>
+        <label htmlFor="current password" className="form__label">Senha Atual</label>
         <input
           className="form__input"
           aria-label="currentPassword"
@@ -82,7 +82,7 @@ function AccountForm(props) {
         }
       </p>
       <p className="form__field">
-        <label htmlFor="new password" className="form__label">New Password</label>
+        <label htmlFor="new password" className="form__label">Nova Senha</label>
         <input
           className="form__input"
           aria-label="newPassword"
@@ -95,7 +95,7 @@ function AccountForm(props) {
       <input
         type="submit"
         disabled={submitting || invalid || pristine}
-        value="Save All Settings"
+        value="Salvar Modificações"
         aria-label="updateSettings"
       />
     </form>

@@ -38,6 +38,8 @@ import { metaKey, } from '../../../utils/metaKey';
 const preferencesUrl = require('../../../images/new2/Icone_configuração.svg');
 const pencilUrl = require('../../../images/new/pencil.svg');
 const playUrl = require('../../../images/new/play-button.svg');
+const editProjectNameUrl = require('../../../images/pencil.svg');
+
 import * as preferenceActions from '../actions/preferences';
 import * as IDEActions from '../actions/ide';
 
@@ -374,6 +376,7 @@ class Editor extends React.Component {
           </div> 
           <div className="edit-name">
           <p className="edit-name">Nome do projeto: </p>
+          <InlineSVG className="toolbar__edit-name-button" src={editProjectNameUrl} alt="Edit Project Name" />
           <Toolbar/>  
           {/**   <button
               aria-label="preferences"

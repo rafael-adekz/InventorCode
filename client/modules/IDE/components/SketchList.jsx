@@ -323,9 +323,9 @@ class SketchList extends React.Component {
           <table className="sketches-table" summary="table containing all saved projects">
             <thead>
               <tr>
-                {this._renderFieldHeader('name', 'Sketch')}
-                {this._renderFieldHeader('createdAt', 'Date Created')}
-                {this._renderFieldHeader('updatedAt', 'Date Updated')}
+                {this._renderFieldHeader('name', 'Projeto')}
+                {this._renderFieldHeader('createdAt', 'Data Criação')}
+                {this._renderFieldHeader('updatedAt', 'Data Atualização')}
                 <th scope="col"></th>
               </tr>
             </thead>
