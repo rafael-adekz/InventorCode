@@ -2,8 +2,6 @@ import objectID from 'bson-objectid';
 import * as ActionTypes from '../../../constants';
 
 
-import tablet from '../../../images/new/tablet.svg';   //aparentemente isso só finciona com SVG [???]; Mudar tablet.svg para o arquivo que vocês usam
-//no defaultHTML chamamos esse arquivo usando {tablet}. Isso é possivel apenas usando ` ao invés do uso de aspas convencional
 
 const defaultSketch = ``;
 
