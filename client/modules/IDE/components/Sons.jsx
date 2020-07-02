@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InlineSVG from 'react-inlinesvg';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router';
@@ -37,19 +37,6 @@ const getFileName = (name) => {
 const audios = importAll(require.context('./sound', false, /\.(mp3|wav|ogg)$/));
 let audios_ref = {};
 
-let pagina = 0;
-let por_pagina = 16;
-let total_paginas = Math.ceil(Object.keys(images) / por_pagina);
-
-const proximaPagina = (p) => {
-  console.log('proximaPagina',p);
-  pagina = p+1;
-}
-
-const paginaAnterior = (p) => {
-  pagina = p-1;
-}
-
 const copyToClipboard = (text) => {
   const el = document.createElement('textarea');
   el.value = text;
@@ -60,7 +47,23 @@ const copyToClipboard = (text) => {
 }
 
 function Sons(props) {
-  console.log("audios>>>>>>>>",audios);
+
+  const [pagina, setPagina] = useState(0);
+
+  let por_pagina = 16;
+  let total_paginas = Math.ceil(Object.keys(audios).length / por_pagina);
+
+  const proximaPagina = (p) => {
+    if(pagina <= total_paginas-2 && total_paginas > 1){
+      setPagina(p+2);
+    }
+  }
+
+  const paginaAnterior = (p) => {
+    if(pagina > 0){
+      setPagina(p-2);
+    }
+  }
 
   let audioList = () => {
     let retorno = <div>Nenhuma imagem disponível</div>

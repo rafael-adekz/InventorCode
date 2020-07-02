@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InlineSVG from 'react-inlinesvg';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router';
@@ -35,19 +35,26 @@ const getFileName = (name) => {
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
 let pagina = 0;
-let por_pagina = 16;
-let total_paginas = Math.ceil(Object.keys(images) / por_pagina);
-
-const proximaPagina = (p) => {
-  console.log('proximaPagina',p);
-  pagina = p+1;
-}
-
-const paginaAnterior = (p) => {
-  pagina = p-1;
-}
 
 function Personagens(props) {
+
+  const [pagina, setPagina] = useState(0);
+
+  let por_pagina = 16;
+  let total_paginas = Math.ceil(Object.keys(images).length / por_pagina);
+
+  const proximaPagina = (p) => {
+    if(pagina <= total_paginas-2 && total_paginas > 1){
+      setPagina(p+2);
+    }
+  }
+
+  const paginaAnterior = (p) => {
+    if(pagina > 0){
+      setPagina(p-2);
+    }
+  }
+
 
   let imageList = () => {
     let retorno = <div>Nenhuma imagem disponível</div>
