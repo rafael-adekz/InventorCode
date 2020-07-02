@@ -61,6 +61,7 @@ function Personagens(props) {
 
     if(Object.keys(images).length > 0){
       let list = [];
+      //let j = 0;
       for(let i in images){
         list.push(
           <div className="box" key={"image_"+i} onClick={() => {copyToClipboard(getFileName(i))}} style={{cursor:'pointer'}}>
@@ -68,6 +69,10 @@ function Personagens(props) {
             <p>{getFileName(i)}</p>
           </div>
         )
+        /*j++;
+        if(j > 5){
+          break;
+        }*/
       }
 
       let pp = por_pagina/2;
