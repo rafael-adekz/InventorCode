@@ -34,14 +34,27 @@ const getFileName = (name) => {
 
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
-let pagina = 0;
-
 function Personagens(props) {
 
+  function escapeRegex(string) {
+    return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  }
+
   const [pagina, setPagina] = useState(0);
+  const [busca,setBusca] = useState('');
+
+  let filtered = images;
+  if(busca != ''){
+    filtered = {};
+    for(let i in images){
+      if(i.match(new RegExp(escapeRegex(busca), 'g'))){
+        filtered[i] = images[i];
+      }
+    }
+  }
 
   let por_pagina = 16;
-  let total_paginas = Math.ceil(Object.keys(images).length / por_pagina);
+  let total_paginas = Math.ceil(Object.keys(filtered).length / por_pagina);
 
   const proximaPagina = (p) => {
     if(pagina <= total_paginas-2 && total_paginas > 1){
@@ -55,37 +68,39 @@ function Personagens(props) {
     }
   }
 
+  
 
   let imageList = () => {
-    let retorno = <div>Nenhuma imagem disponível</div>
+    let retorno = <div></div>;
 
-    if(Object.keys(images).length > 0){
-      let list = [];
-      //let j = 0;
-      for(let i in images){
+    let list = [];
+    if(Object.keys(filtered).length > 0){
+      
+      for(let i in filtered){
         list.push(
           <div className="box" key={"image_"+i} onClick={() => {copyToClipboard(getFileName(i))}} style={{cursor:'pointer'}}>
-            <img src={images[i]} alt={i} style={{width:100,height:100}} />
+            <img src={filtered[i]} alt={i} style={{width:100,height:100}} />
             <p>{getFileName(i)}</p>
           </div>
         )
-        /*j++;
-        if(j > 5){
-          break;
-        }*/
       }
+    }
 
-      let pp = por_pagina/2;
-      let p1 = list.slice(pp*pagina,pp*(pagina+1));
-      let p2 = list.slice(pp*(pagina+1),pp*(pagina+2));
+    let pp = por_pagina/2;
+    let p1 = list.slice(pp*pagina,pp*(pagina+1));
+    let p2 = list.slice(pp*(pagina+1),pp*(pagina+2));
 
-      retorno = <div className="book-content">
+    if(Object.keys(filtered).length <= 0){
+      p1 = <div>Nenhuma imagem encontrada</div>
+    }
+
+    retorno = <div className="book-content">
       <div className="w50">
         <div className="search d-flex a-center">
-          <input type="text" placeholder="Buscar" />
-          <button className="btn-search">
-            <InlineSVG src={searchUrl} alt="" />
-          </button>
+          <input type="text" placeholder="Buscar" value={busca} onChange={(event) => {
+            setBusca(event.target.value);
+            setPagina(0);
+          }}/>
         </div>
         <div className="list">
           {p1}
@@ -102,7 +117,7 @@ function Personagens(props) {
         </div>
       </div>
     </div> 
-    }
+    
     return retorno;
   }
 
