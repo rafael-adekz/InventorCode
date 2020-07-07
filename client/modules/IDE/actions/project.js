@@ -129,7 +129,7 @@ export function saveProject(selectedFile = null, autosave = false, anonymous = f
       return Promise.resolve();
     }
     dispatch(startSavingProject());
-    //console.log("state.user",state.user, state.project, state);
+    //console.log("state.user",state.user, state.project, state)
 
     if(!anonymous){
       if (state.user.id && state.project.owner && state.project.owner.id !== state.user.id) {
@@ -144,6 +144,7 @@ export function saveProject(selectedFile = null, autosave = false, anonymous = f
       fileToUpdate.content = selectedFile.content;
     }
     if (state.project.id) {
+      let project_id = state.project.id; 
       return axios.put(`${ROOT_URL}/projects/${project_id}`, formParams, { withCredentials: true })
         .then((response) => {
           dispatch(endSavingProject());

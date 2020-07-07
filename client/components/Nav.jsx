@@ -286,7 +286,7 @@ class Nav extends React.PureComponent {
                   Novo
                 </button>
               </li>
-              { __process.env.LOGIN_ENABLED && (!this.props.project.owner || this.isUserOwner()) &&
+              
               <li className="nav__dropdown-item">
                 <button
                   onClick={this.handleSave}
@@ -296,7 +296,7 @@ class Nav extends React.PureComponent {
                   Salvar
                   <span className="nav__keyboard-shortcut">{metaKeyName}+s</span>
                 </button>
-              </li> }
+              </li>
               { this.props.project.id && this.props.user.authenticated &&
               <li className="nav__dropdown-item">
                 <button

@@ -8,7 +8,7 @@ export default function createProject(req, res) {
   }
 
   User.findGuest((err,guest) => {
-    console.log('guest',guest)
+    
     
     let projectValues = {
       user: req.user ? req.user._id : guest._id //'5efb43c34c0aa827b4843720'
