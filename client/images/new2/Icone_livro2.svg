@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Camada_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.8 27.8"
+	 style="enable-background:new 0 0 42.8 27.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#42BCD6;}
+	.st1{fill:#1F94A3;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#F2F2F2;}
+</style>
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" height="25" width="38.5" x="2.1" y="1.4"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g id="Camada_2_1_">
+	<g id="Camada_1-2">
+		<path id="Path_36" class="st0" d="M26.4,1.7c-2.8,0-5.1,2.3-5.1,5.1l0,0c0-2.8-2.3-5.1-5.1-5.1H2.1v23h14.1c1.4,0,2.8,0.6,3.7,1.6
+			h2.7c1-1,2.3-1.6,3.7-1.6h14.2v-23H26.4z"/>
+		<path id="Path_37" class="st1" d="M26.4,24.8h14.2v-23H26.4c-2.8,0-5.1,2.3-5.1,5.1v19.6h1.4C23.7,25.4,25,24.8,26.4,24.8z"/>
+		<path id="Path_38" class="st2" d="M25.9,1.4c-2.5,0-4.5,2-4.5,4.5l0,0c0-2.5-2-4.5-4.5-4.5H4.3v20.5h12.6c1.4,0,2.8,0.7,3.6,1.8
+			h1.8c0.8-1.1,2.2-1.8,3.6-1.8h12.6V1.4H25.9z"/>
+		<path id="Path_39" class="st3" d="M25.9,21.9h12.6V1.4H25.9c-2.5,0-4.5,2-4.5,4.5l0,0v17.8h0.9C23.1,22.6,24.5,21.9,25.9,21.9z"/>
+		<g id="Group_69">
+			<path id="Path_40" class="st0" d="M8.8,7.8l1.1,2.2l2.5,0.4l-1.8,1.8l0.4,2.5l-2.2-1.2l-2.2,1.2L7,12.2l-1.8-1.8L7.7,10L8.8,7.8z
+				"/>
+			<path id="Path_41" class="st0" d="M17.2,7.8l1.1,2.2l2.5,0.4L19,12.2l0.4,2.5l-2.2-1.2L15,14.6l0.4-2.4l-1.8-1.7l2.5-0.4
+				L17.2,7.8z"/>
+		</g>
+		<g id="Group_70">
+			<path id="Path_42" class="st1" d="M25.5,7.8l1.1,2.2l2.5,0.3l-1.8,1.8l0.4,2.5l-2.2-1.2l-2.2,1.2l0.5-2.4L22,10.5l2.5-0.4
+				L25.5,7.8z"/>
+			<path id="Path_43" class="st1" d="M34,7.8l1.1,2.2l2.5,0.4l-1.8,1.7l0.4,2.5L34,13.5l-2.2,1.2l0.4-2.4l-1.8-1.8l2.5-0.4L34,7.8z"
+				/>
+		</g>
+	</g>
+</g>
+</svg>

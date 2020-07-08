@@ -38,6 +38,8 @@ import { metaKey, } from '../../../utils/metaKey';
 const preferencesUrl = require('../../../images/new2/Icone_configuração.svg');
 const pencilUrl = require('../../../images/new/pencil.svg');
 const playUrl = require('../../../images/new/play-button.svg');
+const editProjectNameUrl = require('../../../images/pencil.svg');
+
 import * as preferenceActions from '../actions/preferences';
 import * as IDEActions from '../actions/ide';
 
@@ -348,7 +350,7 @@ class Editor extends React.Component {
         <header className="editor__header">
           <button
             aria-label="collapse file navigation"
-            className="sidebar__contract"
+            className="sidebar__contractdn"
             onClick={this.props.collapseSidebar}
           > 
             <InlineSVG src={leftArrowUrl} />
@@ -356,7 +358,7 @@ class Editor extends React.Component {
            
           <button
             aria-label="expand file navigation"
-            className="sidebar__expand"
+            className="sidebar__expanddn"
             onClick={this.props.expandSidebar}
           >
             <InlineSVG src={rightArrowUrl} />
@@ -373,8 +375,9 @@ class Editor extends React.Component {
             />
           </div> 
           <div className="edit-name">
-          <p className="edit-name">Area de Programação</p>
-                   
+          <p className="edit-name">Nome do projeto: </p>
+          <InlineSVG className="toolbar__edit-name-button" src={editProjectNameUrl} alt="Edit Project Name" />
+          <Toolbar/>  
           {/**   <button
               aria-label="preferences"
               className="icon_settings"

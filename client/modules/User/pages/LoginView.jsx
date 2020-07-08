@@ -47,7 +47,7 @@ class LoginView extends React.Component {
           </button>
         </div>
         <div className="form-container__content">
-          <h2 className="form-container__title">Log In</h2>
+          <h2 className="form-container__title">Entrar</h2>
           <LoginForm {...this.props} />
         </div>
       </div>

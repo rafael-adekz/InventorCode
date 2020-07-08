@@ -63,7 +63,101 @@ class Toolbar extends React.Component {
 
     return (
       <div className="toolbar">
-        
+        {/** 
+        <button
+          className="toolbar__play-sketch-button"
+          onClick={() => {
+            this.props.startAccessibleSketch();
+            this.props.setTextOutput(true);
+            this.props.setGridOutput(true);
+          }}
+          aria-label="play sketch"
+          disabled={this.props.infiniteLoop}
+        >
+          <InlineSVG src={playUrl} alt="Play Sketch" />
+        </button>
+        <button
+          className={playButtonClass}
+          onClick={this.props.startSketch}
+          aria-label="play only visual sketch"
+          disabled={this.props.infiniteLoop}
+        >
+          <InlineSVG src={playUrl} alt="Play only visual Sketch" />
+        </button>
+        <button
+          className={stopButtonClass}
+          onClick={this.props.stopSketch}
+          aria-label="stop sketch"
+        >
+          <InlineSVG src={stopUrl} alt="Stop Sketch" />
+        </button>
+        {/**
+        <div className="toolbar__autorefresh">
+          <input
+            id="autorefresh"
+            type="checkbox"
+            checked={this.props.autorefresh}
+            onChange={(event) => {
+              this.props.setAutorefresh(event.target.checked);
+            }}
+          />
+          <label htmlFor="autorefresh" className="toolbar__autorefresh-label">
+            Atualizar Automaticamente
+          </label>
+        </div>
+         */}
+        <div className={nameContainerClass}>
+          <a
+            className="toolbar__project-name"
+            href={this.props.owner ? `/${this.props.owner.username}/sketches/${this.props.project.id}` : ''}
+            onClick={(e) => {
+              if (this.canEditProjectName()) {
+                e.preventDefault();
+                this.originalProjectName = this.props.project.name;
+                this.props.showEditProjectName();
+                setTimeout(() => this.projectNameInput.focus(), 0);
+              }
+            }}
+          >
+            {this.props.project.name}&nbsp;
+            {/**
+              this.canEditProjectName() &&
+              <InlineSVG className="toolbar__edit-name-button" src={editProjectNameUrl} alt="Edit Project Name" />
+             */}
+          </a>
+          <input
+            type="text"
+            maxLength="256"
+            className="toolbar__project-name-input"
+            value={this.props.project.name}
+            onChange={this.handleProjectNameChange}
+            ref={(element) => { this.projectNameInput = element; }}
+            onBlur={() => {
+              this.validateProjectName();
+              this.props.hideEditProjectName();
+              if (this.props.project.id) {
+                this.props.saveProject();
+              }
+            }}
+            onKeyPress={this.handleKeyPress}
+          />
+          {(() => { // eslint-disable-line
+            if (this.props.owner) {
+              return (
+                <p className="toolbar__project-owner">
+                  por <Link to={`/${this.props.owner.username}/sketches`}>{this.props.owner.username}</Link>
+                </p>
+              );
+            }
+          })()}
+        </div>
+        {/* <button
+          className={preferencesButtonClass}
+          onClick={this.props.openPreferences}
+          aria-label="preferences"
+        >
+          <InlineSVG src={preferencesUrl} alt="Preferences" />
+        </button>*/}
       </div>
     );
   }

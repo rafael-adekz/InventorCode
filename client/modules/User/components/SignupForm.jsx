@@ -11,7 +11,7 @@ function SignupForm(props) {
   return (
     <form className="form" onSubmit={handleSubmit(props.signUpUser.bind(this, props.previousPath))}>
       <p className="form__field">
-        <label htmlFor="username" className="form__label">User Name</label>
+        <label htmlFor="username" className="form__label">Usuário</label>
         <input
           className="form__input"
           aria-label="username"
@@ -33,7 +33,7 @@ function SignupForm(props) {
         {email.touched && email.error && <span className="form-error">{email.error}</span>}
       </p>
       <p className="form__field">
-        <label htmlFor="password" className="form__label">Password</label>
+        <label htmlFor="password" className="form__label">Senha</label>
         <input
           className="form__input"
           aria-label="password"
@@ -44,7 +44,7 @@ function SignupForm(props) {
         {password.touched && password.error && <span className="form-error">{password.error}</span>}
       </p>
       <p className="form__field">
-        <label htmlFor="confirm password" className="form__label">Confirm Password</label>
+        <label htmlFor="confirm password" className="form__label">Confirmar Senha</label>
         <input
           className="form__input"
           type="password"
@@ -58,7 +58,7 @@ function SignupForm(props) {
           <span className="form-error">{confirmPassword.error}</span>
         }
       </p>
-      <input type="submit" disabled={submitting || invalid || pristine} value="Sign Up" aria-label="sign up" />
+      <input type="submit" disabled={submitting || invalid || pristine} value="Registrar" aria-label="sign up" />
     </form>
   );
 }

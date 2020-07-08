@@ -42,7 +42,7 @@
 		@extend %toolbar-button;
 		line-height: #{52 / $base-font-size}rem;
 		&--selected {
-			@extend %toolbar-button--selected;	
+			@extend %toolbar-button--selected;
 			line-height: #{52 / $base-font-size}rem;
 		}
 	}
@@ -51,10 +51,6 @@
 	& span {
 		padding-left: #{1 / $base-font-size}rem;
 	}
-}
-
-.toolbar__preferences-buttondn{
-//	display:none
 }
 
 .toolbar__logo {
@@ -67,7 +63,7 @@
 }
 
 .toolbar {
-	padding: 2px;
+//	padding: #{20 / $base-font-size}rem #{34 / $base-font-size}rem;
 	display: flex;
 	align-items: center;
 }
@@ -81,15 +77,16 @@
 	height: 70%;
   display: flex;
   align-items: center;
+  margin-left: -10px;
 }
 
 .toolbar__project-name {
 	@include themify() {
-		color: getThemifyVariable('inactive-text-color');
+		color: #fff;
 		&:hover {
-		color: getThemifyVariable('primary-text-color');
+		color: #EF7D00;
 		  & .toolbar__edit-name-button path {
-		  	fill: getThemifyVariable('primary-text-color');
+		  	fill: #EF7D00;
 		  }
 		}
 	}
@@ -97,12 +94,12 @@
 	line-height: #{18 / $base-font-size}rem;
 
 	.toolbar__project-name-container--editing & {
-		//display: none;
+		display: none;
 	}
 }
 
 .toolbar__project-name-input {
-	//display: none;
+	display: none;
 	border: 0px;
 	.toolbar__project-name-container--editing & {
 		display: block;
@@ -112,7 +109,7 @@
 .toolbar__project-owner {
 	margin-left: #{5 / $base-font-size}rem;
 	@include themify() {
-		color: getThemifyVariable('inactive-text-color');
+		color: #fff
 	}
 }
 
@@ -165,4 +162,9 @@
 			fill: getThemifyVariable('inactive-text-color');
 		}
 	}
+}
+
+.toolbar__espaco{
+
+	padding: 3px;
 }

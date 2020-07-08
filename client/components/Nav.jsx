@@ -13,10 +13,10 @@ import { logoutUser } from '../modules/User/actions';
 import { metaKeyName, } from '../utils/metaKey';
 
 const triangleUrl = require('../images/down-filled-triangle.svg');
-const shareURL = require('../images/new2/Icone_compartilhar.svg');
+const shareURL = require('../images/new2/Icone_compartilhar2.svg');
 const bibliotecaURL = require('../images/new2/Icone_livro.svg');
-const arquivoURL = require('../images/new2/Icone_menu.svg');
-const ajudaURL = require('../images/new2/Icone_duvida.svg');
+const arquivoURL = require('../images/new2/Icone_menu2.svg');
+const ajudaURL = require('../images/new2/Icone_duvida2.svg');
 const logoUrl = require('../images/new2/logo.svg');
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
@@ -298,7 +298,7 @@ class Nav extends React.PureComponent {
                 </button>
               </li>
               { this.props.project.id && this.props.user.authenticated &&
-              <li className="nav__dropdown-item">
+              <li className="nav__dropdown-dn">
                 <button
                   onClick={this.handleDuplicate}
                   onFocus={this.handleFocusForFile}
@@ -307,7 +307,9 @@ class Nav extends React.PureComponent {
                   Duplicar
                 </button>
               </li> }
-              
+
+             {/** { this.props.project.id &&
+
               <li className="nav__dropdown-item">
                 <button
                   onClick={this.handleShare}
@@ -326,7 +328,7 @@ class Nav extends React.PureComponent {
                 >
                   Download
                 </button>
-              </li> }
+              </li> } */}
               { this.props.user.authenticated &&
               <li className="nav__dropdown-item">
                 <Link
@@ -335,7 +337,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  Abrir
+                  Meus Projetos
                 </Link>
               </li> }
               { __process.env.EXAMPLES_ENABLED &&
@@ -500,8 +502,18 @@ class Nav extends React.PureComponent {
             </button>
                 </Link>
           </li>
+          <li className="nav__item">              
+            <button
+                  onClick={this.handleShare}
+                  //onFocus={this.handleFocusForFile}
+                  //onBlur={this.handleBlur}
+                >
+                  <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
+              </button>
+            
+          </li>
           <li className={navDropdownState.help}>
-            {/**<button
+            <button
               onClick={this.toggleDropdownForHelp}
               onBlur={this.handleBlur}
               onFocus={this.clearHideTimeout}
@@ -513,7 +525,7 @@ class Nav extends React.PureComponent {
             >
               <span className="nav__item-header"></span>
               <InlineSVG className="nav__item-header-triangle" src={ajudaURL} />
-            </button>*/}
+            </button>
             <ul className="nav__dropdown">
               <li className="nav__dropdown-item">
                 <button
@@ -559,9 +571,6 @@ class Nav extends React.PureComponent {
               
             </ul>
           </li>
-          <li className="nav__itemdn">
-            <InlineSVG src={shareURL} alt="p5.js share" className="svg__share" />
-          </li>
         </ul>
         { __process.env.LOGIN_ENABLED && !this.props.user.authenticated &&
           <ul className="nav__items-right" title="user-menu">
@@ -606,10 +615,10 @@ class Nav extends React.PureComponent {
                     onBlur={this.handleBlur}
                     onClick={this.setDropdownForNone}
                   >
-                    Meus Sketches
+                    Meus projetos
                   </Link>
                 </li>
-                <li className="nav__dropdown-item">
+               {/** <li className="nav__dropdown-item">
                   <Link
                     to="/assets"
                     onFocus={this.handleFocusForAccount}
@@ -618,7 +627,7 @@ class Nav extends React.PureComponent {
                   >
                     Meus Assets
                   </Link>
-                </li>
+                </li>  */}
                 <li className="nav__dropdown-item">
                   <Link
                     to="/account"
@@ -635,7 +644,7 @@ class Nav extends React.PureComponent {
                     onFocus={this.handleFocusForAccount}
                     onBlur={this.handleBlur}
                   >
-                    Log out
+                    Sair
                   </button>
                 </li>
               </ul>

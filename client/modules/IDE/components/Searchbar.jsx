@@ -58,14 +58,14 @@ class Searchbar extends React.Component {
           className="searchbar__input"
           type="text"
           value={searchValue}
-          placeholder="Search files..."
+          placeholder="Procurar projetos..."
           onChange={this.handleSearchChange}
           onKeyUp={this.handleSearchEnter}
         />
         <button
           className="searchbar__clear-button"
           onClick={this.handleResetSearch}
-        >clear
+        >limpar
         </button>
       </div>
     );

@@ -11,7 +11,7 @@ import SignupForm from '../components/SignupForm';
 import { validateSignup } from '../../../utils/reduxFormUtils';
 
 const exitUrl = require('../../../images/exit.svg');
-const logoUrl = require('../../../images/p5js-logo.svg');
+const logoUrl = require('../../../images/new2/logo.svg');
 
 class SignupView extends React.Component {
   constructor(props) {
@@ -47,12 +47,12 @@ class SignupView extends React.Component {
           </button>
         </div>
         <div className="form-container__content">
-          <h2 className="form-container__title">Sign Up</h2>
+          <h2 className="form-container__title">Registrar</h2>
           <SignupForm {...this.props} />
-          <p className="form__navigation-options">
+         {/**<p className="form__navigation-options">
             Already have an account?&nbsp;
             <Link className="form__login-button" to="/login">Log In</Link>
-          </p>
+          </p> */} 
         </div>
       </div>
     );
