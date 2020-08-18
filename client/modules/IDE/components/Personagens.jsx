@@ -14,6 +14,7 @@ const tlogoUrl = require('../../../images/new/t-logo.svg');
 const musicaUrl = require('../../../images/new/t-musica.svg');
 const searchUrl = require('../../../images/new/search.svg');
 const sonsUrl = require('../../../images/new/sons.svg');
+const musicasUrl = require('../../../images/new/musica.svg');
 const copyUrl = require('../../../images/new/copy.svg');
 const bugUrl = require('../../../images/new/bug.svg');
 
@@ -137,15 +138,15 @@ function Personagens(props) {
     <div className="book">
       <div className="book-tabs">
         <div className="tab active">
-        <Link to="/personagens"><span>Sprite</span></Link>
+        <Link to="/personagens"><span>Personagens</span></Link>
           <InlineSVG src={tlogoUrl} alt="" />
         </div>
         <div className="tab">
         <Link to="/fundos"><span>Fundos</span></Link>
           <InlineSVG src={imagesUrl} alt="" />
         </div>
-        <div className="tabdn">
-          <span>Tab 3</span>
+        <div className="tab">
+        <Link to="/musicas"><span>Musicas</span></Link>
           <InlineSVG src={corUrl} alt="" />
         </div>
         <div className="tab">

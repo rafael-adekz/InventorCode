@@ -149,15 +149,15 @@ function Sons(props) {
     <div className="book">
       <div className="book-tabs">
         <div className="tab">
-        <Link to="/personagens"><span>Sprite</span></Link>             
+        <Link to="/personagens"><span>Personagens</span></Link>             
           <InlineSVG src={tlogoUrl} alt="" />
         </div>
         <div className="tab">
         <Link to="/fundos"><span>Fundos</span></Link>
           <InlineSVG src={imagesUrl} alt="" />
         </div>
-        <div className="tabdn">
-          <span>Tab 3</span>
+        <div className="tab">
+        <Link to="/musicas"><span>Musicas</span></Link>
           <InlineSVG src={corUrl} alt="" />
         </div>
         <div className="tabdn">
