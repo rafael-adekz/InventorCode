@@ -6,8 +6,17 @@ function LoginForm(props) {
   const {
     fields: { email, password }, handleSubmit, submitting, pristine
   } = props;
+
+  let h3_error = <div></div>
+
+  if(props.submitFailed){
+    h3_error = <h3 style={{marginTop: '10px',color: '#f10046',fontWeight: 'bold'}}> <div>{props.errors?.email}</div> <div>{props.errors?.password}</div></h3>
+  }
+
   return (
     <form className="form" onSubmit={handleSubmit(props.validateAndLoginUser.bind(this, props.previousPath))}>
+      {h3_error}
+     
       <p className="form__field">
         <label htmlFor="email" className="form__label">Email ou usuário</label>
         <input
@@ -30,7 +39,7 @@ function LoginForm(props) {
         />
         {password.touched && password.error && <span className="form-error">{password.error}</span>}
       </p>
-      <input type="submit" disabled={submitting || pristine} value="Log In" aria-label="login" />
+      <input type="submit" disabled={submitting || pristine} value="Log In" aria-label="login" />    
     </form>
   );
 }

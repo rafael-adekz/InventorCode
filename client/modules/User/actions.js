@@ -52,17 +52,23 @@ export function validateAndLoginUser(previousPath, formProps, dispatch) {
   return new Promise((resolve, reject) => {
     loginUser(formProps)
       .then((response) => {
-        dispatch({
-          type: ActionTypes.AUTH_USER,
-          user: response.data
-        });
-        dispatch({
-          type: ActionTypes.SET_PREFERENCES,
-          preferences: response.data.preferences
-        });
-        dispatch(justOpenedProject());
-        browserHistory.push(previousPath);
-        resolve();
+        if(!response.data.error){
+          dispatch({
+            type: ActionTypes.AUTH_USER,
+            user: response.data
+          });
+          dispatch({
+            type: ActionTypes.SET_PREFERENCES,
+            preferences: response.data.preferences
+          });
+          dispatch(justOpenedProject());
+          browserHistory.push(previousPath);
+          resolve();
+        }else{
+          //alert(response.data.message);
+          //toast(response.data.message);
+          reject({ password: response.data.message, _error: 'Login failed!' }); // eslint-disable-line
+        }
       })
       .catch((response) => {
         reject({ password: response.data.message, _error: 'Login failed!' }); // eslint-disable-line

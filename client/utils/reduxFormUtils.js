@@ -50,12 +50,12 @@ export function validateSettings(formProps) {
 
 export function validateLogin(formProps) {
   const errors = {};
-  if (!formProps.email) {
+  /*if (!formProps.email) {
     errors.email = 'Please enter an email';
   }
   if (!formProps.password) {
     errors.password = 'Please enter a password';
-  }
+  }*/
   return errors;
 }
 
